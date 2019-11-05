@@ -2,7 +2,27 @@ small
   font-size: inherit
 
 h1, h2, h3, h4, h5, h6
-  font-weight: 400
+  font-weight: 500
 
 .title
-  +css-lock(21, 45, 320, 1399, font-size)
+  line-height: 1
+  font-weight: 500
+  display: block
+  &--h1
+    +css-lock(36, 70, 320, 1399, font-size)
+    letter-spacing: .18em
+    text-transform: uppercase
+    +md
+      letter-spacing: .1em
+  &--h2
+    +css-lock(32, 65, 320, 1399, font-size)
+    letter-spacing: .12em
+    text-transform: uppercase
+    +md
+      letter-spacing: .1em
+  &--h3
+    +css-lock(24, 32, 320, 1399, font-size)
+  &--h4
+    +css-lock(16, 18, 320, 1399, font-size)
+  &--ttu
+    text-transform: uppercase

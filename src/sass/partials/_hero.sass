@@ -1,0 +1,20 @@
+.hero
+  position: fixed
+  z-index: 0
+  top: $header-height
+  left: 0
+  right: 0
+  +cover
+  background-position: 75% 50%
+  color: $white
+  +lg
+    top: $header-height-lg
+  &__inner
+    +flex(center, center)
+    height: calc(100vh - #{$header-height})
+    height: calc((var(--vh, 1vh) * 100) - #{$header-height})
+    +lg
+      height: calc(100vh - #{$header-height-lg})
+      height: calc((var(--vh, 1vh) * 100) - #{$header-height-lg})
+  &__block
+    text-align: center

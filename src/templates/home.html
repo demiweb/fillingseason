@@ -1,0 +1,27 @@
+---
+title: home
+page: home
+hero: {
+  bg: 'home/juDeTVeVCewTm3kAKNiQme-1920-80.jpg',
+  block: { mod: 'title-block' },
+  upttl: {
+    mod: 'title-block__upttl',
+    title: 'коллекція 2019'
+  },
+  title: {
+    mod: 'title-block__title',
+    title: 'А який твій стиль?'
+  },
+  btns: [
+    {
+      title: 'Детальніше'
+    }
+  ]
+}
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+  {% include "partials/sections/_s-categories.html" %}
+  {% include "partials/sections/_s-trends.html" %}
+{% endblock %}

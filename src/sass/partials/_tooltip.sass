@@ -1,0 +1,19 @@
+.tooltip
+  position: absolute
+  z-index: 10
+  background-color: $white
+  left: -50px
+  top: calc(100% + 30px)
+  right: 0
+  +ready
+    +tr(opacity .3s, visibility .3s)
+  +hidden
+  +lg
+    top: calc(100% + 15px)
+  +xs
+    position: fixed
+    left: 0 !important
+    width: 100% !important
+    top: $header-height-lg !important
+  &.is-active
+    +visible

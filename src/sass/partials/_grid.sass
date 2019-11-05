@@ -1,0 +1,46 @@
+$grid-gap: 1em
+
+.grid
+  margin-left: -$grid-gap / 2
+  margin-right: -$grid-gap / 2
+  +flex(flex-start, normal, row, wrap)
+
+._col
+  width: 100%
+  padding-left: $grid-gap / 2
+  padding-right: $grid-gap / 2
+  margin-bottom: $grid-gap
+
+@for $i from 1 through 12
+  ._col-#{$i}
+    width: percentage($i/12)
+
+@for $i from 1 through 12
+  ._col-xss-#{$i}
+    +xssmin
+      width: percentage($i/12)
+
+@for $i from 1 through 12
+  ._col-xs-#{$i}
+    +xsmin
+      width: percentage($i/12)
+
+@for $i from 1 through 12
+  ._col-sm-#{$i}
+    +smmin
+      width: percentage($i/12)
+
+@for $i from 1 through 12
+  ._col-md-#{$i}    
+    +mdmin
+      width: percentage($i/12)
+
+@for $i from 1 through 12
+  ._col-lg-#{$i}    
+    +lgmin
+      width: percentage($i/12)
+
+@for $i from 1 through 12
+  ._col-xl-#{$i}    
+    +xlmin
+      width: percentage($i/12)

@@ -1,0 +1,27 @@
+<!-- begin section -->
+<section class="section">
+  <div class="container container--lg">
+    <div class="section__title">
+      <h3 class="title title--h3">Тренди</h3>
+    </div>
+
+    <div class="section__items">
+      <div class="grid">
+        {% for i in range(0, 4) %}
+        <div class="_col _col-md-3 _col-sm-4 _col-xss-6">
+          {% include "partials/_card.html" %}
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="section__btn">
+      {{ mixins.btn(
+        title = 'Завантажити ще',
+        mod = 'btn--transp-accent',
+        href = false
+      ) }}
+    </div>
+  </div>
+</section>
+<!-- end section -->

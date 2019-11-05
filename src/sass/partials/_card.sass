@@ -1,0 +1,41 @@
+.card
+  position: relative
+  height: 100%
+  border: 1px solid  $gray-light
+  &__add
+    position: absolute
+    z-index: 1
+    top: 30px
+    right: 25px
+    +md
+      top: 20px
+      right: 20px
+  &__inner
+    height: 100%
+    +flex(flex-start, normal, column)
+    text-align: center
+    +tr(color .3s)
+    +hover
+      color: $accent
+  &__img
+    flex-grow: 1
+    display: block
+  &__content
+    display: block
+    padding: 25px
+    border-top: 1px solid  $gray-light
+    +md
+      padding: 15px
+  &__title
+    display: block
+    margin-bottom: 5px
+  &__subttl
+    display: block
+    margin-bottom: 5px
+    color: $gray
+  &__img
+    display: block
+    padding-top: 100%
+    background-repeat: no-repeat
+    background-position: 50% 100%
+    background-size: contain

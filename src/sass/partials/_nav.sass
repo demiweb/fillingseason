@@ -1,0 +1,61 @@
+.nav
+  text-transform: uppercase
+  font-weight: 300
+  li
+    position: relative
+    padding-left: 5px
+    padding-right: 5px
+    +hover
+      > ul
+        +visible
+    > ul
+      position: absolute
+      top: 100%
+      left: 0
+      z-index: 1
+      background-color: $c-text
+      color: $white
+      display: block
+      width: 220px
+      padding: 20px
+      font-weight: 400
+      font-size: $fz-sm
+      text-transform: none
+      +tr(opacity .3s, visibility .3s)
+      +hidden
+      +before
+        +arr(20, 10, $c-text, t)
+        position: absolute
+        bottom: 100%
+        left: 12px
+      li
+        +notlast
+          margin-bottom: 15px
+      a
+        display: inline
+        padding: 0 !important
+
+  ul
+    +flex(space-around, center)
+    +lg
+      display: block
+  a
+    +tr(color .3s)
+    display: inline-block
+    padding-top: 1em
+    padding-bottom: 1em
+    +hover
+      color: $accent
+    &.is-active
+      color: $accent
+
+  &--footer
+    text-transform: none
+    ul
+      justify-content: space-between
+      +md
+        justify-content: center
+        flex-wrap: wrap
+    a
+      display: inline
+      padding: 0

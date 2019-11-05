@@ -1,5 +1,32 @@
 <!-- begin hero -->
-<section class="hero">
-  <h1>hello from hero</h1>
+<section class="hero js-lazy" data-background-image="./img/{{ hero.bg }}">
+  <div class="container container--lg">
+    <div class="hero__inner">
+      <div class="hero__block{% if hero.block.mod %} {{ hero.block.mod }}{% endif %}">
+        {% if hero.upttl %}
+          <div class="hero__upttl{% if hero.upttl.mod %} {{ hero.upttl.mod }}{% endif %}">{{ hero.upttl.title | safe }}</div>
+        {% endif %}
+
+        {% if hero.title %}
+          <div class="hero__title{% if hero.title.mod %} {{ hero.title.mod }}{% endif %}">
+            <h1 class="title title--h1">{{ hero.title.title | safe }}</h1>
+          </div>
+        {% endif %}
+
+        {% if hero.btns %}
+        <div class="hero__btns title-block__btns">
+          {% for i in hero.btns %}
+          <div class="hero__btn">
+            {{ mixins.btn(
+              title = i.title,
+              mod = i.mod
+            ) }}
+          </div>
+          {% endfor %}
+        </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
 </section>
 <!-- end hero -->

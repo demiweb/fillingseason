@@ -1,4 +1,4 @@
-ProjectTitle: template
+ProjectTitle: fillingseason
 
 PageList:
-- file: page.html
+- file: home.html

@@ -1,0 +1,36 @@
+.btn
+  display: inline-block
+  background-color: $white
+  border: 1px solid  $white
+  font-size: $fz-sm
+  font-weight: 500
+  min-width: 160px
+  padding: 1em
+  border-radius: 1.8em
+  text-align: center
+  color: $c-text
+  +tr(background-color .3s, color .3s, border-color .3s)
+  +sm
+    padding: .8em
+  +hover
+    background-color: transparent
+    color: $white
+
+  &--transp-accent
+    color: $accent
+    border-color: currentColor
+    +hover
+      background-color: $accent
+      color: $white
+  &--full
+    min-width: 0
+    width: 100%
+  &--square
+    background-color: $accent
+    border-color: $accent
+    color: $white
+    border-radius: 0
+    font-size: $fz
+    padding: 1.15em 1em
+    +hover
+      color: $accent

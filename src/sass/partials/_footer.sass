@@ -1,0 +1,44 @@
+.footer
+  background-color: $gray-lightest
+  position: relative
+  z-index: 20
+  &__top
+    border-bottom: 2px solid  $gray-light
+  &__inner
+    padding-top: 20px
+    padding-bottom: 20px
+    +flex(space-between, center, row, wrap)
+    +lg
+      padding-top: 10px
+      padding-bottom: 10px
+  &__social
+  &__contacts
+    +xs
+      width: 100%
+      margin-bottom: 10px
+    small
+      color: $gray
+      font-size: $fz-xs
+      display: block
+      margin-bottom: 5px
+    a
+      display: inline-block
+      vertical-align: top
+      +tr(color .3s)
+      +hover
+        color: $accent
+      +notlast
+        margin-right: 15px
+  &__nav
+    width: 100%
+    margin-left: -5px
+    margin-right: -5px
+  &__copy
+    font-size: 11px
+    color: #575757
+    text-transform: uppercase
+    sup
+      display: inline-block
+      font-size: .75em
+      vertical-align: top
+      margin-right: .3em

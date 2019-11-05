@@ -1,0 +1,57 @@
+{%set
+blocks = [
+  {
+    colMod: '_col-md-6',
+    img: 'home/football.jpg',
+    upttl: 'коллекція 2019',
+    title: 'футбол'
+  },
+  {
+    colMod: '_col-md-6',
+    img: 'home/pravilno-podberite-obuv.jpg',
+    upttl: 'коллекція 2019',
+    title: 'Спорт'
+  },
+  {
+    img: 'home/lifestyle.jpg',
+    upttl: 'коллекція 2019',
+    title: 'лайфстайл'
+  }
+]
+%}
+
+<!-- begin section -->
+<section class="section">
+  <div class="container container--lg">
+    <div class="grid">
+      {% for i in blocks %}
+      <div class="_col{% if i.colMod %} {{ i.colMod}}{% endif %}">
+        <!-- begin category-link -->
+        <div class="category-link js-lazy" data-background-image="./img/{{ i.img }}">
+          <div class="category-link__block">
+            <!-- begin title-block -->
+            <div class="title-block">
+              <div class="title-block__upttl">{{ i.upttl | safe }}</div>
+
+              <div class="title-block__title">
+                <div class="title title--h2">{{ i.title | safe }}</div>
+              </div>
+
+              <div class="title-block__btn">
+                {{ mixins.btn(
+                  title = 'Детальніше',
+                  mod = ''
+                ) }}
+              </div>
+            </div>
+            <!-- end title-block -->
+          </div>
+        </div>
+        <!-- end category-link -->
+      </div>
+      {% endfor %}
+
+    </div>
+  </div>
+</section>
+<!-- end section -->

@@ -1,0 +1,26 @@
+<!-- begin header-controls -->
+<div class="header-controls">
+  <div class="header-controls__item header-controls__search">
+    <button class="js-popup-open" data-popup-target="search">{{ mixins.icon('search') }}</button>
+    {% include "partials/tooltips/_search-tooltip.html" %}    
+  </div>
+
+  <div class="header-controls__item">
+    <a href="#">{{ mixins.icon('like') }}</a>
+  </div>
+
+  <div class="header-controls__item header-controls__cart">
+    <button class="js-popup-open" data-popup-target="cart">{{ mixins.icon('shopping-bag') }}</button>
+    {% include "partials/tooltips/_cart-tooltip.html" %}
+  </div>
+
+  <div class="header-controls__item">
+    <button>{{ mixins.icon('user') }}</button>
+  </div>
+
+  <div class="header-controls__item header-controls__lang">
+    <button class="lang-btn js-popup-open" data-popup-target="lang">Ua</button>
+    {% include "partials/tooltips/_lang-tooltip.html" %}
+  </div>
+</div>
+<!-- end header-controls -->

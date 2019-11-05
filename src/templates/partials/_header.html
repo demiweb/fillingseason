@@ -1,5 +1,46 @@
 <!-- begin header -->
 <header class="header">
-  hello from header
+  <div class="container container--lg">
+    <div class="header__inner">
+      <div class="header__logo">
+        <a href="/" class="logo">
+          filling season
+        </a>
+      </div>
+
+      <div class="header__nav js-popup" data-popup="menu">
+        <button class="header__close close js-popup-close"></button>
+        
+        <div class="header__nav-in">
+          {{ mixins.list(
+            name = 'nav',
+            modifications = { wrap: '', item: '', link: '' },
+            list = [
+              { link: 'чоловіки', modLink: 'is-active', item: '
+                <ul>
+                  <li><a href="#">Футболки та шорти</a></li>
+                  <li><a href="#">Курточки та жилетки</a></li>
+                  <li><a href="#">Кофти, штани та костюми</a></li>
+                </ul>
+              ' },
+              { link: 'Жінки' },
+              { link: 'діти' },
+              { link: 'Лайфстайл' },
+              { link: 'спорт' },
+              { link: 'футбол' }
+            ]
+          ) }}
+        </div>
+      </div>
+
+      <div class="header__controls">
+        {% include "partials/_header-controls.html" %}
+      </div>
+
+      <div class="header__burger">
+        <button class="burger js-popup-open" data-popup-target="menu"><span></span></button>
+      </div>
+    </div>
+  </div>
 </header>
 <!-- end header -->

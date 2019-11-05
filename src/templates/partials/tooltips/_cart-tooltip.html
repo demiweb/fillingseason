@@ -1,0 +1,62 @@
+<!-- begin tooltip -->
+<div class="tooltip js-popup" data-popup="cart">
+  <div class="header-cart">
+    <div class="header-cart__top">
+      Кошик <span>(2)</span>
+
+      <button class="header-cart__close close js-popup-close"></button>
+    </div>
+
+    <div class="header-cart__inner">
+      <div class="header-cart__items">
+        {% for i in range(0, 10) %}
+        <!-- begin cart-tooltip-item -->
+        <a href="#" class="header-cart__item cart-tooltip-item">
+          <span class="cart-tooltip-item__img">
+            <img class="js-lazy" alt="" src="" data-src="./img/cart-sm.jpg"/>
+          </span>
+
+          <span class="cart-tooltip-item__content">
+            <span class="cart-tooltip-item__title">
+              <span class="title title--h6">Куртка зимова</span>
+            </span>
+
+            <span class="cart-tooltip-item__meta">
+              <span class="cart-tooltip-item__meta-item">Колір: білий</span>
+              <span class="cart-tooltip-item__meta-item">Розмір: XS</span>
+              <span class="cart-tooltip-item__meta-item">32 шт</span>
+            </span>
+          </span>
+
+          <span class="cart-tooltip-item__price">
+            <span class="price price--sm">$ 4890,00</span>
+          </span>
+        </a>
+        <!-- end cart-tooltip-item -->
+        {% endfor %}
+      </div>
+
+      <div class="header-cart__amount">
+        <div>Сума замовлення:</div>
+        <div class="price price--inherit price--sm">9690,00 ₴</div>
+      </div>
+
+      <div class="header-cart__amount-pay">
+        <div class="accent">До сплати:</div>
+        <div class="price price--inherit price--medium">9690,00 ₴</div>
+      </div>
+
+      <div class="header-cart__btn">
+        {{ mixins.btn(
+          title = 'Оформити замовлення',
+          mod = 'btn--full btn--square'
+        ) }}
+      </div>
+
+      <div class="header-cart__link">
+        <a class="link-accent" href="#">Перейти до кошика</a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end tooltip -->

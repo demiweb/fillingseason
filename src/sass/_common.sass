@@ -1,9 +1,9 @@
 body
-  background: $white
+  background-color: $white-dark
   line-height: 1.4
   font-size: $fz
   min-width: 320px
-  font-family: 'proximanova', Arial, sans-serif
+  font-family: 'helveticaneuecyr', Arial, sans-serif
   color: $c-text
   +no-scroll
   +sm
@@ -17,4 +17,81 @@ body
 .lazy
   &.is-loaded:not(.no-fade-in)
     animation: fadeIn 1s
-    
+
+.out
+  padding-top: $header-height
+  +lg
+    padding-top: $header-height-lg
+
+.main
+  position: relative
+  background-color: $white
+  z-index: 1
+  background-color: $white-dark  
+
+.logo
+  font-weight: 700
+  text-transform: uppercase
+  font-size: em(20)
+  display: inline-block
+  +tr(color .3s)
+  +hover
+    color: $accent
+  +sm
+    font-size: $fz
+  +xs
+    font-size: $fz-sm
+
+.container
+  margin-left: auto
+  margin-right: auto
+  padding-left: 15px
+  padding-right: 15px
+  max-width: 1345px
+  &--lg
+    max-width: 1790px
+
+.title-block
+  &__upttl
+    text-transform: uppercase
+    margin-bottom: 30px
+    +md
+      margin-bottom: 15px
+  &__title
+    margin-bottom: 40px
+    +lg
+      margin-bottom: 30px
+    +md
+      margin-bottom: 15px
+
+.price
+  display: inline-block
+  font-size: em(18)
+  text-transform: uppercase
+  color: $accent
+  &--inherit
+    color: inherit
+  &--medium
+    font-weight: 500
+  &--sm
+    font-size: $fz-sm
+
+.link
+  font-weight: 500
+  +tr(color .3s)
+  +hover
+    color: $accent
+
+.accent
+  color: $accent
+
+.link-accent
+  color: $accent
+  font-weight: 500
+  font-size: $fz-sm
+  +hover
+    text-decoration: underline
+
+.close
+  display: inline-block
+  +icon-close(20, 1, currentColor)

@@ -1,5 +1,56 @@
 <!-- begin footer -->
 <footer class="footer">
-  hello from footer
+  <div class="container">
+    <div class="footer__top">
+      <div class="footer__inner">
+        <div class="footer__contacts">
+          <small>Із запитаннями:</small>
+          <a href="tel:+380500505050">+38 (050) 050 5050;</a>
+          <a href="tel:+380500505050">+38 (050) 050 5050;</a>
+        </div>
+
+        <div class="footer__social">
+          {{ mixins.list(
+            name = 'social',
+            modifications = { wrap: '', item: '', link: '' },
+            list = [
+              { link: mixins.icon('facebook-logo') },
+              { link: mixins.icon('instagram') },
+              { link: mixins.icon('linked-in-logo-of-two-letters') }
+            ]
+          ) }}
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <div class="footer__inner">
+        <div class="footer__nav">
+          {{ mixins.list(
+            name = 'nav',
+            modifications = { wrap: 'nav--footer', item: '', link: '' },
+            list = [
+              { link: 'Каталог' },
+              { link: 'Клуб FS' },
+              { link: 'Програма лояльності' },
+              { link: 'Програма тренер' },
+              { link: 'Партнерам' },
+              { link: 'Технології' },
+              { link: 'Компанія' },
+              { link: 'Новини' },
+              { link: 'Допомога' }
+            ]
+          ) }}
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer__inner">
+      <div class="footer__copy">
+        <sup>&copy;</sup> тм «filling season» 2019
+      </div>
+    </div>
+    
+  </div>
 </footer>
 <!-- end footer -->

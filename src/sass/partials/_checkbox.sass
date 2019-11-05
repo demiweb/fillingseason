@@ -1,0 +1,15 @@
+.checkbox
+  position: relative
+  input
+    position: absolute
+    width: 0
+    height: 0
+    +hidden
+    &:checked + span
+      color: $accent
+
+  &--icon
+    width: 20px
+    height: 20px
+    .icon
+      font-size: em(21)

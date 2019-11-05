@@ -15,6 +15,10 @@
     <!-- BEGIN content -->
     <div class="out{% if outClass %} {{ outClass }}{% endif %}">
       {% include "partials/_header.html" %}
+
+      {% if hero %}
+      {% include "partials/_hero.html" %}
+      {% endif %}
       <!-- begin main -->
       <main class="main{% if mainClass %} {{ mainClass }}{% endif %}">
         {% block content %}{% endblock %}
