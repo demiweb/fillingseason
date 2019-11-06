@@ -248,3 +248,12 @@
     backface-visibility: hidden
     border-radius: 2px
 
+  &--arrow
+    width: auto
+    height: auto
+    +inline-flex(flex-start, center)
+    +before
+      +icon-arrow(15, 15, 2, currentColor, 225 )
+      display: block
+      margin-right: .5em
+

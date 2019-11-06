@@ -15,7 +15,8 @@
   </div>
 
   <div class="header-controls__item">
-    <button>{{ mixins.icon('user') }}</button>
+    <button class="js-popup-open" data-popup-target="login">{{ mixins.icon('user') }}</button>
+    {% include "partials/tooltips/_log-in-tooltip.html" %}
   </div>
 
   <div class="header-controls__item header-controls__lang">

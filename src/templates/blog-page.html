@@ -1,0 +1,25 @@
+---
+title: blog-page
+page: blog-page
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+  {% include "partials/sections/_s-blog-page.html" %}
+
+  <!-- begin section -->
+  <section class="section">
+    <div class="section__title">
+      <div class="container">
+        <h3 class="title title--h3-sm">Інші новини</h3>
+      </div>
+    </div>
+    
+    <div class="container">
+      {% include "partials/_news.html" %}
+
+      {% include "partials/_section-btn.html" %}
+    </div>
+  </section>
+  <!-- end section -->
+{% endblock %}

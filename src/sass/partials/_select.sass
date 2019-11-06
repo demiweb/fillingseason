@@ -1,0 +1,59 @@
+.custom-select
+  $this: &
+  position: relative
+  font-size: $fz-sm
+  width: 150px
+  select
+    position: absolute
+    +hidden
+    width: 0
+    height: 0
+  &.is-open
+    #{$this}__panel
+      +visible
+  &.has-placeholder
+    #{$this}__opener
+      color: $gray
+  &__opener
+    position: relative
+    height: 48px
+    border: 1px solid  $gray
+    padding: 1em
+    padding-right: 2em
+    cursor: pointer
+    +text-overflow
+    +md
+      height: 40px
+      padding: .7em
+    +sm
+      height: 35px
+    +after
+      +arr(10, 5, $c-text, b)
+      display: block
+      position: absolute
+      z-index: 1
+      top: 50%
+      transform: translate(0, -50%)
+      right: 1em
+  &__panel
+    position: absolute
+    top: 100%
+    left: 0
+    right: 0
+    z-index: 5
+    background-color: $white
+    border: 1px solid  $gray
+    border-top: 0
+    +hidden
+    +ready
+      +tr(opacity .3s, visibility .3s)
+  &__option
+    padding: .5em 1em
+    cursor: pointer
+    +tr(color .3s)
+    +hover
+      color: $accent
+    &.is-selected
+      color: $accent
+    &[data-value="placeholder"]
+      display: none

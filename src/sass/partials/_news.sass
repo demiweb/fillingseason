@@ -1,0 +1,35 @@
+.news-item
+  display: block
+  +cover
+  background-color: $gray-light
+  color: $white
+  padding: 35px
+  position: relative
+  padding-top: 40%
+  +tr(color .3s)
+  +before
+    +coverdiv
+    background-color: rgba($black, .5)
+    z-index: 0
+  +hover
+    color: $accent
+  +lg
+    padding: 25px
+    padding-top: 40%
+  +md
+    padding: 15px
+    padding-top: 50%
+  +sm
+    padding-top: 40%
+  +xs
+    padding-top: 50%
+  &__upttl
+    color: #d3d5d2
+    margin-bottom: 10px
+    display: block
+  &__content
+    position: relative
+    z-index: 1
+    display: block
+  &__title
+    display: block

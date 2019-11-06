@@ -68,6 +68,8 @@
     "jquery": "^3.4.1",
     "lozad": "^1.9.0",
     "popup-simple": "^1.0.1",
+    "select-custom": "^1.1.8",
+    "stickyfilljs": "^2.1.0",
     "throttle-debounce": "^2.1.0"
   }
 }

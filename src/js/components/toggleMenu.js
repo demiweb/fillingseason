@@ -2,6 +2,8 @@ import {
   IS_ACTIVE, NO_SCROLL, IS_HIDDEN,
 } from '../constants';
 
+import popup from './setPopups';
+
 class Burger {
   init() {
     document.addEventListener('click', this.toggle.bind(this));
@@ -56,6 +58,7 @@ export default function toggleMenu() {
   const burger = new Burger();
   burger.onToggle = () => {
     document.body.classList.toggle(NO_SCROLL);
+    popup.closeAll();
   };
   burger.onClose = () => {
     document.body.classList.remove(NO_SCROLL);
@@ -73,5 +76,11 @@ export default function toggleMenu() {
 
     e.preventDefault();
     burger.close();
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.keyCode && e.keyCode === 27) {
+      burger.close();
+    }
   });
 }

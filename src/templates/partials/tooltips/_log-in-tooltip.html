@@ -1,0 +1,79 @@
+<!-- begin popup -->
+<div class="popup js-popup" data-popup="login">
+  <div class="popup__top">
+    <h3 class="title title--h3-sm">Увійти</h3>
+    <button class="popup__close close js-popup-close"></button>
+  </div>
+
+  <div class="popup__inner">
+
+    <div class="popup__form">
+      <!-- begin form -->
+      <div class="form">
+        <form>
+          <div class="form__field">
+            {{ mixins.input(
+              name = 'input',
+              mod = '',
+              type = 'email',
+              placeholder = 'Електрона адреса',
+              value = '',
+              fieldClass = ''
+            ) }}
+          </div>
+
+          <div class="form__field">
+            {{ mixins.input(
+              name = 'input',
+              mod = '',
+              type = 'password',
+              placeholder = 'Пароль',
+              value = '',
+              fieldClass = ''
+            ) }}
+          </div>
+
+          <div class="form__field">
+            <div class="form__checkbox">
+              {{ mixins.input(
+                name = 'checkbox',
+                mod = '',
+                type = 'checkbox',
+                placeholder = '',
+                value = '',
+                fieldClass = '',
+                label = { last: { span: true, title: 'Не виходити з системи' } }
+              ) }}
+
+              <a class="gray" href="#">Забули пароль?</a>
+            </div>
+          </div>      
+
+          <div class="popup__content-title">Не маєте профілю?</div>
+
+          <a class="popup__content-link" href="#">Реєструйтесь</a>
+
+          <div class="popup__btns">
+            <div class="popup__btn">
+              {{ mixins.btn(
+                title = 'Увійти',
+                mod = 'btn--full btn--square btn--text',
+                href = false
+              ) }}
+            </div>
+
+            <div class="popup__btn">
+              {{ mixins.btn(
+                title = 'Увійти через Facebook',
+                mod = 'btn--full btn--square btn--face',
+                href = false
+              ) }}
+            </div>
+          </div>
+        </form>
+      </div>
+      <!-- end form -->
+    </div>
+  </div>
+</div>
+<!-- end popup -->

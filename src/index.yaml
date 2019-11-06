@@ -3,3 +3,9 @@ ProjectTitle: fillingseason
 PageList:
 - file: home.html
 - file: my-favorite.html
+- file: about.html
+- file: blog.html
+- file: blog-page.html
+- file: catalog-women.html
+- file: cart.html
+- file: contacts.html

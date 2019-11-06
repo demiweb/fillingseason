@@ -1,0 +1,56 @@
+{%set
+contacts = [
+  {
+    title: 'зателефонуйте нам :',
+    text: '
+      <p><a href="tel:+380962000220">+38 (096) 200 02 20</a></p>
+      <p><a href="tel:+380504000220">+38 (050) 400 02 20</a></p>
+    '
+  },
+  {
+    title: 'напишіть нам:',
+    text: '
+      <p><a href="mailto:sale@fillingseason.com">sale@fillingseason.com</a></p>
+      <p><a href="mailto:office@fillingseason.com">office@fillingseason.com</a></p>
+    '
+  },
+  {
+    title: 'чекаємо вас за адресою:',
+    text: 'Київ, просп. Академіка Глушкова, 13,'
+  }
+]
+%}
+
+<!-- begin section -->
+<section class="section section--lg pb-0">
+  <div class="container">
+    <!-- begin contacts -->
+    <div class="contacts">
+      <div class="contacts__left">
+        <!-- begin contacts-block -->
+        <div class="contacts-block">
+          {% for i in contacts %}
+          <div class="contacts-block__block">
+            <div class="contacts-block__title">
+              <div class="title title--h6 title--ttu">{{ i.title | safe }}</div>
+            </div>
+
+            <div class="contacts-block__text">{{ i.text | safe }}</div>
+          </div>
+          {% endfor %}
+        </div>
+        <!-- end contacts-block -->
+      </div>
+
+      <div class="contacts__right">
+        <!-- begin map -->
+        <div class="map">
+          <iframe class="js-lazy" src="" data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2544.975731341278!2d30.455265615893698!3d50.36700700125456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4c85779189361%3A0x9eb5a05d1934099c!2z0L_RgNC-0YHQvy4g0JDQutCw0LTQtdC80LjQutCwINCT0LvRg9GI0LrQvtCy0LAsIDEzLCDQmtC40LXQsiwgMDIwMDA!5e0!3m2!1sru!2sua!4v1573046020948!5m2!1sru!2sua" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+        </div>
+        <!-- end map -->
+      </div>
+    </div>
+    <!-- end contacts -->
+  </div>
+</section>
+<!-- end section -->

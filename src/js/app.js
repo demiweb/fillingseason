@@ -3,14 +3,17 @@ import 'core-js/features/array/from';
 import 'core-js/features/promise';
 import 'intersection-observer';
 import './lib/polyfill';
+import Stickyfill from 'stickyfilljs';
 
 import sayHello from './lib/sayHello';
 import setHTMLClassNames from './components/setHTMLClassNames';
 import setLazy from './components/setLazy';
 import { setVhProperty } from './helpers';
-import setPopups from './components/setPopups';
+import popup from './components/setPopups';
 import setOutPadding from './components/setOutPadding';
-// import toggleMenu from './components/toggleMenu';
+import toggleMenu from './components/toggleMenu';
+import setAccordion from './components/setAccordion';
+import setSelects from './components/select/setSelects';
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -18,7 +21,12 @@ document.addEventListener('DOMContentLoaded', () => {
   setHTMLClassNames();
   setLazy();
   setVhProperty();
-  setPopups();
+  const elements = document.querySelectorAll('.js-sticky-polyfill');
+  Stickyfill.add(elements);
+
+  popup.init();
   setOutPadding();
-  // toggleMenu();
+  toggleMenu();
+  setAccordion();
+  setSelects();
 });

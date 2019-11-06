@@ -1,0 +1,69 @@
+<!-- begin popup -->
+<div class="popup js-popup" data-popup="review">
+  <div class="popup__top">
+    <h3 class="title title--h3-sm">Залиште відгук</h3>
+    <button class="popup__close close js-popup-close"></button>
+  </div>
+
+  <div class="popup__inner">
+
+      <!-- begin form -->
+      <div class="form">
+        <form>
+          <div class="form__field">
+            {{ mixins.input(
+              name = 'input',
+              mod = '',
+              type = 'text',
+              placeholder = 'Ім’я',
+              value = '',
+              fieldClass = ''
+            ) }}
+          </div>
+
+          <div class="form__field">
+            {{ mixins.input(
+              name = 'input',
+              mod = '',
+              type = 'text',
+              placeholder = 'Прізвище',
+              value = '',
+              fieldClass = ''
+            ) }}
+          </div>
+
+          <div class="form__field">
+            {{ mixins.input(
+              name = 'input',
+              mod = '',
+              type = 'email',
+              placeholder = 'Електрона адреса',
+              value = '',
+              fieldClass = ''
+            ) }}
+          </div>
+
+          <div class="form__field">
+            {{ mixins.input(
+              name = 'textarea',
+              mod = '',
+              type = '',
+              placeholder = 'Як вам наш товар?',
+              value = '',
+              fieldClass = ''
+            ) }}
+          </div>
+
+          <div class="form__field">
+            {{ mixins.btn(
+              title = 'Залишити відгук',
+              mod = 'btn--full btn--square'
+            ) }}
+          </div>      
+
+        </form>
+      </div>
+      <!-- end form -->
+  </div>
+</div>
+<!-- end popup -->

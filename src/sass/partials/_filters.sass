@@ -1,0 +1,49 @@
+.filters-block
+  $this: &
+  &__title
+    position: relative
+    display: block
+    width: 100%
+    text-align: left
+    padding-right: 40px
+    padding-top: 14px
+    padding-bottom: 14px
+    border-bottom: 1px solid transparent
+    +tr(color .3s)
+    +hover
+      color: $accent
+    &.is-active
+      border-color: $gray-light
+      #{$this}__title-icon
+        +after
+          display: none
+  &__title-icon
+    position: absolute
+    top: 50%
+    transform: translate(0, -50%)
+    right: 0
+    z-index: 1
+    width: 20px
+    height: 20px
+    +flex(center, center)
+    color: $gray
+    &::after, &::before
+      position: absolute
+      content: ''
+      background-color: currentColor
+      display: block
+    &::before
+      width: 16px
+      height: 2px
+    &::after
+      width: 2px
+      height: 16px
+  &__item
+    font-size: $fz-sm
+    padding-top: 12px
+    padding-bottom: 12px
+  &__content
+    display: none
+    &.is-active
+      display: block
+    

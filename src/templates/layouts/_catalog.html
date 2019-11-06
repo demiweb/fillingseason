@@ -1,0 +1,102 @@
+{%set
+accordion = [
+  {
+    active: true,
+    title: 'Тип продукта:',
+    filters: [
+      { title: 'Лайф стайл <span class="gray">(32)</span>' },
+      { title: 'Спорт <span class="gray">(56)</span>' },
+      { title: 'Футбол <span class="gray">(87)</span>' }
+    ]
+  },
+  {
+    title: 'Коллекции:',
+    filters: [
+      { title: 'Лайф стайл <span class="gray">(32)</span>' },
+      { title: 'Спорт <span class="gray">(56)</span>' },
+      { title: 'Футбол <span class="gray">(87)</span>' }
+    ]
+  },
+  {
+    title: 'Бренд::',
+    filters: [
+      { title: 'Лайф стайл <span class="gray">(32)</span>' },
+      { title: 'Спорт <span class="gray">(56)</span>' },
+      { title: 'Футбол <span class="gray">(87)</span>' }
+    ]
+  },
+  {
+    title: 'Размер',
+    filters: [
+      { title: 'Лайф стайл <span class="gray">(32)</span>' },
+      { title: 'Спорт <span class="gray">(56)</span>' },
+      { title: 'Футбол <span class="gray">(87)</span>' }
+    ]
+  }
+]
+%}
+
+<div class="container container--lg">
+  <!-- begin catalog-page -->
+  <div class="catalog-page">
+    <div class="catalog-page__aside-toggle">
+      
+      <h3 class="title title--h3-sm"><button class="burger burger--arrow js-burger" data-menu-target="aside">Каталог</button></h3>
+    </div>
+
+    <div class="catalog-page__aside js-menu" data-menu="aside">
+      <!-- begin aside -->
+      <aside class="aside js-sticky-polyfill">
+        <button class="aside__close close js-menu-close"></button>
+        
+        <div class="aside__title section__title">
+          <h3 class="title title--h3-sm">Каталог</h3>
+        </div>
+
+        <div class="aside__filter">
+          <!-- begin filters -->
+          <div class="filters js-accordion">
+            {% for i in accordion %}
+            <!-- begin aside- -->
+            <div class="filters-block">
+              <button class="filters-block__title js-accordion-title{% if i.active %} is-active{% endif %}">
+                <span class="title title--h6">{{ i.title | safe }}</span>
+                <span class="filters-block__title-icon"></span>
+              </button>
+
+              <div class="filters-block__content js-accordion-content{% if i.active %} is-active{% endif %}">
+                {% for j in i.filters %}
+                <div class="filters-block__item">
+                  {{ mixins.input(
+                    name = 'checkbox',
+                    mod = '',
+                    type = 'checkbox',
+                    placeholder = '',
+                    value = '',
+                    fieldClass = '',
+                    label = { last: { span: true, title: j.title } }
+                  ) }}
+                </div>
+                {% endfor %}
+              </div>
+            </div>
+            <!-- end aside- -->
+            {% endfor %}
+          </div>
+          <!-- end filters -->
+        </div>
+      </aside>
+      <!-- end aside -->
+    </div>
+
+    <div class="catalog-page__content">
+      <!-- begin section -->
+      <section class="section">
+        {% block catalog %}{% endblock %}
+      </section>
+      <!-- end section -->
+    </div>
+
+  </div>
+  <!-- end catalog-page -->
+</div>

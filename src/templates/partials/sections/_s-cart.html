@@ -7,9 +7,9 @@
   </div>
   
   <div class="container">
-    <!-- begin favorites -->
-    <div class="favorites">
-      <div class="favorites__items">
+    <!-- begin cart -->
+    <div class="cart">
+      <div class="cart__items">
         {% for i in range(0, 3) %}
         <!-- begin cart-item -->
         <div class="cart-item">
@@ -26,6 +26,9 @@
               <span class="cart-item__meta">
                 <span class="cart-item__meta-item">Колір: білий</span>
                 <span class="cart-item__meta-item">Розмір: XS</span>
+                {% if page === 'cart' %}
+                <span class="cart-item__meta-item is-color-text">1 шт.</span>
+                {% endif %}
               </span>
             </span>
 
@@ -33,18 +36,31 @@
               <span class="price price--md">$ 4890,00</span>
             </span>
           </a>
-
-          <button class="cart-item__del">Видалити {{ mixins.icon('close') }}</button>
+          
+          {% if page === 'cart' %}
+          <button class="cart-item__btn">Редагувати</button>
+          {% endif %}
+          
+          {% if page === 'my-favorite' %}
+          <button class="cart-item__btn cart-item__del">Видалити {{ mixins.icon('close') }}</button>
+          {% endif %}
         </div>
         <!-- end cart-item -->
         {% endfor %}
       </div>
 
-      <div class="favorites__meta">
+      <div class="cart__meta">
         <!-- begin cart-meta -->
         <div class="cart-meta">
           <div class="cart-meta__title">
-            <div class="title title--h4">Придбайте зараз</div>
+            {% if page === 'cart' %}
+              <div class="title title--h4">Деталі замовлення</div>
+            {% endif %}
+
+            {% if page === 'my-favorite' %}
+              <div class="title title--h4">Придбайте зараз</div>
+            {% endif %}
+            
           </div>
 
           <div class="cart-meta__amount">
@@ -58,16 +74,27 @@
           </div>
 
           <div class="cart-meta__btn">
-            {{ mixins.btn(
-              title = 'Додати до кошика',
-              mod = 'btn--full btn--square'
-            ) }}
+            {% if page === 'cart' %}
+              {{ mixins.btn(
+                title = 'Оформити замовлення',
+                mod = 'btn--full btn--square',
+                href = false
+              ) }}
+            {% endif %}
+
+            {% if page === 'my-favorite' %}
+              {{ mixins.btn(
+                title = 'Додати до кошика',
+                mod = 'btn--full btn--square',
+                href = false
+              ) }}
+            {% endif %}
           </div>
         </div>
         <!-- end cart-meta -->
       </div>
     </div>
-    <!-- end favorites -->
+    <!-- end cart -->
   </div>
 </section>
 <!-- end section -->

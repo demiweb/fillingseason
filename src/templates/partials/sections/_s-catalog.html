@@ -1,0 +1,40 @@
+{% extends "layouts/_catalog.html" %}
+
+{% block catalog %}
+  <!-- begin catalog -->
+  <div class="catalog">
+    <div class="catalog__top">
+      <h3 class="title title--h3-sm">Жінки <span class="gray">(32)</span></h3>
+
+      <div class="catalog__select">
+        {{ mixins.input(
+          name = 'select',
+          mod = '',
+          type = '',
+          placeholder = '',
+          value = '',
+          fieldClass = 'js-select',
+          options = [
+            { value: 'placeholder', option: 'Сортировать' },
+            { value: 1, option: 'Сортировать1' },
+            { value: 3, option: 'Сортировать2' },
+            { value: 2, option: 'Сортировать3' }
+          ]
+        ) }}
+      </div>
+    </div>
+
+    <div class="section__items">
+      <div class="grid">
+        {% for i in range(0, 16) %}
+        <div class="_col _col-md-3 _col-sm-4 _col-xss-6">
+          {% include "partials/_card.html" %}
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    {% include "partials/_section-btn.html" %}
+  </div>
+  <!-- end catalog -->
+{% endblock %}

@@ -6,3 +6,86 @@
   left: 0
   right: 0
   background-color: rgba($black, .7)
+
+.popup
+  position: fixed
+  width: 465px
+  left: 50%
+  top: 50%
+  // transform: translate(-50%, -50%)
+  z-index: 10
+  background-color: $white
+  border-radius: 10px
+  overflow: hidden
+  +hidden
+  +ready
+    +tr(opacity .3s, visibility .3s)
+  +xs
+    width: auto
+    left: 15px
+    right: 15px
+    top: 15vh
+  &.is-active
+    +visible
+  &__top
+    background-color: $gray-lightest
+    padding-top: 25px
+    padding-bottom: 25px
+    padding-left: 38px
+    padding-right: 60px
+    +xl
+      padding-left: 30px
+      padding-right: 30px
+    +lg
+      padding-left: 20px
+      padding-right: 20px
+    +md
+      padding: 15px
+  &__close
+    position: absolute
+    top: 25px
+    right: 38px
+    +xl
+      right: 30px
+    +lg
+      right: 20px
+    +md
+      right: 15px
+      top: 15px
+  &__inner
+    padding: 50px 38px 55px
+    text-align: center
+    +xl
+      padding: 50px 30px
+    +lg
+      padding: 40px 20px
+    +md
+      padding: 30px 15px
+    +sm
+      padding: 20px 15px
+  &__form
+    margin-bottom: 50px
+    +xl
+      margin-bottom: 40px
+    +lg
+      margin-bottom: 30px
+    +md
+      margin-bottom: 15px
+  &__content-title
+    font-size: $fz-sm
+    margin-bottom: 12px
+    +md
+      margin-bottom: 6px
+  &__content-link
+    display: inline-block
+    color: $accent
+    font-size: $fz-sm
+    margin-bottom: 30px
+    font-weight: 500
+    +md
+      margin-bottom: 15px
+    +hover
+      text-decoration: underline
+  &__btn
+    +notlast
+      margin-bottom: 15px

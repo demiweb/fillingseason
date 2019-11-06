@@ -1,0 +1,94 @@
+<!-- begin section -->
+<section class="section section--lg">
+  <div class="container">
+    <div class="section__title text-center">
+      <h3 class="title title--h3-sm">Напишіть нам</h3>
+    </div>
+
+    <!-- begin contacts-form -->
+    <div class="form form--contacts">
+      <form>
+        <div class="grid">
+          <div class="_col _col-xs-6">
+            {{ mixins.input(
+              name = 'input',
+              mod = '',
+              type = 'text',
+              placeholder = 'Ваше ім’я',
+              value = '',
+              fieldClass = ''
+            ) }}
+
+            {{ mixins.input(
+              name = 'input',
+              mod = '',
+              type = 'email',
+              placeholder = 'Ваш Email',
+              value = '',
+              fieldClass = ''
+            ) }}
+          </div>
+
+          <div class="_col _col-xs-6">
+            {{ mixins.input(
+              name = 'textarea',
+              mod = 'textarea--full-h',
+              type = '',
+              placeholder = 'Текст повідомлення:',
+              value = '',
+              fieldClass = ''
+            ) }}
+          </div>
+        </div>
+
+        <div class="grid">
+          <div class="_col _col-xs-6">
+            {{ mixins.input(
+              name = 'input',
+              mod = '',
+              type = 'text',
+              placeholder = 'Web-site',
+              value = '',
+              fieldClass = ''
+            ) }}
+          </div>
+
+          <div class="_col _col-xs-6">
+            <div class="form__captcha">
+              {{ mixins.input(
+                name = 'input',
+                mod = 'input--short',
+                type = 'text',
+                placeholder = 'Код безпеки',
+                value = '',
+                fieldClass = ''
+              ) }}
+
+              <img class="js-lazy" alt="" src="" data-src="./img/captcha.jpg"/>
+            </div>
+          </div>
+
+          <div class="_col _col-xs-6">
+            {{ mixins.input(
+              name = 'input',
+              mod = '',
+              type = 'text',
+              placeholder = 'Тема листа:',
+              value = '',
+              fieldClass = ''
+            ) }}
+          </div>
+
+          <div class="_col _col-xs-6">
+            {{ mixins.btn(
+              title = 'Відправити повідомлення',
+              mod = 'btn--full btn--square'
+            ) }}
+          </div>
+        </div>
+      </form>
+    </div>
+    <!-- end contacts-form -->
+  </div>
+</section>
+<!-- end section -->

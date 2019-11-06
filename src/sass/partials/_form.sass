@@ -1,0 +1,46 @@
+.form
+  &__captcha
+    +flex(space-between, center)
+    .input
+      margin-bottom: 0 !important
+      margin-right: 10px
+  &__field
+    +notlast
+      margin-bottom: 1em
+  &__checkbox
+    font-size: $fz-sm
+    +flex(space-between, center)
+      
+  &--contacts
+    max-width: 775px
+    margin-left: auto
+    margin-right: auto
+    .input
+      +notlast
+        margin-bottom: 1em
+
+.input, .textarea
+  font-size: $fz-sm
+  color: $article-text
+  input, textarea
+    background-color: $white-dark
+    border: 1px solid  $gray-light
+    height: 60px
+    padding: 19px 20px
+    width: 100%
+    +tr(border-color .3s)
+    +placeholder
+      color: $gray
+    +sm
+      height: 50px
+      padding: 12px
+    &:focus
+      border-color: $article-text
+  &--short
+    width: 260px
+  &--full-h
+    height: 100%
+    input, textarea
+      height: 100% !important
+      +xs
+        min-height: 135px

@@ -1,0 +1,799 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>blog-page</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#fff" />
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="stylesheet" media="all" href="css/app.css" />
+  </head>
+  <body>
+    <!-- BEGIN content -->
+    <div class="out">
+      <!-- begin header -->
+      <header class="header">
+        <div class="container container--lg">
+          <div class="header__inner">
+            <div class="header__logo">
+              <a href="/" class="logo"> filling season </a>
+            </div>
+            <div class="header__nav js-menu" data-menu="menu">
+              <button class="header__close close js-menu-close"></button>
+              <div class="header__nav-in">
+                <!-- begin nav -->
+                <nav class="nav">
+                  <ul>
+                    <li><a href="#" class=" is-active">чоловіки</a>
+                      <ul>
+                        <li><a href="#">Футболки та шорти</a></li>
+                        <li><a href="#">Курточки та жилетки</a></li>
+                        <li><a href="#">Кофти, штани та костюми</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="#">Жінки</a></li>
+                    <li><a href="#">діти</a></li>
+                    <li><a href="#">Лайфстайл</a></li>
+                    <li><a href="#">спорт</a></li>
+                    <li><a href="#">футбол</a></li>
+                  </ul>
+                </nav>
+                <!-- end nav -->
+              </div>
+            </div>
+            <div class="header__controls">
+              <!-- begin header-controls -->
+              <div class="header-controls">
+                <div class="header-controls__item header-controls__search">
+                  <button class="js-popup-open" data-popup-target="search">
+                    <!-- begin icon-search -->
+                    <svg viewBox="0 0 52.966 52.966" class="icon icon-search" width="1.000em" height="1em">
+                      <path d="M51.704 51.273L36.845 35.82c3.79-3.801 6.138-9.041 6.138-14.82 0-11.58-9.42-21-21-21s-21 9.42-21 21 9.42 21 21 21c5.083 0 9.748-1.817 13.384-4.832l14.895 15.491a.998.998 0 001.414.028 1 1 0 00.028-1.414zM21.983 40c-10.477 0-19-8.523-19-19s8.523-19 19-19 19 8.523 19 19-8.524 19-19 19z" />
+                    </svg>
+                    <!-- end icon-search -->
+                  </button>
+                  <!-- begin tooltip -->
+                  <div class="tooltip js-popup" data-popup="search">
+                    <div class="header-search">
+                      <div class="header-search__top">
+                        <div class="header-search__input">
+                          <form>
+                            <button class="header-search__input-btn">
+                              <!-- begin icon-search -->
+                              <svg viewBox="0 0 52.966 52.966" class="icon icon-search" width="1.000em" height="1em">
+                                <path d="M51.704 51.273L36.845 35.82c3.79-3.801 6.138-9.041 6.138-14.82 0-11.58-9.42-21-21-21s-21 9.42-21 21 9.42 21 21 21c5.083 0 9.748-1.817 13.384-4.832l14.895 15.491a.998.998 0 001.414.028 1 1 0 00.028-1.414zM21.983 40c-10.477 0-19-8.523-19-19s8.523-19 19-19 19 8.523 19 19-8.524 19-19 19z" />
+                              </svg>
+                              <!-- end icon-search -->
+                            </button>
+                            <input type="text">
+                          </form>
+                          <button class="close js-popup-close header-search__close"></button>
+                        </div>
+                      </div>
+                      <div class="header-search__body">
+                        <div class="header-search__items">
+                          <!-- begin cart-tooltip-item -->
+                          <a href="#" class="header-search__item cart-tooltip-item">
+                            <span class="cart-tooltip-item__img">
+                              <img class="js-lazy" alt="" src="" data-src="./img/cart-sm.jpg" />
+                            </span>
+                            <span class="cart-tooltip-item__content">
+                              <span class="cart-tooltip-item__title">
+                                <span class="title title--h6">Куртка зимова</span>
+                              </span>
+                              <span class="cart-tooltip-item__meta">
+                                <span class="cart-tooltip-item__meta-item">Колір: білий</span>
+                                <span class="cart-tooltip-item__meta-item">Розмір: XS</span>
+                                <span class="cart-tooltip-item__meta-item">32 шт</span>
+                              </span>
+                            </span>
+                            <span class="cart-tooltip-item__price">
+                              <span class="price price-sm">$ 4890,00</span>
+                            </span>
+                          </a>
+                          <!-- end cart-tooltip-item -->
+                          <!-- begin cart-tooltip-item -->
+                          <a href="#" class="header-search__item cart-tooltip-item">
+                            <span class="cart-tooltip-item__img">
+                              <img class="js-lazy" alt="" src="" data-src="./img/cart-sm.jpg" />
+                            </span>
+                            <span class="cart-tooltip-item__content">
+                              <span class="cart-tooltip-item__title">
+                                <span class="title title--h6">Куртка зимова</span>
+                              </span>
+                              <span class="cart-tooltip-item__meta">
+                                <span class="cart-tooltip-item__meta-item">Колір: білий</span>
+                                <span class="cart-tooltip-item__meta-item">Розмір: XS</span>
+                                <span class="cart-tooltip-item__meta-item">32 шт</span>
+                              </span>
+                            </span>
+                            <span class="cart-tooltip-item__price">
+                              <span class="price price-sm">$ 4890,00</span>
+                            </span>
+                          </a>
+                          <!-- end cart-tooltip-item -->
+                          <!-- begin cart-tooltip-item -->
+                          <a href="#" class="header-search__item cart-tooltip-item">
+                            <span class="cart-tooltip-item__img">
+                              <img class="js-lazy" alt="" src="" data-src="./img/cart-sm.jpg" />
+                            </span>
+                            <span class="cart-tooltip-item__content">
+                              <span class="cart-tooltip-item__title">
+                                <span class="title title--h6">Куртка зимова</span>
+                              </span>
+                              <span class="cart-tooltip-item__meta">
+                                <span class="cart-tooltip-item__meta-item">Колір: білий</span>
+                                <span class="cart-tooltip-item__meta-item">Розмір: XS</span>
+                                <span class="cart-tooltip-item__meta-item">32 шт</span>
+                              </span>
+                            </span>
+                            <span class="cart-tooltip-item__price">
+                              <span class="price price-sm">$ 4890,00</span>
+                            </span>
+                          </a>
+                          <!-- end cart-tooltip-item -->
+                          <!-- begin cart-tooltip-item -->
+                          <a href="#" class="header-search__item cart-tooltip-item">
+                            <span class="cart-tooltip-item__img">
+                              <img class="js-lazy" alt="" src="" data-src="./img/cart-sm.jpg" />
+                            </span>
+                            <span class="cart-tooltip-item__content">
+                              <span class="cart-tooltip-item__title">
+                                <span class="title title--h6">Куртка зимова</span>
+                              </span>
+                              <span class="cart-tooltip-item__meta">
+                                <span class="cart-tooltip-item__meta-item">Колір: білий</span>
+                                <span class="cart-tooltip-item__meta-item">Розмір: XS</span>
+                                <span class="cart-tooltip-item__meta-item">32 шт</span>
+                              </span>
+                            </span>
+                            <span class="cart-tooltip-item__price">
+                              <span class="price price-sm">$ 4890,00</span>
+                            </span>
+                          </a>
+                          <!-- end cart-tooltip-item -->
+                          <!-- begin cart-tooltip-item -->
+                          <a href="#" class="header-search__item cart-tooltip-item">
+                            <span class="cart-tooltip-item__img">
+                              <img class="js-lazy" alt="" src="" data-src="./img/cart-sm.jpg" />
+                            </span>
+                            <span class="cart-tooltip-item__content">
+                              <span class="cart-tooltip-item__title">
+                                <span class="title title--h6">Куртка зимова</span>
+                              </span>
+                              <span class="cart-tooltip-item__meta">
+                                <span class="cart-tooltip-item__meta-item">Колір: білий</span>
+                                <span class="cart-tooltip-item__meta-item">Розмір: XS</span>
+                                <span class="cart-tooltip-item__meta-item">32 шт</span>
+                              </span>
+                            </span>
+                            <span class="cart-tooltip-item__price">
+                              <span class="price price-sm">$ 4890,00</span>
+                            </span>
+                          </a>
+                          <!-- end cart-tooltip-item -->
+                          <!-- begin cart-tooltip-item -->
+                          <a href="#" class="header-search__item cart-tooltip-item">
+                            <span class="cart-tooltip-item__img">
+                              <img class="js-lazy" alt="" src="" data-src="./img/cart-sm.jpg" />
+                            </span>
+                            <span class="cart-tooltip-item__content">
+                              <span class="cart-tooltip-item__title">
+                                <span class="title title--h6">Куртка зимова</span>
+                              </span>
+                              <span class="cart-tooltip-item__meta">
+                                <span class="cart-tooltip-item__meta-item">Колір: білий</span>
+                                <span class="cart-tooltip-item__meta-item">Розмір: XS</span>
+                                <span class="cart-tooltip-item__meta-item">32 шт</span>
+                              </span>
+                            </span>
+                            <span class="cart-tooltip-item__price">
+                              <span class="price price-sm">$ 4890,00</span>
+                            </span>
+                          </a>
+                          <!-- end cart-tooltip-item -->
+                          <!-- begin cart-tooltip-item -->
+                          <a href="#" class="header-search__item cart-tooltip-item">
+                            <span class="cart-tooltip-item__img">
+                              <img class="js-lazy" alt="" src="" data-src="./img/cart-sm.jpg" />
+                            </span>
+                            <span class="cart-tooltip-item__content">
+                              <span class="cart-tooltip-item__title">
+                                <span class="title title--h6">Куртка зимова</span>
+                              </span>
+                              <span class="cart-tooltip-item__meta">
+                                <span class="cart-tooltip-item__meta-item">Колір: білий</span>
+                                <span class="cart-tooltip-item__meta-item">Розмір: XS</span>
+                                <span class="cart-tooltip-item__meta-item">32 шт</span>
+                              </span>
+                            </span>
+                            <span class="cart-tooltip-item__price">
+                              <span class="price price-sm">$ 4890,00</span>
+                            </span>
+                          </a>
+                          <!-- end cart-tooltip-item -->
+                          <!-- begin cart-tooltip-item -->
+                          <a href="#" class="header-search__item cart-tooltip-item">
+                            <span class="cart-tooltip-item__img">
+                              <img class="js-lazy" alt="" src="" data-src="./img/cart-sm.jpg" />
+                            </span>
+                            <span class="cart-tooltip-item__content">
+                              <span class="cart-tooltip-item__title">
+                                <span class="title title--h6">Куртка зимова</span>
+                              </span>
+                              <span class="cart-tooltip-item__meta">
+                                <span class="cart-tooltip-item__meta-item">Колір: білий</span>
+                                <span class="cart-tooltip-item__meta-item">Розмір: XS</span>
+                                <span class="cart-tooltip-item__meta-item">32 шт</span>
+                              </span>
+                            </span>
+                            <span class="cart-tooltip-item__price">
+                              <span class="price price-sm">$ 4890,00</span>
+                            </span>
+                          </a>
+                          <!-- end cart-tooltip-item -->
+                          <!-- begin cart-tooltip-item -->
+                          <a href="#" class="header-search__item cart-tooltip-item">
+                            <span class="cart-tooltip-item__img">
+                              <img class="js-lazy" alt="" src="" data-src="./img/cart-sm.jpg" />
+                            </span>
+                            <span class="cart-tooltip-item__content">
+                              <span class="cart-tooltip-item__title">
+                                <span class="title title--h6">Куртка зимова</span>
+                              </span>
+                              <span class="cart-tooltip-item__meta">
+                                <span class="cart-tooltip-item__meta-item">Колір: білий</span>
+                                <span class="cart-tooltip-item__meta-item">Розмір: XS</span>
+                                <span class="cart-tooltip-item__meta-item">32 шт</span>
+                              </span>
+                            </span>
+                            <span class="cart-tooltip-item__price">
+                              <span class="price price-sm">$ 4890,00</span>
+                            </span>
+                          </a>
+                          <!-- end cart-tooltip-item -->
+                          <!-- begin cart-tooltip-item -->
+                          <a href="#" class="header-search__item cart-tooltip-item">
+                            <span class="cart-tooltip-item__img">
+                              <img class="js-lazy" alt="" src="" data-src="./img/cart-sm.jpg" />
+                            </span>
+                            <span class="cart-tooltip-item__content">
+                              <span class="cart-tooltip-item__title">
+                                <span class="title title--h6">Куртка зимова</span>
+                              </span>
+                              <span class="cart-tooltip-item__meta">
+                                <span class="cart-tooltip-item__meta-item">Колір: білий</span>
+                                <span class="cart-tooltip-item__meta-item">Розмір: XS</span>
+                                <span class="cart-tooltip-item__meta-item">32 шт</span>
+                              </span>
+                            </span>
+                            <span class="cart-tooltip-item__price">
+                              <span class="price price-sm">$ 4890,00</span>
+                            </span>
+                          </a>
+                          <!-- end cart-tooltip-item -->
+                        </div>
+                      </div>
+                      <div class="header-search__bottom">
+                        <a href="#" class="link">Всі результати (32)</a>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- end tooltip -->
+                </div>
+                <div class="header-controls__item">
+                  <a href="#">
+                    <!-- begin icon-like -->
+                    <svg viewBox="0 0 51.997 51.997" class="icon icon-like" width="1.000em" height="1em">
+                      <path d="M51.911 16.242c-.759-8.354-6.672-14.415-14.072-14.415-4.93 0-9.444 2.653-11.984 6.905-2.517-4.307-6.846-6.906-11.697-6.906C6.759 1.826.845 7.887.087 16.241c-.06.369-.306 2.311.442 5.478 1.078 4.568 3.568 8.723 7.199 12.013l18.115 16.439 18.426-16.438c3.631-3.291 6.121-7.445 7.199-12.014.748-3.166.502-5.108.443-5.477zm-2.39 5.019c-.984 4.172-3.265 7.973-6.59 10.985L25.855 47.481 9.072 32.25c-3.331-3.018-5.611-6.818-6.596-10.99-.708-2.997-.417-4.69-.416-4.701l.015-.101c.65-7.319 5.731-12.632 12.083-12.632 4.687 0 8.813 2.88 10.771 7.515l.921 2.183.921-2.183c1.927-4.564 6.271-7.514 11.069-7.514 6.351 0 11.433 5.313 12.096 12.727.002.016.293 1.71-.415 4.707z" />
+                    </svg>
+                    <!-- end icon-like -->
+                  </a>
+                </div>
+                <div class="header-controls__item header-controls__cart">
+                  <button class="js-popup-open" data-popup-target="cart">
+                    <!-- begin icon-shopping-bag -->
+                    <svg viewBox="0 0 511.808 511.808" class="icon icon-shopping-bag" width="1.000em" height="1em">
+                      <path d="M477.511 491.424l-26.48-348.832c-.624-8.336-7.584-14.784-15.952-14.784H76.391c-8.368 0-15.328 6.448-15.952 14.8l-26.704 352a16.013 16.013 0 004.224 12.08 15.996 15.996 0 0011.728 5.12h412.432c8.832 0 16-7.168 16-16.016 0-1.504-.208-2.976-.608-4.368zM66.935 479.808l24.288-320h329.024l24.288 320h-377.6z" />
+                      <path d="M255.735 0c-70.576 0-128 57.44-128 128.032v63.776c0 8.832 7.168 16 16 16s16-7.168 16-16v-63.776c0-52.96 43.056-96.032 96-96.032s96 43.072 96 96.032v63.776c0 8.832 7.168 16 16 16s16-7.168 16-16v-63.776C383.735 57.44 326.311 0 255.735 0z" />
+                    </svg>
+                    <!-- end icon-shopping-bag -->
+                  </button>
+                  <!-- begin tooltip -->
+                  <div class="tooltip js-popup" data-popup="cart">
+                    <div class="header-cart">
+                      <div class="header-cart__top"> Кошик <span>(2)</span>
+                        <button class="header-cart__close close js-popup-close"></button>
+                      </div>
+                      <div class="header-cart__inner">
+                        <div class="header-cart__items">
+                          <!-- begin cart-tooltip-item -->
+                          <a href="#" class="header-cart__item cart-tooltip-item">
+                            <span class="cart-tooltip-item__img">
+                              <img class="js-lazy" alt="" src="" data-src="./img/cart-sm.jpg" />
+                            </span>
+                            <span class="cart-tooltip-item__content">
+                              <span class="cart-tooltip-item__title">
+                                <span class="title title--h6">Куртка зимова</span>
+                              </span>
+                              <span class="cart-tooltip-item__meta">
+                                <span class="cart-tooltip-item__meta-item">Колір: білий</span>
+                                <span class="cart-tooltip-item__meta-item">Розмір: XS</span>
+                                <span class="cart-tooltip-item__meta-item">32 шт</span>
+                              </span>
+                            </span>
+                            <span class="cart-tooltip-item__price">
+                              <span class="price price--sm">$ 4890,00</span>
+                            </span>
+                          </a>
+                          <!-- end cart-tooltip-item -->
+                          <!-- begin cart-tooltip-item -->
+                          <a href="#" class="header-cart__item cart-tooltip-item">
+                            <span class="cart-tooltip-item__img">
+                              <img class="js-lazy" alt="" src="" data-src="./img/cart-sm.jpg" />
+                            </span>
+                            <span class="cart-tooltip-item__content">
+                              <span class="cart-tooltip-item__title">
+                                <span class="title title--h6">Куртка зимова</span>
+                              </span>
+                              <span class="cart-tooltip-item__meta">
+                                <span class="cart-tooltip-item__meta-item">Колір: білий</span>
+                                <span class="cart-tooltip-item__meta-item">Розмір: XS</span>
+                                <span class="cart-tooltip-item__meta-item">32 шт</span>
+                              </span>
+                            </span>
+                            <span class="cart-tooltip-item__price">
+                              <span class="price price--sm">$ 4890,00</span>
+                            </span>
+                          </a>
+                          <!-- end cart-tooltip-item -->
+                          <!-- begin cart-tooltip-item -->
+                          <a href="#" class="header-cart__item cart-tooltip-item">
+                            <span class="cart-tooltip-item__img">
+                              <img class="js-lazy" alt="" src="" data-src="./img/cart-sm.jpg" />
+                            </span>
+                            <span class="cart-tooltip-item__content">
+                              <span class="cart-tooltip-item__title">
+                                <span class="title title--h6">Куртка зимова</span>
+                              </span>
+                              <span class="cart-tooltip-item__meta">
+                                <span class="cart-tooltip-item__meta-item">Колір: білий</span>
+                                <span class="cart-tooltip-item__meta-item">Розмір: XS</span>
+                                <span class="cart-tooltip-item__meta-item">32 шт</span>
+                              </span>
+                            </span>
+                            <span class="cart-tooltip-item__price">
+                              <span class="price price--sm">$ 4890,00</span>
+                            </span>
+                          </a>
+                          <!-- end cart-tooltip-item -->
+                          <!-- begin cart-tooltip-item -->
+                          <a href="#" class="header-cart__item cart-tooltip-item">
+                            <span class="cart-tooltip-item__img">
+                              <img class="js-lazy" alt="" src="" data-src="./img/cart-sm.jpg" />
+                            </span>
+                            <span class="cart-tooltip-item__content">
+                              <span class="cart-tooltip-item__title">
+                                <span class="title title--h6">Куртка зимова</span>
+                              </span>
+                              <span class="cart-tooltip-item__meta">
+                                <span class="cart-tooltip-item__meta-item">Колір: білий</span>
+                                <span class="cart-tooltip-item__meta-item">Розмір: XS</span>
+                                <span class="cart-tooltip-item__meta-item">32 шт</span>
+                              </span>
+                            </span>
+                            <span class="cart-tooltip-item__price">
+                              <span class="price price--sm">$ 4890,00</span>
+                            </span>
+                          </a>
+                          <!-- end cart-tooltip-item -->
+                          <!-- begin cart-tooltip-item -->
+                          <a href="#" class="header-cart__item cart-tooltip-item">
+                            <span class="cart-tooltip-item__img">
+                              <img class="js-lazy" alt="" src="" data-src="./img/cart-sm.jpg" />
+                            </span>
+                            <span class="cart-tooltip-item__content">
+                              <span class="cart-tooltip-item__title">
+                                <span class="title title--h6">Куртка зимова</span>
+                              </span>
+                              <span class="cart-tooltip-item__meta">
+                                <span class="cart-tooltip-item__meta-item">Колір: білий</span>
+                                <span class="cart-tooltip-item__meta-item">Розмір: XS</span>
+                                <span class="cart-tooltip-item__meta-item">32 шт</span>
+                              </span>
+                            </span>
+                            <span class="cart-tooltip-item__price">
+                              <span class="price price--sm">$ 4890,00</span>
+                            </span>
+                          </a>
+                          <!-- end cart-tooltip-item -->
+                          <!-- begin cart-tooltip-item -->
+                          <a href="#" class="header-cart__item cart-tooltip-item">
+                            <span class="cart-tooltip-item__img">
+                              <img class="js-lazy" alt="" src="" data-src="./img/cart-sm.jpg" />
+                            </span>
+                            <span class="cart-tooltip-item__content">
+                              <span class="cart-tooltip-item__title">
+                                <span class="title title--h6">Куртка зимова</span>
+                              </span>
+                              <span class="cart-tooltip-item__meta">
+                                <span class="cart-tooltip-item__meta-item">Колір: білий</span>
+                                <span class="cart-tooltip-item__meta-item">Розмір: XS</span>
+                                <span class="cart-tooltip-item__meta-item">32 шт</span>
+                              </span>
+                            </span>
+                            <span class="cart-tooltip-item__price">
+                              <span class="price price--sm">$ 4890,00</span>
+                            </span>
+                          </a>
+                          <!-- end cart-tooltip-item -->
+                          <!-- begin cart-tooltip-item -->
+                          <a href="#" class="header-cart__item cart-tooltip-item">
+                            <span class="cart-tooltip-item__img">
+                              <img class="js-lazy" alt="" src="" data-src="./img/cart-sm.jpg" />
+                            </span>
+                            <span class="cart-tooltip-item__content">
+                              <span class="cart-tooltip-item__title">
+                                <span class="title title--h6">Куртка зимова</span>
+                              </span>
+                              <span class="cart-tooltip-item__meta">
+                                <span class="cart-tooltip-item__meta-item">Колір: білий</span>
+                                <span class="cart-tooltip-item__meta-item">Розмір: XS</span>
+                                <span class="cart-tooltip-item__meta-item">32 шт</span>
+                              </span>
+                            </span>
+                            <span class="cart-tooltip-item__price">
+                              <span class="price price--sm">$ 4890,00</span>
+                            </span>
+                          </a>
+                          <!-- end cart-tooltip-item -->
+                          <!-- begin cart-tooltip-item -->
+                          <a href="#" class="header-cart__item cart-tooltip-item">
+                            <span class="cart-tooltip-item__img">
+                              <img class="js-lazy" alt="" src="" data-src="./img/cart-sm.jpg" />
+                            </span>
+                            <span class="cart-tooltip-item__content">
+                              <span class="cart-tooltip-item__title">
+                                <span class="title title--h6">Куртка зимова</span>
+                              </span>
+                              <span class="cart-tooltip-item__meta">
+                                <span class="cart-tooltip-item__meta-item">Колір: білий</span>
+                                <span class="cart-tooltip-item__meta-item">Розмір: XS</span>
+                                <span class="cart-tooltip-item__meta-item">32 шт</span>
+                              </span>
+                            </span>
+                            <span class="cart-tooltip-item__price">
+                              <span class="price price--sm">$ 4890,00</span>
+                            </span>
+                          </a>
+                          <!-- end cart-tooltip-item -->
+                          <!-- begin cart-tooltip-item -->
+                          <a href="#" class="header-cart__item cart-tooltip-item">
+                            <span class="cart-tooltip-item__img">
+                              <img class="js-lazy" alt="" src="" data-src="./img/cart-sm.jpg" />
+                            </span>
+                            <span class="cart-tooltip-item__content">
+                              <span class="cart-tooltip-item__title">
+                                <span class="title title--h6">Куртка зимова</span>
+                              </span>
+                              <span class="cart-tooltip-item__meta">
+                                <span class="cart-tooltip-item__meta-item">Колір: білий</span>
+                                <span class="cart-tooltip-item__meta-item">Розмір: XS</span>
+                                <span class="cart-tooltip-item__meta-item">32 шт</span>
+                              </span>
+                            </span>
+                            <span class="cart-tooltip-item__price">
+                              <span class="price price--sm">$ 4890,00</span>
+                            </span>
+                          </a>
+                          <!-- end cart-tooltip-item -->
+                          <!-- begin cart-tooltip-item -->
+                          <a href="#" class="header-cart__item cart-tooltip-item">
+                            <span class="cart-tooltip-item__img">
+                              <img class="js-lazy" alt="" src="" data-src="./img/cart-sm.jpg" />
+                            </span>
+                            <span class="cart-tooltip-item__content">
+                              <span class="cart-tooltip-item__title">
+                                <span class="title title--h6">Куртка зимова</span>
+                              </span>
+                              <span class="cart-tooltip-item__meta">
+                                <span class="cart-tooltip-item__meta-item">Колір: білий</span>
+                                <span class="cart-tooltip-item__meta-item">Розмір: XS</span>
+                                <span class="cart-tooltip-item__meta-item">32 шт</span>
+                              </span>
+                            </span>
+                            <span class="cart-tooltip-item__price">
+                              <span class="price price--sm">$ 4890,00</span>
+                            </span>
+                          </a>
+                          <!-- end cart-tooltip-item -->
+                        </div>
+                        <div class="header-cart__amount">
+                          <div>Сума замовлення:</div>
+                          <div class="price price--inherit price--sm">9690,00 ₴</div>
+                        </div>
+                        <div class="header-cart__amount-pay">
+                          <div class="accent">До сплати:</div>
+                          <div class="price price--inherit price--medium">9690,00 ₴</div>
+                        </div>
+                        <div class="header-cart__btn">
+                          <a href="#" class="btn btn--full btn--square">Оформити замовлення</a>
+                        </div>
+                        <div class="header-cart__link">
+                          <a class="link-accent" href="#">Перейти до кошика</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- end tooltip -->
+                </div>
+                <div class="header-controls__item">
+                  <button class="js-popup-open" data-popup-target="login">
+                    <!-- begin icon-user -->
+                    <svg viewBox="0 0 513.323 513.323" class="icon icon-user" width="1.000em" height="1em">
+                      <path d="M256.661 257.323c-135.275 0-245.333 110.059-245.333 245.333 0 5.888 4.779 10.667 10.667 10.667s10.667-4.779 10.667-10.667c0-123.52 100.48-224 224-224s224 100.48 224 224c0 5.888 4.779 10.667 10.667 10.667s10.667-4.779 10.667-10.667c-.001-135.296-110.06-245.333-245.335-245.333zM256.661 0c-64.683 0-117.333 52.629-117.333 117.333s52.651 117.333 117.333 117.333 117.333-52.629 117.333-117.333S321.344 0 256.661 0zm0 213.333c-52.928 0-96-43.072-96-96s43.072-96 96-96 96 43.072 96 96-43.072 96-96 96z" />
+                    </svg>
+                    <!-- end icon-user -->
+                  </button>
+                  <!-- begin popup -->
+                  <div class="popup js-popup" data-popup="login">
+                    <div class="popup__top">
+                      <h3 class="title title--h3-sm">Увійти</h3>
+                      <button class="popup__close close js-popup-close"></button>
+                    </div>
+                    <div class="popup__inner">
+                      <div class="popup__form">
+                        <!-- begin form -->
+                        <div class="form">
+                          <form>
+                            <div class="form__field">
+                              <!-- begin input -->
+                              <div class="input">
+                                <input type="email" placeholder="Електрона адреса">
+                              </div>
+                              <!-- end input -->
+                            </div>
+                            <div class="form__field">
+                              <!-- begin input -->
+                              <div class="input">
+                                <input type="password" placeholder="Пароль">
+                              </div>
+                              <!-- end input -->
+                            </div>
+                            <div class="form__field">
+                              <div class="form__checkbox">
+                                <!-- begin checkbox -->
+                                <label class="checkbox">
+                                  <input type="checkbox">
+                                  <span>Не виходити з системи</span>
+                                </label>
+                                <!-- end checkbox -->
+                                <a class="gray" href="#">Забули пароль?</a>
+                              </div>
+                            </div>
+                            <div class="popup__content-title">Не маєте профілю?</div>
+                            <a class="popup__content-link" href="#">Реєструйтесь</a>
+                            <div class="popup__btns">
+                              <div class="popup__btn">
+                                <button class="btn btn--full btn--square btn--text">Увійти</button>
+                              </div>
+                              <div class="popup__btn">
+                                <button class="btn btn--full btn--square btn--face">Увійти через Facebook</button>
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+                        <!-- end form -->
+                      </div>
+                    </div>
+                  </div>
+                  <!-- end popup -->
+                </div>
+                <div class="header-controls__item header-controls__lang">
+                  <button class="lang-btn js-popup-open" data-popup-target="lang">Ua</button>
+                  <!-- begin tooltip -->
+                  <div class="tooltip js-popup" data-popup="lang">
+                    <!-- begin lang-list -->
+                    <div class="lang-list">
+                      <ul>
+                        <li><a href="#" class=" is-active">(ua) Українська</a></li>
+                        <li><a href="#">(en) English</a></li>
+                        <li><a href="#">(ru) Русский</a></li>
+                      </ul>
+                    </div>
+                    <!-- end lang-list -->
+                  </div>
+                  <!-- end tooltip -->
+                </div>
+              </div>
+              <!-- end header-controls -->
+            </div>
+            <div class="header__burger">
+              <button class="burger js-burger" data-menu-target="menu"><span></span></button>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- end header -->
+      <!-- begin main -->
+      <main class="main">
+        <!-- begin section -->
+        <section class="section section--lg">
+          <!-- begin article -->
+          <div class="article">
+            <div class="container">
+              <article>
+                <div class="article__date">02-03-2019</div>
+                <h2>Нові гірнолижні комплекти <br> Filling Season</h2>
+                <div class="article__subttl">Сторителлинг - причина, по которой некоторіе продакт-менеджері, маркотологи и дизайнері делают скачок от хорошего к великому</div>
+              </article>
+            </div>
+            <img class="js-lazy" alt="" src="" data-src="./img/boy-1835416_1920.jpg" />
+            <div class="container">
+              <article>
+                <blockquote>
+                  <p>«Давно выяснено, что при оценке дизайна и композиции текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает текст»</p>
+                  <ul>
+                    <li>Стив Джобс.</li>
+                  </ul>
+                </blockquote>
+              </article>
+              <article>
+                <p>Есть много вариантов Lorem Ipsum, но большинство из них имеет не всегда приемлемые модификации, например, юмористические вставки или слова, которые даже отдалённо не напоминают латынь. Если вам нужен Lorem Ipsum для серьёзного проекта, вы используюте один и тот же текст, который они просто повторяют, пока не достигнут нужный объём. Это:</p>
+                <ul>
+                  <li>Есть много вариантов Lorem Ipsum, но большинство из них имеет смысл.</li>
+                  <li>Есть много вариантов Lorem Ipsum, но большинство из них имеет смысл.</li>
+                  <li>Есть много вариантов Lorem Ipsum, но большинство из них имеет не всегда правдивую информацию, а это необходимо для удленения строки в 2 раза.</li>
+                  <li>Есть много вариантов Lorem Ipsum, но большинство из них имеет смысл...</li>
+                </ul>
+              </article>
+            </div>
+          </div>
+          <!-- end article -->
+        </section>
+        <!-- end section -->
+        <!-- begin section -->
+        <section class="section">
+          <div class="section__title">
+            <div class="container">
+              <h3 class="title title--h3-sm">Інші новини</h3>
+            </div>
+          </div>
+          <div class="container">
+            <div class="section__items">
+              <div class="grid">
+                <div class="_col _col-sm-6">
+                  <!-- begin news-item -->
+                  <a href="#" class="news-item js-lazy" data-background-image="./img/news-img.jpg">
+                    <span class="news-item__content">
+                      <span class="news-item__upttl">02-03-2019</span>
+                      <span class="news-item__title">
+                        <span class="title title--h3">Огляд юнацького чемпіонату з мініфутболу</span>
+                      </span>
+                    </span>
+                  </a>
+                  <!-- end news-item -->
+                </div>
+                <div class="_col _col-sm-6">
+                  <!-- begin news-item -->
+                  <a href="#" class="news-item js-lazy" data-background-image="./img/news-img.jpg">
+                    <span class="news-item__content">
+                      <span class="news-item__upttl">02-03-2019</span>
+                      <span class="news-item__title">
+                        <span class="title title--h3">Огляд юнацького чемпіонату з мініфутболу</span>
+                      </span>
+                    </span>
+                  </a>
+                  <!-- end news-item -->
+                </div>
+                <div class="_col _col-sm-6">
+                  <!-- begin news-item -->
+                  <a href="#" class="news-item js-lazy" data-background-image="./img/news-img.jpg">
+                    <span class="news-item__content">
+                      <span class="news-item__upttl">02-03-2019</span>
+                      <span class="news-item__title">
+                        <span class="title title--h3">Огляд юнацького чемпіонату з мініфутболу</span>
+                      </span>
+                    </span>
+                  </a>
+                  <!-- end news-item -->
+                </div>
+                <div class="_col _col-sm-6">
+                  <!-- begin news-item -->
+                  <a href="#" class="news-item js-lazy" data-background-image="./img/news-img.jpg">
+                    <span class="news-item__content">
+                      <span class="news-item__upttl">02-03-2019</span>
+                      <span class="news-item__title">
+                        <span class="title title--h3">Огляд юнацького чемпіонату з мініфутболу</span>
+                      </span>
+                    </span>
+                  </a>
+                  <!-- end news-item -->
+                </div>
+              </div>
+            </div>
+            <div class="section__btn">
+              <button class="btn btn--transp-accent">Завантажити ще</button>
+            </div>
+          </div>
+        </section>
+        <!-- end section -->
+      </main>
+      <!-- end main -->
+      <!-- begin footer -->
+      <footer class="footer">
+        <div class="container">
+          <div class="footer__top">
+            <div class="footer__inner">
+              <div class="footer__contacts">
+                <small>Із запитаннями:</small>
+                <a href="tel:+380500505050">+38 (050) 050 5050;</a>
+                <a href="tel:+380500505050">+38 (050) 050 5050;</a>
+              </div>
+              <div class="footer__social">
+                <!-- begin social -->
+                <div class="social">
+                  <ul>
+                    <li><a href="#">
+                        <!-- begin icon-facebook-logo -->
+                        <svg width="1.000em" height="1em" viewBox="0 0 96.124 96.123" class="icon icon-facebook-logo">
+                          <path d="M72.089.02L59.624 0C45.62 0 36.57 9.285 36.57 23.656v10.907H24.037a1.96 1.96 0 00-1.96 1.961v15.803a1.96 1.96 0 001.96 1.96H36.57v39.876a1.96 1.96 0 001.96 1.96h16.352a1.96 1.96 0 001.96-1.96V54.287h14.654a1.96 1.96 0 001.96-1.96l.006-15.803a1.963 1.963 0 00-1.961-1.961H56.842v-9.246c0-4.444 1.059-6.7 6.848-6.7l8.397-.003a1.96 1.96 0 001.959-1.96V1.98A1.96 1.96 0 0072.089.02z" />
+                        </svg>
+                        <!-- end icon-facebook-logo -->
+                      </a></li>
+                    <li><a href="#">
+                        <!-- begin icon-instagram -->
+                        <svg viewBox="0 0 300 300" class="icon icon-instagram" width="1.000em" height="1em">
+                          <path d="M38.52.012h222.978C282.682.012 300 17.336 300 38.52v222.978c0 21.178-17.318 38.49-38.502 38.49H38.52c-21.184 0-38.52-17.313-38.52-38.49V38.52C0 17.336 17.336.012 38.52.012zm180.026 33.317c-7.438 0-13.505 6.091-13.505 13.525v32.314c0 7.437 6.067 13.514 13.505 13.514h33.903c7.426 0 13.506-6.077 13.506-13.514V46.854c0-7.434-6.08-13.525-13.506-13.525h-33.903zm47.538 93.539h-26.396a87.715 87.715 0 013.86 25.759c0 49.882-41.766 90.34-93.266 90.34-51.487 0-93.254-40.458-93.254-90.34 0-8.963 1.37-17.584 3.861-25.759H33.35V253.6c0 6.563 5.359 11.902 11.916 11.902h208.907c6.563 0 11.911-5.339 11.911-11.902V126.868zm-115.801-35.89c-33.26 0-60.24 26.128-60.24 58.388 0 32.227 26.98 58.375 60.24 58.375 33.278 0 60.259-26.148 60.259-58.375 0-32.261-26.981-58.388-60.259-58.388z" />
+                        </svg>
+                        <!-- end icon-instagram -->
+                      </a></li>
+                    <li><a href="#">
+                        <!-- begin icon-linked-in-logo-of-two-letters -->
+                        <svg width="1.000em" height="1em" viewBox="0 0 552.77 552.77" class="icon icon-linked-in-logo-of-two-letters">
+                          <path d="M17.95 528.854h71.861c9.914 0 17.95-8.037 17.95-17.951V196.8c0-9.915-8.036-17.95-17.95-17.95H17.95C8.035 178.85 0 186.885 0 196.8v314.103c0 9.913 8.035 17.951 17.95 17.951zM17.95 123.629h71.861c9.914 0 17.95-8.036 17.95-17.95V41.866c0-9.914-8.036-17.95-17.95-17.95H17.95C8.035 23.916 0 31.952 0 41.866v63.813c0 9.914 8.035 17.95 17.95 17.95zM525.732 215.282c-10.098-13.292-24.988-24.223-44.676-32.791-19.688-8.562-41.42-12.846-65.197-12.846-48.268 0-89.168 18.421-122.699 55.27-6.672 7.332-11.523 5.729-11.523-4.186V196.8c0-9.915-8.037-17.95-17.951-17.95h-64.192c-9.915 0-17.95 8.035-17.95 17.95v314.103c0 9.914 8.036 17.951 17.95 17.951h71.861c9.915 0 17.95-8.037 17.95-17.951V401.666c0-45.508 2.748-76.701 8.244-93.574 5.494-16.873 15.66-30.422 30.488-40.649 14.83-10.227 31.574-15.343 50.24-15.343 14.572 0 27.037 3.58 37.393 10.741 10.355 7.16 17.834 17.19 22.436 30.104 4.604 12.912 6.904 41.354 6.904 85.33v132.627c0 9.914 8.035 17.951 17.949 17.951h71.861c9.914 0 17.949-8.037 17.949-17.951V333.02c0-31.445-1.982-55.607-5.941-72.48s-10.992-31.959-21.096-45.258z" />
+                        </svg>
+                        <!-- end icon-linked-in-logo-of-two-letters -->
+                      </a></li>
+                  </ul>
+                </div>
+                <!-- end social -->
+              </div>
+            </div>
+          </div>
+          <div class="footer__bottom">
+            <div class="footer__inner">
+              <div class="footer__nav">
+                <!-- begin nav -->
+                <nav class="nav nav--footer">
+                  <ul>
+                    <li><a href="#">Каталог</a></li>
+                    <li><a href="#">Клуб FS</a></li>
+                    <li><a href="#">Програма лояльності</a></li>
+                    <li><a href="#">Програма тренер</a></li>
+                    <li><a href="#">Партнерам</a></li>
+                    <li><a href="#">Технології</a></li>
+                    <li><a href="#">Компанія</a></li>
+                    <li><a href="#">Новини</a></li>
+                    <li><a href="#">Допомога</a></li>
+                  </ul>
+                </nav>
+                <!-- end nav -->
+              </div>
+            </div>
+          </div>
+          <div class="footer__inner">
+            <div class="footer__copy">
+              <sup>&copy;</sup> тм «filling season» 2019 </div>
+          </div>
+        </div>
+      </footer>
+      <!-- end footer -->
+    </div>
+    <!-- END content -->
+    <!-- BEGIN scripts -->
+    <script type="text/javascript" src="js/app.js"></script>
+    <!-- END scripts -->
+  </body>
+</html>

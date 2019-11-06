@@ -1,0 +1,52 @@
+.catalog-page
+  +flex()
+  +lg
+    display: block
+  &__aside
+    width: 320px
+    padding-right: 10px
+    +lg
+      position: fixed
+      top: $header-height-lg
+      z-index: 10
+      background-color: rgba($black, .7)
+      bottom: 0
+      left: 0
+      right: 0
+      width: auto
+      padding: 0
+      +hidden
+      +ready
+        +tr(opacity .3s, visibility .3s)
+      &.is-active
+        +visible
+        .aside
+          transform: translate(0, 0)
+  &__content
+    width: calc(100% - 440px)
+    padding-left: 10px
+    margin-left: 120px
+    +xl
+      margin-left: 0
+      width: calc(100% - 320px)
+    +lg
+      width: auto
+      padding-left: 0
+  &__aside-toggle
+    display: none
+    padding-top: 25px
+    .burger
+      margin-right: 10px
+    +lg
+      display: flex
+      align-items: center
+
+
+.catalog
+  &__top
+    +flex(space-between, center)
+    margin-bottom: 40px
+    +xl
+      margin-bottom: 30px
+    +md
+      margin-bottom: 15px

@@ -26,11 +26,12 @@
     width: 25%
     display: block
   &__meta-item
-    display: block
-    color: $gray
+    display: block    
     font-size: $fz-xs
     +notlast
       margin-bottom: 8px
+    &:not(.is-color-text)
+      color: $gray
   &__title
     display: block
     margin-bottom: 8px
@@ -60,7 +61,7 @@
     @extend .cart-tooltip-item__meta-item
   &__title
     @extend .cart-tooltip-item__title
-  &__del
+  &__btn
     position: absolute
     z-index: 1
     bottom: 30px
@@ -111,3 +112,21 @@
     +sm
       margin-bottom: 10px
 
+.cart
+  +flex(flex-start, normal, row, wrap)
+  &__items
+    width: percentage(765/1315)
+    padding-right: 10px
+    +md
+      width: 100%
+      padding-right: 0
+  &__meta
+    width: percentage(430/1315)
+    margin-left: percentage(120/1315)
+    padding-left: 10px
+    +lg
+      margin-left: 0
+      width: percentage(550/1315)
+    +md
+      width: 100%
+      padding-left: 0

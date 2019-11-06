@@ -1,0 +1,61 @@
+.article
+  font-size: em(21)
+  color: $article-text
+  h1, h2, h3, h4, h5, h6, p, article, img, ul, ol
+    +notlast
+      margin-bottom: 40px
+      +xl
+        margin-bottom: 30px
+      +md
+        margin-bottom: 15px
+  h1, h2, h3, h4, h5, h6
+    color: $c-text
+  h2
+    @extend .title
+    +css-lock(28, 55, 320, 1399, font-size)
+  img
+    width: 100%
+  h2
+    font-weight: 700
+  h3
+    @extend .title
+    font-size: 1em
+  article
+    max-width: 875px
+    margin-left: auto
+    margin-right: auto
+  ul
+    li
+      &::before
+        content: '-'
+        display: inline-block
+        margin-right: .5em
+      +notlast
+        margin-bottom: 40px
+        +xl
+          margin-bottom: 30px
+        +md
+          margin-bottom: 15px
+  blockquote
+    color: $c-text
+    font-weight: 700
+  &__subttl
+    color: $c-text
+    margin-left: auto
+    margin-right: auto
+    max-width: 985px
+    margin-bottom: 40px
+    +xl
+      margin-bottom: 30px
+    +lg
+      br
+        display: none
+    +md
+      margin-bottom: 15px
+  &__date
+    color: $gray
+    font-size: em(24, 21)
+    margin-bottom: 15px
+    +md
+      margin-bottom: 10px
+    
