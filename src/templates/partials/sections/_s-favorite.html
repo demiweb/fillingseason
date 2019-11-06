@@ -1,0 +1,73 @@
+<!-- begin section -->
+<section class="section pt-0">
+  <div class="section__top">
+    <div class="container">
+      <h3 class="title title--h3-sm">Мої вподобання (32)</h3>
+    </div>
+  </div>
+  
+  <div class="container">
+    <!-- begin favorites -->
+    <div class="favorites">
+      <div class="favorites__items">
+        {% for i in range(0, 3) %}
+        <!-- begin cart-item -->
+        <div class="cart-item">
+          <a href="#" class="cart-item__inner">
+            <span class="cart-item__img">
+              <img class="js-lazy" alt="" src="" data-src="./img/cart-md.jpg"/>
+            </span>
+
+            <span class="cart-item__content">
+              <span class="cart-item__title">
+                <span class="title title--h5">Куртка зимова</span>
+              </span>
+
+              <span class="cart-item__meta">
+                <span class="cart-item__meta-item">Колір: білий</span>
+                <span class="cart-item__meta-item">Розмір: XS</span>
+              </span>
+            </span>
+
+            <span class="cart-item__price">
+              <span class="price price--md">$ 4890,00</span>
+            </span>
+          </a>
+
+          <button class="cart-item__del">Видалити {{ mixins.icon('close') }}</button>
+        </div>
+        <!-- end cart-item -->
+        {% endfor %}
+      </div>
+
+      <div class="favorites__meta">
+        <!-- begin cart-meta -->
+        <div class="cart-meta">
+          <div class="cart-meta__title">
+            <div class="title title--h4">Придбайте зараз</div>
+          </div>
+
+          <div class="cart-meta__amount">
+            <div>сума замовлення:</div>
+            <div class="price price--inherit price--sm">9690,00 ₴</div>
+          </div>
+
+          <div class="cart-meta__amount-pay">
+            <div>До сплати:</div>
+            <div class="price price--inherit">9690,00 ₴</div>
+          </div>
+
+          <div class="cart-meta__btn">
+            {{ mixins.btn(
+              title = 'Додати до кошика',
+              mod = 'btn--full btn--square'
+            ) }}
+          </div>
+        </div>
+        <!-- end cart-meta -->
+      </div>
+    </div>
+    <!-- end favorites -->
+  </div>
+</section>
+<!-- end section -->
