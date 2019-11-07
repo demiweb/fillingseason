@@ -1,0 +1,48 @@
+.rating
+  position: relative
+  display: inline-flex
+  justify-content: flex-start
+  flex-direction: row-reverse
+  vertical-align: middle
+  input    
+    visibility: hidden
+    opacity: 0
+    position: absolute
+    width: 0
+    height: 0
+  label
+    color: transparent
+    display: block
+    margin-right: .4em
+    +tr(color .3s)
+    cursor: pointer
+    .icon
+      stroke: $c-text
+      +tr(stroke .3s)
+  &__wrap
+    text-align: left
+  &__title
+    color: $gray
+    margin-bottom: 8px
+  &__grade
+    display: inline-block
+    font-size: $fz-xs
+    color: $gray
+    vertical-align: middle
+    margin-left: .5em
+  &__star
+    color: transparent
+    margin-left: .4em
+    stroke: $c-text
+    &.is-filled
+      color: $c-text
+
+  &--plain
+    flex-direction: row
+  
+.rating > input:checked ~ label,
+.rating > label:hover,
+.rating > label:hover ~ label
+  color: $accent
+  .icon
+    stroke: transparent

@@ -37,12 +37,16 @@
     margin-bottom: 8px
 
 .cart-item
+  $this: &
   position: relative
+  &__title
+    +tr(color .3s)
   &__inner
     @extend .cart-tooltip-item
     +tr(color .3s)
     +hover
-      color: $accent
+      #{$this}__title
+        color: $accent
   &__img
     @extend .cart-tooltip-item__img
     // width: 135px
@@ -86,7 +90,15 @@
       position: relative
       top: .1em
 
+  &--sm
+    #{$this}__price
+      width: auto
+      text-align: left
+    #{$this}__content
+      width: 100% - 18%
+
 .cart-meta
+  $this: &
   padding-top: 30px
   +lg
     padding-top: 15px
@@ -112,21 +124,23 @@
     +sm
       margin-bottom: 10px
 
+  &--sm
+    padding-top: 0
+    #{$this}__amount
+      border-top: 0
+    #{$this}__amount-pay
+      color: $accent
+
 .cart
-  +flex(flex-start, normal, row, wrap)
-  &__items
-    width: percentage(765/1315)
-    padding-right: 10px
-    +md
-      width: 100%
-      padding-right: 0
-  &__meta
-    width: percentage(430/1315)
-    margin-left: percentage(120/1315)
-    padding-left: 10px
-    +lg
-      margin-left: 0
-      width: percentage(550/1315)
-    +md
-      width: 100%
-      padding-left: 0
+  $this: &
+  &--sm
+    .cart-item
+      &:last-child
+        .cart-item__inner
+          border-bottom: 0
+    #{$this}__top
+      +flex(space-between, center)
+      font-size: $fz-sm
+      margin-bottom: 20px
+      +md
+        margin-bottom: 10px

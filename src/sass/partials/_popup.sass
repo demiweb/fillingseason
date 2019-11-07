@@ -1,3 +1,16 @@
+.header
+  &.is-relative
+    .popup
+      position: absolute
+      top: 0
+      right: 0
+      left: auto
+      margin-left: 0 !important
+      margin-top: 0 !important
+      top: calc(100% + 31px)
+      +lg
+        top: calc(100% + 17px)
+
 .overlay
   position: fixed
   z-index: 10
@@ -88,4 +101,8 @@
       text-decoration: underline
   &__btn
     +notlast
+      margin-bottom: 15px
+  &__rating
+    margin-bottom: 25px
+    +md
       margin-bottom: 15px

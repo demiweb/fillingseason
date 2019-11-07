@@ -1,9 +1,16 @@
 <!-- begin section -->
 <section class="section">
   <div class="container container--lg">
+
+    {% if sectionMore.title %}
+    <div class="section__title">
+      <h3 class="title title--h3-sm">{{ sectionMore.title | safe }}</h3>
+    </div>
+    {% else %}
     <div class="section__title">
       <h3 class="title title--h3">Тренди</h3>
     </div>
+    {% endif %}
 
     <div class="section__items">
       <div class="grid">

@@ -136,6 +136,13 @@
 =tr($what...)
   transition: $what
 
+=counter($var, $sep)
+  counter-reset: list + $var
+  > li
+    &:before
+      content: counter(list + $var) $sep
+      counter-increment: list + $var
+
 
 //icon close
 =icon-close($size, $line-width, $color)

@@ -1,0 +1,32 @@
+.comment
+  display: block
+  padding-top: 25px
+  padding-bottom: 25px
+  border-bottom: 1px solid  $gray-light
+  +md
+    padding-top: 10px
+    padding-bottom: 10px
+  &__top
+    margin-bottom: 8px
+    +flex(flex-start, normal, row, wrap)
+  &__date
+    width: 100%
+    color: $gray
+    font-size: $fz-sm
+  &__text
+    font-size: $fz-sm
+  &__title
+    margin-bottom: 5px
+    flex-grow: 1
+  &__rating
+    margin-bottom: 5px
+    margin-top: -.3em
+    font-size: $fz-sm
+
+.comment-btns
+  +flex(space-between, center)
+  padding-top: 20px
+  padding-bottom: 20px
+  +md
+    padding-top: 10px
+    padding-bottom: 10px

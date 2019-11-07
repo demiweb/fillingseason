@@ -1,3 +1,27 @@
+{% if header.order %}
+<!-- begin header -->
+<header class="header header--cab">
+  <div class="container container--lg">
+    <div class="header__inner">
+      <div class="header__logo">
+        <a href="/" class="logo">
+          filling season
+        </a>
+      </div>
+
+      <div class="header__title">
+        <h3 class="title title--h3-sm">Оформлення замовлення</h3>
+      </div>
+
+      <div class="header__contacts">
+        <small class="gray">Допомога:</small>
+        <p><a href="tel:+380500505050">+38 (050) 050 5050</a></p>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- end header -->
+{% else %}
 <!-- begin header -->
 <header class="header">
   <div class="container container--lg">
@@ -44,3 +68,4 @@
   </div>
 </header>
 <!-- end header -->
+{% endif %}

@@ -14,7 +14,8 @@ import setOutPadding from './components/setOutPadding';
 import toggleMenu from './components/toggleMenu';
 import setAccordion from './components/setAccordion';
 import setSelects from './components/select/setSelects';
-
+import handleInputs from './components/handleInputs';
+import setGrid from './components/setGrid';
 
 document.addEventListener('DOMContentLoaded', () => {
   sayHello();
@@ -29,4 +30,6 @@ document.addEventListener('DOMContentLoaded', () => {
   toggleMenu();
   setAccordion();
   setSelects();
+  handleInputs();
+  setGrid();
 });

@@ -1,0 +1,105 @@
+.product-descr
+  margin-bottom: 40px
+  +lg
+    margin-bottom: 30px
+  +md
+    margin-bottom: 15px
+  &__top
+    +flex(space-between, center)
+    margin-bottom: 10px
+    small
+      font-size: $fz-sm
+      font-weight: 500
+  &__title
+    margin-bottom: 10px
+  &__block
+    margin-bottom: 30px
+    +md
+      margin-bottom: 15px
+  &__block-title
+    color: $gray
+    margin-bottom: 5px
+  &__btns
+    +flex
+    margin-top: 50px
+    margin-bottom: 50px
+    +xl
+      margin-top: 30px
+      margin-bottom: 30px
+    +md
+      margin-top: 15px
+      margin-bottom: 15px
+  &__btn-lg
+    // width: calc(100% - 95px)
+    flex-grow: 1
+    padding-right: 1em
+    +xs
+      padding-right: .5em
+  &__btn-sm
+    flex: 0 0 95px
+    +xs
+      flex: 0 0 75px
+  &__text
+    p
+      margin-bottom: 30px
+      +md
+        margin-bottom: 15px
+
+.colors, .sizes
+  +flex(flex-start, normal, row, wrap)
+
+.color
+  border-radius: 50%
+  width: 40px
+  height: 40px
+  display: block
+  +notlast
+    margin-right: 20px
+    margin-bottom: 20px
+    +md
+      margin-right: 10px
+      margin-bottom: 10px
+
+.size
+  min-width: 40px
+  height: 40px
+  +flex(center, center)
+  border: 1px solid  $gray
+  text-transform: uppercase
+  +notlast
+    margin-right: 7px
+    margin-bottom: 7px
+
+.product-meta-block
+  &__title
+    @extend .filters-block__title
+    border-bottom: 1px solid  $gray-light
+  &__title-icon
+    @extend .filters-block__title-icon
+  &__content
+    @extend .filters-block__content
+
+.product-preview
+  // +flex(flex-start, normal, row, wrap)
+  margin-left: -.5em
+  margin-right: -.5em
+  +clr
+
+
+.product-img
+  display: block
+  float: left
+  width: 50%  
+  position: relative
+  padding-left: .5em
+  padding-right: .5em
+  margin-bottom: 1em
+  &__img
+    width: 100%
+    padding-top: 120%
+    +cover
+    // background-repeat: no-repeat
+    // background-position: 50% 100%
+    // background-size: contain
+
+    

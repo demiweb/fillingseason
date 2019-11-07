@@ -1,11 +1,11 @@
 .btn
-  display: inline-block
+  +inline-flex(center, center)
   background-color: $white
   border: 1px solid  $white
   font-size: $fz-sm
   font-weight: 500
   min-width: 160px
-  padding: 1em
+  padding: .9em
   border-radius: 1.8em
   text-align: center
   color: $c-text
@@ -47,3 +47,7 @@
     border-color: #20538d
     +hover
       color: #20538d
+  &--sm
+    font-size: $fz-sm
+  &--md
+    font-size: em(18)

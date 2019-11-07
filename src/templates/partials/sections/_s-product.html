@@ -1,0 +1,178 @@
+{%set
+colors = [
+  { color: '#154bc3' },
+  { color: '#cb0e33' },
+  { color: '#f4f4f4' },
+  { color: '#1f1f1f' }
+]
+%}
+
+{%set
+sizes = [
+  { size: 'xs' },
+  { size: 's' },
+  { size: 'M' },
+  { size: 'L' },
+  { size: 'XL' }
+]
+%}
+
+{%set
+meta = [
+  {
+    title: 'Доставка та оплата:'
+  },
+  {
+    title: 'Відгуки (2):'
+  }
+]
+%}
+
+<!-- begin section -->
+<section class="section section--lg">
+  <div class="container container--lg">
+    <div class="layout">
+      <div class="layout__left">
+        <!-- begin product-preview -->
+        <div class="product-preview js-grid" data-scale="vertical">
+          {% for i in range(0, 3) %}
+          <div class="product-img">
+            <div class="product-img__img js-lazy" data-background-image="./img/cart-lg.jpg"></div>
+          </div>
+          {% endfor %}
+        </div>
+        <!-- end product-preview -->
+      </div>
+
+      <div class="layout__right">
+        <!-- begin product-descr -->
+        <div class="product-descr">
+          <div class="product-descr__top">
+            <div class="gray">Жіночій одяг</div>
+            <small>Артикул: FS100612/WN</small>
+          </div>
+
+          <div class="product-descr__title">
+            <h3 class="title title--h3-md">Пальто зимове</h3>
+          </div>
+
+          <div class="product-descr__block">
+            <div class="price">$ 4890,00</div>
+          </div>
+
+          <div class="product-descr__block">
+            <div class="product-descr__block-title">Колір</div>
+            <!-- begin colors -->
+            <div class="colors">
+              <!-- end colors -->
+              {% for i in colors %}
+              <!-- begin color -->
+              <div class="color" style="background-color: {{ i.color }};"></div>
+              <!-- end color -->
+              {% endfor %}
+            </div>
+            
+          </div>
+
+          <div class="product-descr__block">
+            <div class="product-descr__block-title">Розмір</div>
+            <!-- begin sizes -->
+            <div class="sizes">       
+            
+            {% for i in sizes %}
+              <!-- begin size -->
+              <div class="size">{{ i.size | safe }}</div>
+              <!-- end size -->
+            
+            {% endfor %}
+            </div>
+            <!-- end sizes -->
+          </div>
+
+          <div class="product-descr__btns">
+            <div class="product-descr__btn-lg">
+              {{ mixins.btn(
+                title = 'Додати у кошик',
+                mod = 'btn--full btn--text btn--square',
+                href = false
+              ) }}
+            </div>
+            <div class="product-descr__btn-sm">
+              {{ mixins.btn(
+                title = mixins.icon('like'),
+                mod = 'btn--full btn--text btn--square',
+                href = false
+              ) }}
+            </div>   
+
+          </div>
+
+          <div class="product-descr__text">
+            <p>Кроссовки Nike Air Max 720 с самой большой и высокой вставкой
+              Nike Air в истории обеспечивают невероятный комфорт на весь
+              день. Зашли ли мы в разрабтке Air Max слишком далеко?
+            Надеемся, что да.</p>
+
+            <a href="#" class="link-accent">Читать дальше</a>
+          </div>
+
+        </div>
+        <!-- end product-descr -->
+
+        <!-- begin product-meta -->
+        <div class="product-meta js-accordion">
+          {% for i in meta %}
+          <!-- begin product-meta-block -->
+          <div class="product-meta-block">
+            <button class="product-meta-block__title js-accordion-title{% if i.active %} is-active{% endif %}">
+              <span class="title title--h4-lg">{{ i.title | safe }}</span>
+              <span class="product-meta-block__title-icon"></span>
+            </button>
+
+            <div class="product-meta-block__content js-accordion-content">
+              {% for i in range(0, 2) %}
+              <!-- begin comment -->
+              <div class="comment">
+                <div class="comment__top">
+                  <div class="comment__title">
+                    <h5 class="title title--h5">Василь Шевченко</h5>
+                  </div>
+
+                  <div class="comment__rating">
+                    <!-- begin rating -->
+                    <div class="rating rating--plain">
+                      {% for i in range(0, 4) %}
+                      <div class="rating__star is-filled">{{ mixins.icon('star') }}</div>
+                      {% endfor %}
+                      <div class="rating__star">{{ mixins.icon('star') }}</div>
+                    </div>
+                    <!-- end rating -->
+                  </div>
+
+                  <div class="comment__date">01.02.2019</div>
+                </div>
+
+                <div class="comment__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid corporis temporibus deleniti, ex, quos, eligendi at aliquam suscipit enim cumque fugiat sed sapiente consectetur accusamus quaerat ab consequuntur molestias adipisci.</div>
+              </div>
+              <!-- end comment -->
+              {% endfor %}
+
+              <div class="comment-btns">
+                <a href="#" class="link-accent">Всі відгуки</a>
+                {{ mixins.btn(
+                  title = 'Залишити відгук',
+                  mod = 'btn--transp-accent',
+                  href = false
+                ) }}
+              </div>
+            </div>
+          </div>
+          <!-- end product-meta-block -->
+          {% endfor %}
+        </div>
+        <!-- end product-meta -->
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end section -->

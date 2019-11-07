@@ -19,7 +19,7 @@
     {% elseif label.first and label.first.noWrap %}
       {{ label.first.title | safe }}
     {% elseif label.first %}
-    <label>{{ label.first.title or label.first | safe }}</label>
+    {{ label.first.title or label.first | safe }}
   {% endif %}
 
   {% if name === 'input' or name === 'radio' or name === 'checkbox' or name === 'attach' %}
@@ -63,7 +63,7 @@
     {% elseif label.last and label.last.noWrap %}
       {{ label.last.title | safe }}
     {% elseif label.last %}
-    <label>{{ label.last.title or label.last | safe }}</label>
+    {{ label.last.title or label.last | safe }}
   {% endif %}
 
 {% if name === 'checkbox' or name === 'radio' or name === 'attach' %}

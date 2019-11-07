@@ -19,9 +19,7 @@
         top: 6px
         left: 3px
         +sm
-          top: 5px
-
-    
+          top: 5px    
   span
     +before
       display: block
@@ -48,3 +46,43 @@
     span
       +before
         display: none
+
+.radio
+  position: relative
+  padding-left: 30px
+  font-weight: 500
+  font-size: $fz-sm
+  display: block
+  user-select: none
+  cursor: pointer
+  input
+    position: absolute
+    width: 0
+    height: 0
+    +hidden
+    &:checked + span
+      +after
+        width: 12px
+        height: 12px
+        display: block
+        border-radius: 50%
+        background-color: $accent
+        position: absolute
+        top: 3px
+        left: 3px
+        +sm
+          top: 2px
+      +before
+        border-color: $accent 
+  span
+    +before
+      display: block
+      border: 1px solid $gray
+      width: 18px
+      height: 18px
+      border-radius: 50%
+      position: absolute
+      top: 0
+      left: 0
+      +sm
+        top: -1px

@@ -1,4 +1,7 @@
 .form
+  $this: &
+  ._col
+    min-height: 30px
   &__captcha
     +flex(space-between, center)
     .input
@@ -18,10 +21,42 @@
     .input
       +notlast
         margin-bottom: 1em
+  &--order
+    border-top: 1px solid  $gray-light
+    padding-top: 25px
+    #{$this}__blocks
+      // margin-bottom: 30px
+      // +md
+      //   margin-bottom: 15px
+
+.form-block
+  $this: &
+  +flex
+  margin-bottom: 25px
+  +md
+    margin-bottom: 15px
+  +xs
+    display: block
+  &:last-child
+    #{$this}__content
+      border-bottom: 0
+  &__title
+    width: percentage(220/760)
+    padding-right: 10px
+    +xs
+      width: 100%
+      padding-right: 0
+      margin-bottom: 1em
+  &__content
+    width: percentage((760 - 220) / 760)
+    border-bottom: 1px solid  $gray-light
+    +xs
+      width: 100%
 
 .input, .textarea
   font-size: $fz-sm
   color: $article-text
+  position: relative
   input, textarea
     background-color: $white-dark
     border: 1px solid  $gray-light
@@ -36,11 +71,39 @@
       padding: 12px
     &:focus
       border-color: $article-text
+  textarea
+    min-height: 125px
+  &.has-text
+    .input__clear, .textarea__clear
+      display: flex
+  &__clear
+    position: absolute
+    z-index: 1
+    top: 50%
+    transform: translate(0, -50%)
+    right: 15px
+    border-radius: 50%
+    width: 21px
+    height: 21px
+    +flex(center, center)
+    background-color: $gray-lightest
+    color: $accent
+    display: none
+    .icon
+      font-size: 10px
   &--short
     width: 260px
   &--full-h
     height: 100%
     input, textarea
       height: 100% !important
+      min-height: 0
       +xs
         min-height: 135px
+  &--sm
+    input, textarea
+      height: 40px
+      padding: 7px 15px
+      +sm
+        height: 35px
+        padding: 5px 10px

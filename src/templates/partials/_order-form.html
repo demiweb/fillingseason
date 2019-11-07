@@ -1,0 +1,192 @@
+{%set
+blocks = [
+  {
+    title: 'Ваш населений пункт',
+    fields: [
+      {
+        colMod: '_col-xs-6',
+        name: 'input',
+        mod: 'input--sm',
+        type: 'text',
+        placeholder: '',
+        value: 'Київ',
+        fieldClass: 'js-input',
+        label: { first: '<button class="input__clear js-input-btn">'+ mixins.icon('close') +'</button>' }
+      }
+    ]
+  },
+  {
+    title: 'Як отримаєте?',
+    fields: [
+      {
+        colMod: '',
+        name: 'radio',
+        mod: '',
+        type: 'radio',
+        placeholder: '',
+        value: '',
+        fieldClass: '',
+        fieldAttributes: { name: 'delivery' },
+        label: { last: { span: true, title: 'Самовивіз' } }
+      },
+      {
+        colMod: '',
+        name: 'radio',
+        mod: '',
+        type: 'radio',
+        placeholder: '',
+        value: '',
+        fieldClass: '',
+        fieldAttributes: { name: 'delivery', checked: '' },
+        label: { last: { span: true, title: 'Кур’єр' } }
+      },
+      {
+        colMod: '',
+        name: 'radio',
+        mod: '',
+        type: 'radio',
+        placeholder: '',
+        value: '',
+        fieldClass: '',
+        fieldAttributes: { name: 'delivery' },
+        label: { last: { span: true, title: 'Забрати на пошті' } }
+      }
+    ]
+  },
+  {
+    title: 'Контактні данні',
+    fields: [
+      {
+        colMod: '_col-xs-6',
+        name: 'input',
+        mod: 'input--sm',
+        type: 'text',
+        placeholder: '',
+        value: 'Василь',
+        fieldClass: 'js-input',
+        label: { first: '<button class="input__clear js-input-btn">'+ mixins.icon('close') +'</button>' }
+      },
+      {
+        colMod: '_col-xs-6',
+        name: 'input',
+        mod: 'input--sm',
+        type: 'text',
+        placeholder: '',
+        value: 'Андрійович',
+        fieldClass: 'js-input',
+        label: { first: '<button class="input__clear js-input-btn">'+ mixins.icon('close') +'</button>' }
+      },
+      {
+        colMod: '',
+        name: 'input',
+        mod: 'input--sm',
+        type: 'text',
+        placeholder: 'Прізвище',
+        value: '',
+        fieldClass: 'js-input',
+        label: { first: '<button class="input__clear js-input-btn">'+ mixins.icon('close') +'</button>' }
+      },
+      {
+        colMod: '',
+        name: 'input',
+        mod: 'input--sm',
+        type: 'tel',
+        placeholder: 'Телефон',
+        value: '',
+        fieldClass: 'js-input',
+        label: { first: '<button class="input__clear js-input-btn">'+ mixins.icon('close') +'</button>' }
+      },
+      {
+        colMod: '',
+        name: 'input',
+        mod: 'input--sm',
+        type: 'email',
+        placeholder: 'Ел. адреса',
+        value: '',
+        fieldClass: 'js-input',
+        label: { first: '<button class="input__clear js-input-btn">'+ mixins.icon('close') +'</button>' }
+      }
+    ]
+  },
+  {
+    title: 'Спосіб оплати',
+    fields: [
+      {
+        colMod: '',
+        name: 'radio',
+        mod: '',
+        type: 'radio',
+        placeholder: '',
+        value: '',
+        fieldClass: '',
+        fieldAttributes: { name: 'pay' },
+        label: { last: { span: true, title: 'Оплата картою' } }
+      },
+      {
+        colMod: '',
+        name: 'radio',
+        mod: '',
+        type: 'radio',
+        placeholder: '',
+        value: '',
+        fieldClass: '',
+        fieldAttributes: { name: 'pay', checked: '' },
+        label: { last: { span: true, title: 'Кур’єр' } }
+      },
+      {
+        colMod: '',
+        name: 'radio',
+        mod: '',
+        type: 'radio',
+        placeholder: '',
+        value: '',
+        fieldClass: '',
+        fieldAttributes: { name: 'pay' },
+        label: { last: { span: true, title: 'Забрати на пошті' } }
+      }
+    ]
+  }
+]
+%}
+
+<!-- begin form -->
+<div class="form form--order">
+  <form>
+    <div class="form__blocks">
+      {% for i in blocks %}
+      <!-- begin form-block -->
+      <div class="form-block">
+        <div class="form-block__title">{{ i.title | safe }}</div>
+
+        <div class="form-block__content">
+          <div class="grid">
+            {% for j in i.fields %}
+              <div class="_col{% if j.colMod %} {{ j.colMod }}{% endif %}">
+                {{ mixins.input(
+                  name = j.name,
+                  mod = j.mod,
+                  type = j.type,
+                  placeholder = j.placeholder,
+                  value = j.value,
+                  fieldClass = j.fieldClass,
+                  label = j.label,
+                  fieldAttributes = j.fieldAttributes
+                ) }}
+              </div>
+            {% endfor %}
+          </div>
+          
+        </div>
+      </div>
+      <!-- end form-block -->
+      {% endfor %}
+    </div>
+    <div class="form__field">
+      {{ mixins.btn(
+        title = 'Придбати',
+        mod = 'btn--full btn--square btn--md'
+      ) }}
+    </div>
+  </form>
+</div>
+<!-- end form -->

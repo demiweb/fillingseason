@@ -25,13 +25,15 @@
     z-index: 1
     width: 20px
     height: 20px
-    +flex(center, center)
+    // +flex(center, center)
+    display: block
     color: $gray
     &::after, &::before
       position: absolute
       content: ''
       background-color: currentColor
       display: block
+      +vcenter
     &::before
       width: 16px
       height: 2px

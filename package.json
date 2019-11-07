@@ -67,6 +67,7 @@
     "intersection-observer": "^0.7.0",
     "jquery": "^3.4.1",
     "lozad": "^1.9.0",
+    "masonry-layout": "^4.2.2",
     "popup-simple": "^1.0.1",
     "select-custom": "^1.1.8",
     "stickyfilljs": "^2.1.0",

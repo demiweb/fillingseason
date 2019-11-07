@@ -1,11 +1,41 @@
 <!-- begin popup -->
-<div class="popup js-popup" data-popup="review">
+<div class="popup{% if popup.review %} is-active{% endif %} js-popup" data-popup="review">
   <div class="popup__top">
     <h3 class="title title--h3-sm">Залиште відгук</h3>
     <button class="popup__close close js-popup-close"></button>
   </div>
 
-  <div class="popup__inner">
+  <div class="popup__inner">      
+      <div class="popup__rating">
+        <!-- begin rating -->
+        <div class="rating__wrap">
+          <div class="rating__title">Оцінка</div>
+          <div class="rating">
+            <input type="radio" id="star5" name="rating" value="5">
+            <label class="full" for="star5">
+              {{ mixins.icon('star') }}
+            </label>
+            <input type="radio" id="star4" name="rating" value="4">
+            <label class="full" for="star4">
+              {{ mixins.icon('star') }}
+            </label>
+            <input type="radio" id="star3" name="rating" value="3">
+            <label class="full" for="star3">
+              {{ mixins.icon('star') }}
+            </label>
+            <input type="radio" id="star2" name="rating" value="2">
+            <label class="full" for="star2">
+              {{ mixins.icon('star') }}
+            </label>
+            <input type="radio" id="star1" name="rating" value="1">
+            <label class="full" for="star1">
+              {{ mixins.icon('star') }}
+            </label>
+          </div>
+          <div class="rating__grade">Добре</div>
+        </div>
+        <!-- end rating -->
+      </div>
 
       <!-- begin form -->
       <div class="form">
@@ -57,7 +87,7 @@
           <div class="form__field">
             {{ mixins.btn(
               title = 'Залишити відгук',
-              mod = 'btn--full btn--square'
+              mod = 'btn--full btn--square btn--sm'
             ) }}
           </div>      
 

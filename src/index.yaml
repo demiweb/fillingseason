@@ -9,3 +9,7 @@ PageList:
 - file: catalog-women.html
 - file: cart.html
 - file: contacts.html
+- file: review-popup.html
+- file: order.html
+# - file: product-page.html
+# - file: text-page.html

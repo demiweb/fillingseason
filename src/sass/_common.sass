@@ -19,9 +19,10 @@ body
     animation: fadeIn 1s
 
 .out
-  padding-top: $header-height
-  +lg
-    padding-top: $header-height-lg
+  &:not(.has-relative-header)
+    padding-top: $header-height
+    +lg
+      padding-top: $header-height-lg
 
 .main
   position: relative
@@ -50,6 +51,8 @@ body
   max-width: 1345px
   &--lg
     max-width: 1790px
+  &--md
+    max-width: 1440px
 
 .title-block
   &__upttl
@@ -77,6 +80,8 @@ body
     font-size: $fz-sm
   &--md
     font-size: em(21)
+  &--fz
+    font-size: 1em
 
 .link
   font-weight: 500

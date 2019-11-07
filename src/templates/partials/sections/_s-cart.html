@@ -8,8 +8,8 @@
   
   <div class="container">
     <!-- begin cart -->
-    <div class="cart">
-      <div class="cart__items">
+    <div class="cart layout">
+      <div class="cart__items layout__left">
         {% for i in range(0, 3) %}
         <!-- begin cart-item -->
         <div class="cart-item">
@@ -49,7 +49,7 @@
         {% endfor %}
       </div>
 
-      <div class="cart__meta">
+      <div class="cart__meta layout__right">
         <!-- begin cart-meta -->
         <div class="cart-meta">
           <div class="cart-meta__title">
@@ -70,7 +70,7 @@
 
           <div class="cart-meta__amount-pay">
             <div>До сплати:</div>
-            <div class="price price--inherit">9690,00 ₴</div>
+            <div class="price price--inherit price--fz">9690,00 ₴</div>
           </div>
 
           <div class="cart-meta__btn">
