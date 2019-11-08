@@ -1,0 +1,129 @@
+{%set
+features = {
+  mod: 'article-features--cols',
+  list: [
+    {
+      icon: 'handshake',
+      text: 'чесне партнерство'
+    },
+    {
+      icon: 'shop',
+      text: 'Відкриті як для маленького магазину так і для національних мереж. '
+    },
+    {
+      icon: 'loupe',
+      text: 'пошук нових ідей та технологій
+для втілення'
+    },
+    {
+      icon: 'contract',
+      text: 'індивідуальні умови співпраці для тих, хто готовий 
+підтримувати вітчизняного виробника'
+    },
+    {
+      icon: 'promotion',
+      text: 'маркетингова підтримка'
+    },
+    {
+      icon: 'respect',
+      text: 'повага до клієнтів'
+    },
+    {
+      icon: 'operator',
+      text: 'виділений менеджер'
+    },
+    {
+      icon: 'shield',
+      text: 'гарантійні зобов’язання перед партнерами'
+    }
+  ]
+} 
+%}
+
+<!-- begin section -->
+<section class="section pt-0">
+  <div class="section__top">
+    <div class="container">
+      <h3 class="title title--h3-sm">Партнерам</h3>
+    </div>
+  </div>
+
+  <div class="section__page">
+    <!-- begin article -->
+    <div class="article">
+      <div class="container">
+        <h1 class="text-center">Про одяг від Filling Season</h1>
+
+        <div class="article__subttl text-center">
+Щоб одяг Filling Season був легким і в той самий час надійно захищав у негоду,<br>
+компанія робить інвестиції у матеріали для гарантії найвищої якості, щоб забезпечити міцність, <br>
+вітронепроникність, вологозахист і разом з тим малу вагу виробу.  
+        </div>
+
+        <img class="js-lazy" alt="" src="" data-src="./img/to-the-partners/01.jpg"/>
+      </div>
+        <!-- begin article-meta -->
+        <div class="article-meta">
+          <div class="container">
+            <article>
+              <h3>Виробничі потужності Filling Season:</h3>
+
+              <div class="article-meta__items">
+                <div class="article-meta-item">
+                  <div class="article-meta-item__nmb">6</div>
+                  <div class="article-meta-itemtext">Виробничих цехів</div>
+                </div>
+
+                <div class="article-meta-item">
+                  <div class="article-meta-item__nmb">255</div>
+                  <div class="article-meta-itemtext">Професійних робітників</div>
+                </div>
+
+                <div class="article-meta-item">
+                  <div class="article-meta-item__nmb">35</div>
+                  <div class="article-meta-itemtext">Потужних спецмашин</div>
+                </div>
+
+                <div class="article-meta-item">
+                  <div class="article-meta-item__nmb">50</div>
+                  <div class="article-meta-itemtext">Годин працюємо щотижня</div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+        <!-- end article-meta -->
+        
+        <div class="container">
+        <article>
+          <h3>Умови співпраці з Filling Season</h3>
+          <p>Filling Season - це 100% український бренд, від команди до виробництва. Ми пропонуємо Вам долучитись до продажу високоякісного українського одягу, який своєю якістю не поступається відомим закордонним брендам та має доступні ціни. Ми створюємо одяг за підтримки спортсменів, професіоналів та людей для яких спорт - це стиль життя.
+Завжди відкриті для підприємців, що працюють зі спортивним та туристичним спорядженням та віддають перевагу якісному спортивному одягу, спортивними командами (футбол, волейбол, баскетбол), фітнес центрами, дитячими спортивними клубами та магазинами,  для яких - якісні речі та довіра клієнтів це норма.</p>
+        </article>
+
+        <img class="js-lazy" alt="" src="" data-src="./img/to-the-partners/02.jpg"/>
+
+        
+
+        <article>
+          <h3>Наші партнери:</h3>
+          
+          <!-- begin article-partners -->
+          <div class="article-partners">
+            {% for i in range(0, 8) %}
+            <div class="article-partners__item">
+              <img class="js-lazy" alt="" src="" data-src="./img/to-the-partners/logos/0{{ i + 1 }}.png"/>
+            </div>            
+            {% endfor %}
+          </div>
+          <!-- end article-partners -->
+          
+
+
+        </article>
+      </div>
+    </div>
+    <!-- end article -->
+  </div>
+</section>
+<!-- end section -->

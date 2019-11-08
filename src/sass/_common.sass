@@ -23,6 +23,8 @@ body
     padding-top: $header-height
     +lg
       padding-top: $header-height-lg
+  &.has-relative-header
+    padding-top: 0 !important
 
 .main
   position: relative
@@ -102,3 +104,19 @@ body
 .close
   display: inline-block
   +icon-close(20, 1, currentColor)
+.search
+  margin-bottom: 60px
+  +xl
+    margin-bottom: 40px
+  +lg
+    margin-bottom: 30px
+  +md
+    margin-bottom: 15px
+  &__title
+    margin-bottom: 15px
+  &__input
+    position: relative
+    
+  &__input-btn
+    @extend .header-search__input-btn
+

@@ -11,5 +11,11 @@ PageList:
 - file: contacts.html
 - file: review-popup.html
 - file: order.html
-# - file: product-page.html
-# - file: text-page.html
+- file: product-page.html
+- file: text-page.html
+- file: coach-program.html
+- file: discount.html
+- file: kids-insurance.html
+- file: technology.html
+- file: to-the-partners.html
+- file: results.html

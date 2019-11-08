@@ -1,0 +1,16 @@
+<!-- begin article-features -->
+<div class="article-features{% if features.mod %} {{ features.mod }}{% endif %}">
+  {% for i in features.list or features %}
+  <div class="article-features__item">
+    <!-- begin article-feature -->
+    <div class="article-feature">
+      <div class="article-feature__icon">
+        {{ mixins.icon(i.icon) }}
+      </div>
+      <div class="article-feature__text">{{ i.text | safe }}</div>
+    </div>
+    <!-- end article-feature -->
+  </div>
+  {% endfor %}
+</div>
+<!-- end article-features -->

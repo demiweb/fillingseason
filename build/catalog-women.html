@@ -1365,99 +1365,101 @@
     </div>
     <!-- END content -->
     <!-- begin popup -->
-    <div class="popup js-popup" data-popup="review">
-      <div class="popup__top">
-        <h3 class="title title--h3-sm">Залиште відгук</h3>
-        <button class="popup__close close js-popup-close"></button>
-      </div>
-      <div class="popup__inner">
-        <div class="popup__rating">
-          <!-- begin rating -->
-          <div class="rating__wrap">
-            <div class="rating__title">Оцінка</div>
-            <div class="rating">
-              <input type="radio" id="star5" name="rating" value="5">
-              <label class="full" for="star5">
-                <!-- begin icon-star -->
-                <svg viewBox="0 0 19.481 19.481" class="icon icon-star" width="1.000em" height="1em">
-                  <path d="M10.201.758l2.478 5.865 6.344.545a.5.5 0 01.285.876l-4.812 4.169 1.442 6.202a.5.5 0 01-.745.541l-5.452-3.288-5.452 3.288a.5.5 0 01-.745-.541l1.442-6.202-4.813-4.17a.5.5 0 01.285-.876l6.344-.545L9.28.758a.5.5 0 01.921 0z" />
-                </svg>
-                <!-- end icon-star -->
-              </label>
-              <input type="radio" id="star4" name="rating" value="4">
-              <label class="full" for="star4">
-                <!-- begin icon-star -->
-                <svg viewBox="0 0 19.481 19.481" class="icon icon-star" width="1.000em" height="1em">
-                  <path d="M10.201.758l2.478 5.865 6.344.545a.5.5 0 01.285.876l-4.812 4.169 1.442 6.202a.5.5 0 01-.745.541l-5.452-3.288-5.452 3.288a.5.5 0 01-.745-.541l1.442-6.202-4.813-4.17a.5.5 0 01.285-.876l6.344-.545L9.28.758a.5.5 0 01.921 0z" />
-                </svg>
-                <!-- end icon-star -->
-              </label>
-              <input type="radio" id="star3" name="rating" value="3">
-              <label class="full" for="star3">
-                <!-- begin icon-star -->
-                <svg viewBox="0 0 19.481 19.481" class="icon icon-star" width="1.000em" height="1em">
-                  <path d="M10.201.758l2.478 5.865 6.344.545a.5.5 0 01.285.876l-4.812 4.169 1.442 6.202a.5.5 0 01-.745.541l-5.452-3.288-5.452 3.288a.5.5 0 01-.745-.541l1.442-6.202-4.813-4.17a.5.5 0 01.285-.876l6.344-.545L9.28.758a.5.5 0 01.921 0z" />
-                </svg>
-                <!-- end icon-star -->
-              </label>
-              <input type="radio" id="star2" name="rating" value="2">
-              <label class="full" for="star2">
-                <!-- begin icon-star -->
-                <svg viewBox="0 0 19.481 19.481" class="icon icon-star" width="1.000em" height="1em">
-                  <path d="M10.201.758l2.478 5.865 6.344.545a.5.5 0 01.285.876l-4.812 4.169 1.442 6.202a.5.5 0 01-.745.541l-5.452-3.288-5.452 3.288a.5.5 0 01-.745-.541l1.442-6.202-4.813-4.17a.5.5 0 01.285-.876l6.344-.545L9.28.758a.5.5 0 01.921 0z" />
-                </svg>
-                <!-- end icon-star -->
-              </label>
-              <input type="radio" id="star1" name="rating" value="1">
-              <label class="full" for="star1">
-                <!-- begin icon-star -->
-                <svg viewBox="0 0 19.481 19.481" class="icon icon-star" width="1.000em" height="1em">
-                  <path d="M10.201.758l2.478 5.865 6.344.545a.5.5 0 01.285.876l-4.812 4.169 1.442 6.202a.5.5 0 01-.745.541l-5.452-3.288-5.452 3.288a.5.5 0 01-.745-.541l1.442-6.202-4.813-4.17a.5.5 0 01.285-.876l6.344-.545L9.28.758a.5.5 0 01.921 0z" />
-                </svg>
-                <!-- end icon-star -->
-              </label>
+    <div class="popup__wrap js-popup" data-popup="review">
+      <div class="popup">
+        <div class="popup__top">
+          <h3 class="title title--h3-sm">Залиште відгук</h3>
+          <button class="popup__close close js-popup-close"></button>
+        </div>
+        <div class="popup__inner">
+          <div class="popup__rating">
+            <!-- begin rating -->
+            <div class="rating__wrap">
+              <div class="rating__title">Оцінка</div>
+              <div class="rating">
+                <input type="radio" id="star5" name="rating" value="5">
+                <label class="full" for="star5">
+                  <!-- begin icon-star -->
+                  <svg viewBox="0 0 19.481 19.481" class="icon icon-star" width="1.000em" height="1em">
+                    <path d="M10.201.758l2.478 5.865 6.344.545a.5.5 0 01.285.876l-4.812 4.169 1.442 6.202a.5.5 0 01-.745.541l-5.452-3.288-5.452 3.288a.5.5 0 01-.745-.541l1.442-6.202-4.813-4.17a.5.5 0 01.285-.876l6.344-.545L9.28.758a.5.5 0 01.921 0z" />
+                  </svg>
+                  <!-- end icon-star -->
+                </label>
+                <input type="radio" id="star4" name="rating" value="4">
+                <label class="full" for="star4">
+                  <!-- begin icon-star -->
+                  <svg viewBox="0 0 19.481 19.481" class="icon icon-star" width="1.000em" height="1em">
+                    <path d="M10.201.758l2.478 5.865 6.344.545a.5.5 0 01.285.876l-4.812 4.169 1.442 6.202a.5.5 0 01-.745.541l-5.452-3.288-5.452 3.288a.5.5 0 01-.745-.541l1.442-6.202-4.813-4.17a.5.5 0 01.285-.876l6.344-.545L9.28.758a.5.5 0 01.921 0z" />
+                  </svg>
+                  <!-- end icon-star -->
+                </label>
+                <input type="radio" id="star3" name="rating" value="3">
+                <label class="full" for="star3">
+                  <!-- begin icon-star -->
+                  <svg viewBox="0 0 19.481 19.481" class="icon icon-star" width="1.000em" height="1em">
+                    <path d="M10.201.758l2.478 5.865 6.344.545a.5.5 0 01.285.876l-4.812 4.169 1.442 6.202a.5.5 0 01-.745.541l-5.452-3.288-5.452 3.288a.5.5 0 01-.745-.541l1.442-6.202-4.813-4.17a.5.5 0 01.285-.876l6.344-.545L9.28.758a.5.5 0 01.921 0z" />
+                  </svg>
+                  <!-- end icon-star -->
+                </label>
+                <input type="radio" id="star2" name="rating" value="2">
+                <label class="full" for="star2">
+                  <!-- begin icon-star -->
+                  <svg viewBox="0 0 19.481 19.481" class="icon icon-star" width="1.000em" height="1em">
+                    <path d="M10.201.758l2.478 5.865 6.344.545a.5.5 0 01.285.876l-4.812 4.169 1.442 6.202a.5.5 0 01-.745.541l-5.452-3.288-5.452 3.288a.5.5 0 01-.745-.541l1.442-6.202-4.813-4.17a.5.5 0 01.285-.876l6.344-.545L9.28.758a.5.5 0 01.921 0z" />
+                  </svg>
+                  <!-- end icon-star -->
+                </label>
+                <input type="radio" id="star1" name="rating" value="1">
+                <label class="full" for="star1">
+                  <!-- begin icon-star -->
+                  <svg viewBox="0 0 19.481 19.481" class="icon icon-star" width="1.000em" height="1em">
+                    <path d="M10.201.758l2.478 5.865 6.344.545a.5.5 0 01.285.876l-4.812 4.169 1.442 6.202a.5.5 0 01-.745.541l-5.452-3.288-5.452 3.288a.5.5 0 01-.745-.541l1.442-6.202-4.813-4.17a.5.5 0 01.285-.876l6.344-.545L9.28.758a.5.5 0 01.921 0z" />
+                  </svg>
+                  <!-- end icon-star -->
+                </label>
+              </div>
+              <div class="rating__grade">Добре</div>
             </div>
-            <div class="rating__grade">Добре</div>
+            <!-- end rating -->
           </div>
-          <!-- end rating -->
+          <!-- begin form -->
+          <div class="form">
+            <form>
+              <div class="form__field">
+                <!-- begin input -->
+                <div class="input">
+                  <input type="text" placeholder="Ім’я">
+                </div>
+                <!-- end input -->
+              </div>
+              <div class="form__field">
+                <!-- begin input -->
+                <div class="input">
+                  <input type="text" placeholder="Прізвище">
+                </div>
+                <!-- end input -->
+              </div>
+              <div class="form__field">
+                <!-- begin input -->
+                <div class="input">
+                  <input type="email" placeholder="Електрона адреса">
+                </div>
+                <!-- end input -->
+              </div>
+              <div class="form__field">
+                <!-- begin textarea -->
+                <div class="textarea">
+                  <textarea placeholder="Як вам наш товар?"></textarea>
+                </div>
+                <!-- end textarea -->
+              </div>
+              <div class="form__field">
+                <a href="#" class="btn btn--full btn--square btn--sm">Залишити відгук</a>
+              </div>
+            </form>
+          </div>
+          <!-- end form -->
         </div>
-        <!-- begin form -->
-        <div class="form">
-          <form>
-            <div class="form__field">
-              <!-- begin input -->
-              <div class="input">
-                <input type="text" placeholder="Ім’я">
-              </div>
-              <!-- end input -->
-            </div>
-            <div class="form__field">
-              <!-- begin input -->
-              <div class="input">
-                <input type="text" placeholder="Прізвище">
-              </div>
-              <!-- end input -->
-            </div>
-            <div class="form__field">
-              <!-- begin input -->
-              <div class="input">
-                <input type="email" placeholder="Електрона адреса">
-              </div>
-              <!-- end input -->
-            </div>
-            <div class="form__field">
-              <!-- begin textarea -->
-              <div class="textarea">
-                <textarea placeholder="Як вам наш товар?"></textarea>
-              </div>
-              <!-- end textarea -->
-            </div>
-            <div class="form__field">
-              <a href="#" class="btn btn--full btn--square btn--sm">Залишити відгук</a>
-            </div>
-          </form>
-        </div>
-        <!-- end form -->
       </div>
     </div>
     <!-- end popup -->

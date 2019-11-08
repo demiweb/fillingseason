@@ -11,7 +11,7 @@
         margin-bottom: 15px
   h1, h2, h3, h4, h5, h6
     color: $c-text
-  h2
+  h2, h1
     @extend .title
     +css-lock(28, 55, 320, 1399, font-size)
   img
@@ -26,11 +26,11 @@
     margin-left: auto
     margin-right: auto
   ol
-      +counter('-text', ')')
-      li
-        &::before
-          display: inline-block
-          margin-right: .5em
+    +counter('-text', '.')
+    li
+      &::before
+        display: inline-block
+        margin-right: .5em
   ul
     li
       &::before
@@ -44,17 +44,28 @@
         margin-bottom: 30px
       +md
         margin-bottom: 15px
-  a
+  a:not(.btn)
     color: $blue
     text-decoration: underline  
   blockquote
     color: $c-text
     font-weight: 700
+  table
+    text-align: center
+    td, th
+      padding: 10px
+      border: 1px solid  $gray-light
+    th
+      font-weight: 400
+      color: $black
+    td
+      font-size: $fz
+      +sm
+        font-size: $fz-sm-px
+  .btn
+    font-size: $fz-sm-px
   &__subttl
     color: $c-text
-    margin-left: auto
-    margin-right: auto
-    max-width: 985px
     margin-bottom: 40px
     +xl
       margin-bottom: 30px
@@ -99,7 +110,96 @@
     ul
       li
         +list-bullet
+    ol
+      +counter('-text', ')')
     li
       +notlast
         margin-bottom: 0 !important
 
+.article-features
+  $this: &
+  &__item
+    margin-bottom: 35px
+    +lg
+      margin-bottom: 25px
+    +md
+      margin-bottom: 15px
+
+  &--cols
+    +flex(flex-start, normal, row, wrap)
+    margin-left: -10px
+    margin-right: -10px
+    #{$this}__item
+      padding-left: 10px
+      padding-right: 10px
+      width: 60%
+      +md
+        width: 100%
+      &:nth-child(odd)
+        width: 40%
+        +md
+          width: 100%
+
+
+.article-feature
+  &__icon
+    color: $accent
+    margin-bottom: 8px
+    .icon
+      font-size: em(54, 21)
+
+.article-meta
+  background-color: $gray-lightest
+  padding-top: 50px
+  padding-bottom: 50px
+  margin-bottom: 40px
+  margin-top: 40px
+  +xl
+    padding-top: 40px
+    padding-bottom: 40px
+    margin-bottom: 30px
+    margin-top: 30px
+  +lg
+    padding-top: 30px
+    padding-bottom: 30px
+  +md
+    padding-top: 15px
+    padding-bottom: 15px
+    margin-bottom: 15px
+    margin-top: 15px
+  &__items
+    +flex(flex-start, normal, row, wrap)
+
+.article-meta-item
+  +flex(flex-start, center)
+  color: $c-text
+  font-weight: 500
+  width: 50%
+  padding-right: 10px
+  margin-bottom: 40px
+  +lg
+    margin-bottom: 30px
+  +md
+    margin-bottom: 15px
+    width: 100%
+  &__nmb
+    @extend .title
+    +css-lock(36, 70, 320, 1399, font-size)
+    text-transform: uppercase
+    color: $accent
+    margin-right: .2em
+
+.article-partners
+  +flex(flex-start, normal, row, wrap)
+  padding-left: -10px
+  padding-right: -10px
+  &__item
+    width: 25%
+    // margin-bottom: 30px
+    +flex(center, center)
+    padding: 10px
+    +xs
+      width: 33.33333%
+    img
+      max-height: 80px
+      width: auto

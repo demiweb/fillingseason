@@ -4,6 +4,8 @@ import {
 
 import popup from './setPopups';
 
+const HAS_OPEN_MENU = 'has-open-menu';
+
 class Burger {
   init() {
     document.addEventListener('click', this.toggle.bind(this));
@@ -57,11 +59,13 @@ Burger.classNames = {
 export default function toggleMenu() {
   const burger = new Burger();
   burger.onToggle = () => {
-    document.body.classList.toggle(NO_SCROLL);
     popup.closeAll();
+    document.body.classList.toggle(NO_SCROLL);
+    document.body.classList.toggle(HAS_OPEN_MENU);
   };
   burger.onClose = () => {
     document.body.classList.remove(NO_SCROLL);
+    document.body.classList.remove(HAS_OPEN_MENU);
   };
   burger.init();
 

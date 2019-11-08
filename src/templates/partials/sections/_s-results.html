@@ -1,0 +1,38 @@
+<!-- begin section -->
+<section class="section">
+  <div class="container">
+    <!-- begin search -->
+    <div class="search">
+      <div class="search__title">
+        <h3 class="title title--h3-sm">«Куртка» <span class="gray">(16)</span></h3>
+      </div>
+
+      <div class="search__input">
+        <form>
+          <button class="search__input-btn">
+            {{ mixins.icon('search') }}
+          </button>
+          {{ mixins.input(
+            name = 'input',
+            mod = 'input--search',
+            type = 'text',
+            placeholder = '',
+            value = '',
+            fieldClass = 'js-input',
+            label = { first: '<button class="input__clear js-input-btn">'+ mixins.icon('close') +'</button>' }
+          ) }}
+        </form>
+      </div>
+    </div>
+    <!-- end search -->
+
+    <div class="grid">
+      {% for i in range(0, 10) %}
+      <div class="_col _col-md-3 _col-sm-4 _col-xss-6">
+        {% include "partials/_card.html" %}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+<!-- end section -->

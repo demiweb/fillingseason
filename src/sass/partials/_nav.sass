@@ -28,6 +28,16 @@
         position: absolute
         bottom: 100%
         left: 12px
+      +lg
+        position: static        
+        background-color: transparent
+        color: inherit
+        width: auto
+        padding: 0
+        .has-open-menu &
+          +visible
+        +before
+          display: none
       li
         +notlast
           margin-bottom: 15px

@@ -23,6 +23,7 @@
 .popup
   position: fixed
   width: 465px
+  margin-bottom: -$header-height
   left: 50%
   top: 50%
   // transform: translate(-50%, -50%)
@@ -40,6 +41,30 @@
     top: 15vh
   &.is-active
     +visible
+  &__wrap
+    @extend .overlay
+    +vertical
+    overflow: auto
+    padding: 15px
+    padding-top: $header-height + 15px
+    +hidden
+    +ready
+      +tr(opacity .3s, visibility .3s)
+    &.is-active
+      +visible
+      .popup
+        +visible
+    .popup
+      display: inline-block
+      vertical-align: middle
+      position: relative
+      top: auto
+      bottom: auto
+      left: auto
+      right: auto
+      font-size: $fz
+      +sm
+        font-size: $fz-sm-px
   &__top
     background-color: $gray-lightest
     padding-top: 25px

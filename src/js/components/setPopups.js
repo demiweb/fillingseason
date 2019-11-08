@@ -46,6 +46,8 @@ class MyPopup extends Popup {
   onOpen() {
     this.state.open = true;
     if (this.btn) this.btn.classList.add(IS_ACTIVE);
+
+    if (this.popup.classList && this.popup.classList.contains('popup__wrap')) return;
     this.addOverlay();
     this.centerPopup();
     this.handleOverflow();
@@ -79,6 +81,7 @@ class MyPopup extends Popup {
 
   centerPopup() {
     if (!this.state.open) return;
+    if (this.popup.classList && this.popup.classList.contains('popup__wrap')) return;
     if (!window.matchMedia('(min-width: 576px)').matches) {
       if (this.popup) {
         this.popup.style.marginTop = '';
@@ -100,8 +103,11 @@ class MyPopup extends Popup {
 
   handleOverflow() {
     if (!this.state.open) return;
+    if (this.popup.classList && this.popup.classList.contains('popup__wrap')) return;
+
     const { top, height } = this.popup.getBoundingClientRect();
-    this.isOverflowing = top + height >= window.innerHeight;
+    const headerHeight = this.dom.header.offsetHeight;
+    this.isOverflowing = top + height + headerHeight >= window.innerHeight;
 
 
     if (this.isOverflowing) {
@@ -175,10 +181,10 @@ class MyPopup extends Popup {
     this.name = this.popup.dataset.popup;
     this.btn = document.querySelector(`.js-popup-open[data-popup-target="${this.name}"]`);
 
+    if (this.options.toggleBodyClass) document.body.classList.add(NO_SCROLL);
+    if (this.popup.classList && this.popup.classList.contains('popup__wrap')) return;
     this.addOverlay();
     this.centerPopup();
-
-    if (this.options.toggleBodyClass) document.body.classList.add(NO_SCROLL);
   }
 
   init() {
