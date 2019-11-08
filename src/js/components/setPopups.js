@@ -197,6 +197,6 @@ class MyPopup extends Popup {
 }
 
 const popup = new MyPopup({
-  closeOnOverlayClick: false,
+  // closeOnOverlayClick: false,
 });
 export default popup;

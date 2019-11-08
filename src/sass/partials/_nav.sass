@@ -21,7 +21,8 @@
       font-weight: 400
       font-size: $fz-sm
       text-transform: none
-      +tr(opacity .3s, visibility .3s)
+      +ready
+        +tr(opacity .3s, visibility .3s)
       +hidden
       +before
         +arr(20, 10, $c-text, t)
