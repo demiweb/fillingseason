@@ -1,0 +1,161 @@
+.cabinet-top
+  +flex(flex-start, center)
+  +xs
+    flex-wrap: wrap
+    align-items: flex-start
+  &__img
+    +cover
+    border-radius: 50%
+    background-color: $gray-lightest
+    overflow: hidden
+    width: 75px
+    height: 75px
+    flex: 0 0 75px
+  &__content
+    flex-grow: 1
+    padding-right: 15px
+    padding-left: 25px
+    +xs
+      flex: 0 0 calc(100% - 75px)
+      padding-left: 15px
+      margin-bottom: 25px
+  &__title
+    small
+      font-size: em(16, 24)
+  &__btn
+    +xs
+      width: 100%
+
+.cabinet-table
+  border: 1px solid  $gray-light
+  &__top
+    +flex(flex-start, center)
+    background-color: $gray-lightest
+    border-bottom: 1px solid  $gray-light
+    padding-left: 20px
+    padding-right: 20px
+    position: sticky
+    top: $header-height
+    z-index: 2
+    +lg
+      top: $header-height-lg
+    +sm
+      display: none
+  &__th
+    font-weight: 700
+    padding-top: .7em
+    padding-bottom: .7em
+    &--number
+      width: percentage(230 / 1410)
+    &--date
+      width: percentage(240 / 1410)
+    &--quantity
+      width: percentage(240 / 1410)
+    &--status
+      width: percentage(240 / 1410)
+    &--price
+      width: percentage(240 / 1410)
+    &--btn
+      width: percentage(220 / 1410)
+
+
+.cabinet-table-item
+  &__top
+    +flex(flex-start, center, row, wrap)
+    padding-left: 20px
+    padding-right: 20px
+    border-bottom: 1px solid  $gray-light    
+  &__td
+    padding-top: .7em
+    padding-bottom: .7em
+    padding-right: .7em
+    +sm
+      width: 33.33333%
+    +xs
+      width: 50%
+    &--number
+      width: percentage(230 / 1410)
+    &--date
+      width: percentage(240 / 1410)
+      .icon
+        font-size: .8em
+    &--quantity
+      width: percentage(240 / 1410)
+    &--status
+      width: percentage(240 / 1410)
+    &--price
+      width: percentage(240 / 1410)
+    &--btn
+      width: percentage(220 / 1410)
+  &__content
+    background-color: $white
+    +flex
+    +sm
+      display: block
+  &__content-left
+    width: percentage(820 / 1410)
+    border-right: 1px solid $gray-light
+    padding-left: 25px
+    padding-right: 25px
+    padding-bottom: 25px
+    +md
+      padding-left: 15px
+      padding-right: 15px
+    +sm
+      width: 100%
+      border-right: 0
+  &__content-right
+    width: percentage((1440 - 820) / 1420)
+    padding-left: 45px
+    padding-right: 45px
+    padding-top: 25px
+    padding-bottom: 25px
+    +lg
+      padding-left: 30px
+      padding-right: 30px
+    +md
+      padding-left: 15px
+      padding-right: 15px
+    +sm
+      width: 100%
+      padding-top: 0
+
+.cabinet-table-meta
+  &__title
+    +flex(flex-start, center)
+    margin-bottom: 45px
+    +lg
+      margin-bottom: 30px
+    +md
+      margin-bottom: 15px
+    .title
+      margin-right: .5em
+  &__list
+    margin-bottom: 20px
+  &__btn
+    max-width: 330px
+    +xs
+      max-width: none
+
+.cabinet-table-meta-list
+  +clr
+  &__title
+    float: left
+    color: $gray
+    margin-right: .5em
+    &--block
+      float: none
+  &__text
+    &--block
+      margin-bottom: 10px
+
+.status
+  +inline-flex(flex-start, center)
+  .icon
+    margin-right: .4em
+  &--done
+    color: #6abb46
+  &--processing
+    color: #f19e1b
+  &--transporting
+    color: #2570cc

@@ -2,6 +2,10 @@
   $this: &
   ._col
     min-height: 30px
+  &__title
+    margin-bottom: 30px
+    +md
+      margin-bottom: 15px
   &__captcha
     +flex(space-between, center)
     .input
@@ -13,6 +17,10 @@
   &__checkbox
     font-size: $fz-sm
     +flex(space-between, center)
+    +notlast
+      margin-right: 25px
+  &__checkboxes
+    +flex
       
   &--contacts
     max-width: 775px

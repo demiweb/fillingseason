@@ -64,6 +64,9 @@
     .price
       +xs
         font-size: 1em
+  &__quantity
+    color: $gray
+    margin-right: .5em
   &__meta-item
     @extend .cart-tooltip-item__meta-item
   &__title
@@ -92,6 +95,16 @@
       margin-left: .3em
       position: relative
       top: .1em
+    &--accent
+      color: $accent
+      +hover
+        color: $white
+        background-color: $accent
+        border-color: $accent
+    &--above
+      bottom: 75px
+      +lg
+        bottom: 55px
 
   &--sm
     #{$this}__price
@@ -99,6 +112,10 @@
       text-align: left
     #{$this}__content
       width: 100% - 18%
+  &--two-btns
+    +xs
+      #{$this}__inner
+        padding-bottom: 50px
 
 .cart-meta
   $this: &

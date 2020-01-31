@@ -9,7 +9,6 @@ class MyPopup extends Popup {
   constructor(options) {
     super(options);
     this.overlay = null;
-    this.out = document.querySelector('.out');
     this.state = {};
     this.dom = {
       header: document.querySelector('.header'),
@@ -22,8 +21,8 @@ class MyPopup extends Popup {
   }
 
   addOverlay() {
-    if (!this.out) return;
-    this.out.appendChild(this.overlay);
+    if (!this.dom.out) return;
+    this.dom.out.appendChild(this.overlay);
   }
 
   removeOverlay() {
@@ -46,6 +45,8 @@ class MyPopup extends Popup {
   onOpen() {
     this.state.open = true;
     if (this.btn) this.btn.classList.add(IS_ACTIVE);
+
+    this.data = this.popup.dataset;
 
     if (this.popup.classList && this.popup.classList.contains('popup__wrap')) return;
     this.addOverlay();
@@ -104,6 +105,7 @@ class MyPopup extends Popup {
   handleOverflow() {
     if (!this.state.open) return;
     if (this.popup.classList && this.popup.classList.contains('popup__wrap')) return;
+    if (this.data.popupCenter) return;
 
     const { top, height } = this.popup.getBoundingClientRect();
     const headerHeight = this.dom.header.offsetHeight;

@@ -573,7 +573,7 @@
                               </div>
                             </div>
                             <div class="popup__content-title">Не маєте профілю?</div>
-                            <a class="popup__content-link" href="#">Реєструйтесь</a>
+                            <button class="popup__content-link js-popup-open" href="#" data-popup-target="registration">Реєструйтесь</button>
                             <div class="popup__btns">
                               <div class="popup__btn">
                                 <button class="btn btn--full btn--square btn--text">Увійти</button>
@@ -582,6 +582,84 @@
                                 <button class="btn btn--full btn--square btn--face">Увійти через Facebook</button>
                               </div>
                             </div>
+                          </form>
+                        </div>
+                        <!-- end form -->
+                      </div>
+                    </div>
+                  </div>
+                  <!-- end popup -->
+                  <!-- begin popup -->
+                  <div class="popup js-popup" data-popup="registration">
+                    <div class="popup__top">
+                      <h3 class="title title--h3-sm">Реєстрація</h3>
+                      <button class="popup__close close js-popup-close"></button>
+                    </div>
+                    <div class="popup__inner">
+                      <div class="popup__form">
+                        <!-- begin form -->
+                        <div class="form">
+                          <form>
+                            <div class="form__field">
+                              <!-- begin input -->
+                              <div class="input">
+                                <input type="text" placeholder="ПІБ">
+                              </div>
+                              <!-- end input -->
+                            </div>
+                            <div class="form__field">
+                              <!-- begin input -->
+                              <div class="input">
+                                <input type="tel" placeholder="+38 ( _ _ _ ) _ _ _ - _ _ - _ _">
+                              </div>
+                              <!-- end input -->
+                            </div>
+                            <div class="form__field">
+                              <!-- begin input -->
+                              <div class="input">
+                                <input type="email" placeholder="Електрона адреса">
+                              </div>
+                              <!-- end input -->
+                            </div>
+                            <div class="form__field">
+                              <!-- begin input -->
+                              <div class="input">
+                                <input type="password" placeholder="Пароль">
+                              </div>
+                              <!-- end input -->
+                            </div>
+                            <div class="form__field">
+                              <!-- begin input -->
+                              <div class="input">
+                                <input type="password" placeholder="Повторіть пароль">
+                              </div>
+                              <!-- end input -->
+                            </div>
+                            <div class="form__field form__checkboxes">
+                              <div class="form__checkbox">
+                                <!-- begin radio -->
+                                <label class="checkbox">
+                                  <input type="radio" name="user">
+                                  <span>Я - клієнт</span>
+                                </label>
+                                <!-- end radio -->
+                              </div>
+                              <div class="form__checkbox">
+                                <!-- begin radio -->
+                                <label class="checkbox">
+                                  <input type="radio" name="user">
+                                  <span>Я - тренер</span>
+                                </label>
+                                <!-- end radio -->
+                              </div>
+                            </div>
+                            <div class="popup__btns form__field">
+                              <div class="popup__btn">
+                                <button class="btn btn--full btn--square btn--text">Зареєструватися</button>
+                              </div>
+                            </div>
+                            <div class="popup__content-title">Вже маєте профіль?</div>
+                            <a class="popup__content-link" href="#">Увійти</a>
                           </form>
                         </div>
                         <!-- end form -->

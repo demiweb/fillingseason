@@ -2,7 +2,7 @@
 <!-- begin {{ name }} -->
 {% if name === 'checkbox' or name === 'radio' or name === 'attach' %}
 <label
-  class="{{ name }}{% if mod %} {{mod}}{% endif %}"
+  class="{% if mod %}{{mod}}{% else %}{{ name }}{% endif %}"
   {% for attr, attrValue in attributes %} {{ attr }}="{{ attrValue }}" {% endfor %}>
 {% elseif isInline %}
 <span

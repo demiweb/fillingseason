@@ -1,0 +1,115 @@
+<!-- begin popup -->
+<div class="popup js-popup" data-popup="registration">
+  <div class="popup__top">
+    <h3 class="title title--h3-sm">Реєстрація</h3>
+    <button class="popup__close close js-popup-close"></button>
+  </div>
+
+  <div class="popup__inner">
+
+    <div class="popup__form">
+      <!-- begin form -->
+      <div class="form">
+        <form>
+          <div class="form__field">
+            {{ mixins.input(
+              name = 'input',
+              mod = '',
+              type = 'text',
+              placeholder = 'ПІБ',
+              value = '',
+              fieldClass = ''
+            ) }}
+          </div>
+
+          <div class="form__field">
+            {{ mixins.input(
+              name = 'input',
+              mod = '',
+              type = 'tel',
+              placeholder = '+38 ( _ _ _ ) _ _ _ - _ _ - _ _',
+              value = '',
+              fieldClass = ''
+            ) }}
+          </div>
+
+          <div class="form__field">
+            {{ mixins.input(
+              name = 'input',
+              mod = '',
+              type = 'email',
+              placeholder = 'Електрона адреса',
+              value = '',
+              fieldClass = ''
+            ) }}
+          </div>
+
+          <div class="form__field">
+            {{ mixins.input(
+              name = 'input',
+              mod = '',
+              type = 'password',
+              placeholder = 'Пароль',
+              value = '',
+              fieldClass = ''
+            ) }}
+          </div>
+
+          <div class="form__field">
+            {{ mixins.input(
+              name = 'input',
+              mod = '',
+              type = 'password',
+              placeholder = 'Повторіть пароль',
+              value = '',
+              fieldClass = ''
+            ) }}
+          </div>
+
+          <div class="form__field form__checkboxes">
+            <div class="form__checkbox">
+              {{ mixins.input(
+                name = 'radio',
+                mod = 'checkbox',
+                type = 'radio',
+                placeholder = '',
+                value = '',
+                fieldClass = '',
+                fieldAttributes = { name: 'user' },
+                label = { last: { span: true, title: 'Я - клієнт' } }
+              ) }}
+            </div>
+            <div class="form__checkbox">
+              {{ mixins.input(
+                name = 'radio',
+                mod = 'checkbox',
+                type = 'radio',
+                placeholder = '',
+                value = '',
+                fieldClass = '',
+                fieldAttributes = { name: 'user' },
+                label = { last: { span: true, title: 'Я - тренер' } }
+              ) }}
+            </div>
+          </div>         
+
+          <div class="popup__btns form__field">
+            <div class="popup__btn">
+              {{ mixins.btn(
+                title = 'Зареєструватися',
+                mod = 'btn--full btn--square btn--text',
+                href = false
+              ) }}
+            </div>           
+          </div>
+
+          <div class="popup__content-title">Вже маєте профіль?</div>
+
+          <a class="popup__content-link" href="#">Увійти</a>          
+        </form>
+      </div>
+      <!-- end form -->
+    </div>
+  </div>
+</div>
+<!-- end popup -->

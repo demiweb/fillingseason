@@ -19,6 +19,7 @@
   &--transp-accent
     color: $accent
     border-color: currentColor
+    background-color: transparent
     +hover
       background-color: $accent
       color: $white
@@ -51,3 +52,25 @@
     font-size: $fz-sm
   &--md
     font-size: em(18)
+  &--reg
+    font-size: 1em
+    padding: .3em 1.5em
+    font-weight: 400
+  &--black
+    background-color: $c-text
+    border-color: $c-text
+    +hover
+      color: $c-text
+
+.more-btn
+  color: $gray
+  +inline-flex(flex-start, center)
+  +after
+    +arr(8, 6, currentColor, b)
+    display: inline-block
+    margin-left: .5em
+  +tr(color .3s)
+  &--active
+    color: $accent
+    +after
+      +arr(8, 6, currentColor, t)

@@ -1,0 +1,180 @@
+{%set
+forms = [  
+  {
+    title: 'Ваші персональні дані',
+    btn: {
+      title: 'Зберегти персональні дані'
+    },
+    fields: [
+      {
+        name: 'input',
+        type: 'text',
+        value: 'Андрій Ігорович Самойленко'
+      },
+      {
+        name: 'input',
+        type: 'tel',
+        value: '+38 ( 097 ) 541 - 22 - 22'
+      },
+      {
+        name: 'input',
+        type: 'email',
+        value: 'Samoilenko.ua@gmail.com'
+      }
+    ]
+  },
+  {
+    title: 'Зміна паролю',
+    btn: {
+      title: 'Зберегти пароль'
+    },
+    fields: [
+      {
+        name: 'input',
+        type: 'password',
+        placeholder: 'Введіть старий пароль',
+        fieldClass: 'js-password-input'
+      },
+      {
+        name: 'input',
+        type: 'password',
+        placeholder: 'Введіть новий пароль',
+        fieldClass: 'js-password-input'
+      },
+      {
+        name: 'input',
+        type: 'password',
+        placeholder: 'Введіть новий пароль ще раз',
+        fieldClass: 'js-password-input'
+      }
+    ]
+  }
+]
+%}
+
+<!-- begin section -->
+<section class="section pt-0">
+  <div class="section__top">
+    <div class="container">
+      <div class="cabinet-top">
+        <div class="cabinet-top__img js-lazy" data-background-image="./img/user.png"></div>
+
+        <div class="cabinet-top__content">
+          <h3 class="title title--h3-sm cabinet-top__title">Вітаємо, Андрій Ігорович <small class="accent">(ваша партнерська знижка 10%)</small></h3>
+          <div class="cabinet-top__subttl gray">Тренер</div>
+        </div>
+
+        <div class="cabinet-top__btn">
+          {{ mixins.btn(
+            title = 'Вихід',
+            mod = 'btn--transp-accent btn--reg'
+          ) }}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="section__block">    
+      <div class="grid">
+        {% for i in forms %}        
+        <div class="_col _col-md-4 _col-xs-6">
+          <!-- begin form -->
+          <div class="form">
+            <h4 class="form__title title title--h4">{{ i.title | safe }}</h4>
+
+            {% for j in i.fields %}
+            <div class="form__field">
+              {{ mixins.input(
+                name = j.name,
+                mod = '',
+                type = j.type,
+                placeholder = j.placeholder,
+                value = j.value,
+                fieldClass = ''
+              ) }}
+            </div>
+            {% endfor %}
+
+            <div class="form__field form__btn">
+              {{ mixins.btn(
+                title = i.btn.title,
+                mod = 'btn--full btn--square btn--black',
+                href = false
+              ) }}
+            </div>
+          </div>
+          <!-- end form -->
+        </div>
+        {% endfor %}
+
+        <div class="_col _col-md-4">
+          <!-- begin banner -->
+          <div class="banner js-lazy" data-background-image="./img/19.jpg">
+            <div class="banner__inner">
+              <div class="banner__upttl">коллекція 2019</div>
+
+              <div class="banner__title">стильні жіночі <br> спортивні костюми</div>
+
+              <div class="banner__btn">
+                {{ mixins.btn(
+                  title = 'Перейти',
+                  mod = 'btn--transp-accent btn--sm'
+                ) }}
+              </div>
+            </div>
+          </div>
+          <!-- end banner -->
+        </div>
+      </div>
+    </div>
+
+    <div class="section__block">
+      <h3 class="section__title title title--h3-sm">Попередні замовлення</h3>
+      {% include "partials/_cabinet-table.html" %}
+    </div>
+
+    <div class="section__block">
+      <h3 class="section__title title title--h3-sm">Мої вподобання</h3>
+
+      <div class="grid">
+        {% for i in range(0, 4) %}
+        <div class="_col _col-md-6">
+          <!-- begin cart-item -->
+          <div class="cart-item cart-item--two-btns">
+            <a href="#" class="cart-item__inner">
+              <span class="cart-item__img">
+                <img class="js-lazy" alt="" src="" data-src="./img/cart-md.jpg"/>
+              </span>
+
+              <span class="cart-item__content">
+                <span class="cart-item__title">
+                  <span class="title title--h5">Куртка зимова</span>
+                </span>
+
+                <span class="cart-item__meta">
+                  <span class="cart-item__meta-item">Колір: білий</span>
+                  <span class="cart-item__meta-item">Розмір: XS</span>
+                  {% if page === 'cart' %}
+                  <span class="cart-item__meta-item is-color-text">1 шт.</span>
+                  {% endif %}
+                </span>
+              </span>
+
+              <span class="cart-item__price">
+                <span class="price price--md">$ 4890,00</span>
+              </span>
+            </a>
+
+            <button class="cart-item__btn cart-item__btn--accent cart-item__btn--above">У кошик</button>
+
+            <button class="cart-item__btn cart-item__del">Видалити {{ mixins.icon('close') }}</button>
+          </div>
+          <!-- end cart-item -->
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end section -->
