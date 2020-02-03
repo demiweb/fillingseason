@@ -46,7 +46,7 @@ table = [
 %}
 
 <!-- begin cabinet-table -->
-<div class="cabinet-table">
+<div class="cabinet-table js-accordion">
   <div class="cabinet-table__top">
     <div class="cabinet-table__th cabinet-table__th--number">№</div>
     <div class="cabinet-table__th cabinet-table__th--date">Дата</div>
@@ -58,33 +58,33 @@ table = [
 
   {% for i in table %}
   <div class="cabinet-table__item cabinet-table-item">
-    <div class="cabinet-table-item__top">
-      <div class="cabinet-table-item__td cabinet-table-item__td--number"><strong>244334</strong></div>
+    <button class="cabinet-table-item__top js-accordion-title{% if i.active %} is-active{% endif %}">
+      <span class="cabinet-table-item__td cabinet-table-item__td--number"><strong>244334</strong></span>
 
-      <div class="cabinet-table-item__td cabinet-table-item__td--date gray">
+      <span class="cabinet-table-item__td cabinet-table-item__td--date gray">
         {{ mixins.icon('clock') }}
         16.01.2019 
-      </div>
+      </span>
 
-      <div class="cabinet-table-item__td cabinet-table-item__td--quantity gray">6 товарів</div>
+      <span class="cabinet-table-item__td cabinet-table-item__td--quantity gray">6 товарів</span>
 
-      <div class="cabinet-table-item__td cabinet-table-item__td--status">
-        <div class="status status--{{ i.status.mod }}">
+      <span class="cabinet-table-item__td cabinet-table-item__td--status">
+        <span class="status status--{{ i.status.mod }}">
           {{ mixins.icon(i.status.icon) }}
           {{ i.status.title | safe }}
-        </div>
-      </div>
+        </span>
+      </span>
 
-      <div class="cabinet-table-item__td cabinet-table-item__td--price">
-        <div class="price price--md">$ 4890,00</div>
-      </div>
+      <span class="cabinet-table-item__td cabinet-table-item__td--price">
+        <span class="price price--md">$ 4890,00</span>
+      </span>
 
-      <div class="cabinet-table-item__td cabinet-table-item__td--btn">
-        <button class="more-btn">Детальніше</button>
-      </div>
-    </div>
+      <span class="cabinet-table-item__td cabinet-table-item__td--btn">
+        <span class="more-btn">Детальніше</span>
+      </span>
+    </button>
 
-    <div class="cabinet-table-item__content">
+    <div class="cabinet-table-item__content js-accordion-content{% if i.active %} is-active{% endif %}">
       <div class="cabinet-table-item__content-left">
         {% for i in range(0, 4) %}
         <!-- begin cart-item -->

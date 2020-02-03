@@ -19,3 +19,29 @@
       height: calc((var(--vh, 1vh) * 100) - #{$header-height-lg})
   &__block
     text-align: center
+    &--sm
+      margin-left: auto
+      margin-right: auto
+      max-width: 450px
+  &__btn
+    max-width: 330px
+    margin-left: auto
+    margin-right: auto
+  &__subttl
+    color: $gray
+    position: relative
+    padding-bottom: 10px
+    margin-bottom: 15px
+    +before
+      position: absolute
+      z-index: 1
+      bottom: 0
+      left: 50%
+      transform: translate(-50%, 0)
+      height: 1px
+      background-color: currentColor
+      width: 45px
+  &__nav
+    margin-bottom: 30px
+    +md
+      margin-bottom: 15px

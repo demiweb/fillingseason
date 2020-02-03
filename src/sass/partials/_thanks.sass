@@ -1,0 +1,73 @@
+.thanks
+  +flex(flex-start, normal, row, wrap)
+  text-align: left
+  &__left, &__center, &__right
+    padding-right: 1em
+    +xs
+      width: 100%
+      padding-right: 0
+  &__left
+    width: percentage(550 / 1410)
+    +md
+      width: 100%
+      padding-right: 0
+      margin-bottom: 2em
+  &__center
+    width: percentage(410/ 1410)
+    +md
+      width: 50%
+    +xs
+      margin-bottom: 1em
+  &__right
+    width: percentage(450 / 1410)
+    +md
+      width: 50%
+  &__icon
+    margin-bottom: 10px
+    .icon
+      font-size: 50px
+  &__subttl
+    color: $gray
+    margin-bottom: 15px
+  &__btn
+    max-width: 330px
+  &__title
+    margin-bottom: .5em
+  &__title-sm
+    margin-bottom: .4em
+  &__list
+    position: relative
+    padding-top: .3em
+    +before
+      position: absolute
+      top: 0
+      left: 0
+      height: 1px
+      width: 44px
+      background-color: $gray
+  &__contact
+    +notlast
+      margin-bottom: 10px
+      
+
+.thanks-list
+  &__title
+    color: $gray
+  &__text
+    margin-bottom: 1em
+
+.thanks-contact
+  +inline-flex(flex-start, center)
+  font-weight: 400
+  font-size: em(18)
+  &__icon
+    font-size: 0
+    margin-right: .5rem
+    .icon
+      font-size: $fz
+  &__link
+    +tr(color .3s)
+    +hover
+      color: $accent
+
+

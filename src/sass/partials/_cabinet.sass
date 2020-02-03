@@ -28,6 +28,7 @@
 
 .cabinet-table
   border: 1px solid  $gray-light
+  border-bottom: 0
   &__top
     +flex(flex-start, center)
     background-color: $gray-lightest
@@ -60,8 +61,11 @@
 
 
 .cabinet-table-item
+  $this: &
   &__top
     +flex(flex-start, center, row, wrap)
+    width: 100%
+    text-align: left
     padding-left: 20px
     padding-right: 20px
     border-bottom: 1px solid  $gray-light    
@@ -69,6 +73,7 @@
     padding-top: .7em
     padding-bottom: .7em
     padding-right: .7em
+    display: block
     +sm
       width: 33.33333%
     +xs
@@ -90,8 +95,13 @@
   &__content
     background-color: $white
     +flex
+    max-height: 0
+    overflow: hidden
     +sm
       display: block
+    &.is-active
+      visibility: visible
+      max-height: none
   &__content-left
     width: percentage(820 / 1410)
     border-right: 1px solid $gray-light

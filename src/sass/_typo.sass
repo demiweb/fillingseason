@@ -5,15 +5,17 @@ h1, h2, h3, h4, h5, h6
   font-weight: 500
 
 .title
+  $this: &
   line-height: 1.2
   font-weight: 500
   display: block
   &--h1
     +css-lock(36, 70, 320, 1399, font-size)
-    letter-spacing: .18em
     text-transform: uppercase
-    +md
-      letter-spacing: .1em
+    &:not(#{$this}--h1-no-ls)
+      letter-spacing: .18em    
+      +md
+        letter-spacing: .1em
   &--h2
     +css-lock(32, 65, 320, 1399, font-size)
     letter-spacing: .12em

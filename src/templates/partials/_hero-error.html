@@ -1,0 +1,33 @@
+<h1 class="hero__title title title--h1 title--h1-no-ls">404</h1>
+
+<div class="hero__subttl">
+  <p>Нажаль, такої сторінки не існує.</p>
+  <p>Але ви можете перейти в інші розділи сайту:</p>
+</div>
+
+<div class="hero__nav">
+  {{ mixins.list(
+    name = 'nav',
+    modifications = { wrap: 'nav--hero', item: '', link: '' },
+    list = [
+      { link: 'Чоловіки', modLink: '', item: '' },
+      { link: 'Лайфстайл' },
+      { link: 'Компанія' },
+      { link: 'Жінки' },
+      { link: 'Спорт' },
+      { link: 'Партнерам' },
+      { link: 'Діти' },      
+      { link: 'Футбол' },      
+      { link: 'Новини' }
+    ]
+  ) }}
+</div>
+
+<div class="hero__btn">
+  {{ mixins.btn(
+    title = 'Перейти на головну',
+    mod = 'btn--square btn--full',
+    href = '/'
+  ) }}
+</div>
+

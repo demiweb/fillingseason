@@ -82,9 +82,9 @@
   textarea
     min-height: 125px
   &.has-text
-    .input__clear, .textarea__clear
+    .input__btn, .textarea__btn
       display: flex
-  &__clear
+  &__btn
     position: absolute
     z-index: 1
     top: 50%
@@ -97,8 +97,18 @@
     background-color: $gray-lightest
     color: $accent
     display: none
+    +tr(color .3s)
     .icon
       font-size: 10px
+    &--inherit
+      background-color: transparent
+      width: auto
+      height: auto
+      color: inherit
+      +hover
+        color: $accent
+      .icon
+        font-size: 1.2em
   &--short
     width: 260px
   &--full-h
@@ -123,3 +133,6 @@
     .input__clear
       background-color: transparent
       color: $c-text
+  &--btn-visible
+    .input__btn, .textarea__btn
+      display: flex

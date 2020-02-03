@@ -1,0 +1,60 @@
+<!-- begin thanks -->
+<div class="thanks">
+  <div class="thanks__left">
+    <div class="thanks__icon">
+      {{ mixins.icon('tick') }}
+    </div>
+
+    <h3 class="thanks__title title title--h3-sm">Дякуємо за замовлення № 23212</h3>
+
+    <div class="thanks__subttl">
+      <p>Наш менеджер обробляє вашу заявку.</p> 
+      <p>Ви отримаєте підтвердження на ваш Email</p>
+    </div>
+
+    <div class="thanks__btn">
+      {{ mixins.btn(
+        title = 'Продовжити покупки',
+        mod = 'btn--square btn--full'
+      ) }}
+    </div>
+  </div>
+
+  <div class="thanks__center">
+    <h4 class="thanks__title-sm title title--h4">Деталі замовлення:</h4>
+
+    <dl class="thanks__list thanks-list">
+      <dt class="thanks-list__title">Спосіб оплати:</dt>
+      <dd class="thanks-list__text">Готівка</dd>
+
+      <dt class="thanks-list__title">Спосіб доставки:</dt>
+      <dd class="thanks-list__text">Ваше замовлення буде доставлено
+за адресою: Київ, вул. Чорногірна, 15</dd>
+
+      <dt class="thanks-list__title">Разом до сплати:</dt>
+      <dd class="thanks-list__text">$ 4890,00</dd>
+    </dl>
+  </div>
+
+  <div class="thanks__right">
+    <h4 class="thanks__title title title--h4">Виникли питання? </h4>
+
+    <div class="thanks__subttl">Телефонуйте або пишіть на Email:</div>
+
+    <div class="thanks__contacts">
+      <div class="thanks__contact thanks-contact">
+        <div class="thanks-contact__icon">{{ mixins.icon('phone') }}</div>
+        <a href="tel:+380500505050" class="thanks-contact__link">+38 (050) 050 5050</a>;
+      </div>
+      <div class="thanks__contact thanks-contact">
+        <div class="thanks-contact__icon">{{ mixins.icon('phone') }}</div>
+        <a href="tel:+380500505050" class="thanks-contact__link">+38 (050) 050 5050</a>;
+      </div>
+      <div class="thanks__contact thanks-contact">
+        <div class="thanks-contact__icon">{{ mixins.icon('mail') }}</div>
+        <a href="mailto:office@fillingseason.com" class="thanks-contact__link">office@fillingseason.com</a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end thanks -->

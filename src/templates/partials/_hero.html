@@ -1,6 +1,6 @@
 <!-- begin hero -->
 <section class="hero js-lazy" data-background-image="./img/{{ hero.bg }}">
-  <div class="container container--lg">
+  <div class="container{% if hero.container.mod %} {{ hero.container.mod }}{% else %} container--lg{% endif %}">
     <div class="hero__inner">
       <div class="hero__block{% if hero.block.mod %} {{ hero.block.mod }}{% endif %}">
         {% if hero.upttl %}
@@ -24,6 +24,14 @@
           </div>
           {% endfor %}
         </div>
+        {% endif %}
+
+        {% if hero.errorPage %}
+          {% include "partials/_hero-error.html" %}
+        {% endif %}
+
+        {% if hero.thanks %}
+          {% include "partials/_hero-thanks.html" %}
         {% endif %}
       </div>
     </div>

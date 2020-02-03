@@ -14,6 +14,14 @@ class Input {
     return null;
   }
 
+  get passwordInputs() {
+    return this.inputs.filter((input) => input.dataset.type === 'password');
+  }
+
+  get textInputs() {
+    return this.inputs.filter((input) => input.dataset.type !== 'password');
+  }
+
   checkValue() {
     if (this.input.value.length >= 1) {
       this.wrap.classList.add(HAS_TEXT);
@@ -30,6 +38,10 @@ class Input {
     this.checkValue();
   }
 
+  onBLurHandler(e) {
+    if (this.wrap) this.wrap.classList.remove(HAS_FOCUS);
+  }
+
   onInputHandler(e) {
     this.input = e.target.closest(`.${INPUT}`);
     if (!this.input) return;
@@ -39,26 +51,46 @@ class Input {
 
   onCLickHandler(e) {
     this.btn = e.target.closest(`.${BTN}`);
+    this.input = null;
     if (!this.btn) return;
     e.preventDefault();
 
     this.input = this.wrap.querySelector(`.${INPUT}`);
-    this.input.value = '';
-    this.checkValue();
+
+    if (this.input.dataset.type === 'password') {
+      const types = ['password', 'text'];
+
+      this.input.type = types.filter((type) => type !== this.input.type);
+    } else {
+      this.input.value = '';
+      this.checkValue();
+    }
   }
 
   _addListeners() {
-    this.onFocus = this.onFocusHandler.bind(this);
-    this.onInput = this.onInputHandler.bind(this);
-    this.onCLick = this.onCLickHandler.bind(this);
+    if (this.textInputs.length > 0) {
+      this.onFocus = this.onFocusHandler.bind(this);
+      this.onInput = this.onInputHandler.bind(this);
+      this.onCLick = this.onCLickHandler.bind(this);
+      this.onBLur = this.onBLurHandler.bind(this);
 
-    document.addEventListener('focus', this.onFocus, true);
-    document.addEventListener('input', this.onInput, true);
-    document.addEventListener('click', this.onCLick);
+      document.addEventListener('focus', this.onFocus, true);
+      document.addEventListener('input', this.onInput, true);
+      document.addEventListener('click', this.onCLick);
+      document.addEventListener('blur', this.onBLur, true);
+    }
+
+    if (this.passwordInputs.length > 0) {
+      this.onCLick = this.onCLickHandler.bind(this);
+
+      document.addEventListener('click', this.onCLick);
+    }
   }
 
   _addInputClasses() {
-    this.inputs.forEach((input) => {
+    if (!this.textInputs.length) return;
+
+    this.textInputs.forEach((input) => {
       this.input = input;
       this.checkValue();
     });

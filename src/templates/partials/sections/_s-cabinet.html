@@ -31,21 +31,30 @@ forms = [
     fields: [
       {
         name: 'input',
+        mod: 'input--btn-visible',
         type: 'password',
         placeholder: 'Введіть старий пароль',
-        fieldClass: 'js-password-input'
+        fieldClass: 'js-input',
+        label: { first: '<button class="input__btn input__btn--inherit js-input-btn">'+ mixins.icon('view') +'</button>' },
+        fieldAttributes: { 'data-type': 'password' }
       },
       {
         name: 'input',
+        mod: 'input--btn-visible',
         type: 'password',
         placeholder: 'Введіть новий пароль',
-        fieldClass: 'js-password-input'
+        fieldClass: 'js-input',
+        label: { first: '<button class="input__btn input__btn--inherit js-input-btn">'+ mixins.icon('view') +'</button>' },
+        fieldAttributes: { 'data-type': 'password' }
       },
       {
         name: 'input',
+        mod: 'input--btn-visible',
         type: 'password',
         placeholder: 'Введіть новий пароль ще раз',
-        fieldClass: 'js-password-input'
+        fieldClass: 'js-input',
+        label: { first: '<button class="input__btn input__btn--inherit js-input-btn">'+ mixins.icon('view') +'</button>' },
+        fieldAttributes: { 'data-type': 'password' }
       }
     ]
   }
@@ -75,23 +84,25 @@ forms = [
   </div>
 
   <div class="container">
-    <div class="section__block">    
+    <div class="section__block">
       <div class="grid">
-        {% for i in forms %}        
+        {% for i in forms %}
         <div class="_col _col-md-4 _col-xs-6">
           <!-- begin form -->
-          <div class="form">
+          <form class="form">
             <h4 class="form__title title title--h4">{{ i.title | safe }}</h4>
 
             {% for j in i.fields %}
             <div class="form__field">
               {{ mixins.input(
                 name = j.name,
-                mod = '',
+                mod = j.mod,
                 type = j.type,
                 placeholder = j.placeholder,
                 value = j.value,
-                fieldClass = ''
+                fieldClass = j.fieldClass,
+                fieldAttributes = j.fieldAttributes,
+                label = j.label
               ) }}
             </div>
             {% endfor %}
@@ -103,7 +114,7 @@ forms = [
                 href = false
               ) }}
             </div>
-          </div>
+          </form>
           <!-- end form -->
         </div>
         {% endfor %}

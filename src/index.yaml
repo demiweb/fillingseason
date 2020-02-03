@@ -20,3 +20,5 @@ PageList:
 - file: to-the-partners.html
 - file: results.html
 - file: cabinet.html
+- file: 404.html
+- file: thanks.html

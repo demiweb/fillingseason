@@ -659,7 +659,7 @@
                               </div>
                             </div>
                             <div class="popup__content-title">Вже маєте профіль?</div>
-                            <a class="popup__content-link" href="#">Увійти</a>
+                            <button class="popup__content-link js-popup-open" data-popup-target="login">Увійти</button>
                           </form>
                         </div>
                         <!-- end form -->
@@ -717,7 +717,7 @@
               <div class="grid">
                 <div class="_col _col-md-4 _col-xs-6">
                   <!-- begin form -->
-                  <div class="form">
+                  <form class="form">
                     <h4 class="form__title title title--h4">Ваші персональні дані</h4>
                     <div class="form__field">
                       <!-- begin input -->
@@ -743,38 +743,62 @@
                     <div class="form__field form__btn">
                       <button class="btn btn--full btn--square btn--black">Зберегти персональні дані</button>
                     </div>
-                  </div>
+                  </form>
                   <!-- end form -->
                 </div>
                 <div class="_col _col-md-4 _col-xs-6">
                   <!-- begin form -->
-                  <div class="form">
+                  <form class="form">
                     <h4 class="form__title title title--h4">Зміна паролю</h4>
                     <div class="form__field">
                       <!-- begin input -->
-                      <div class="input">
-                        <input type="password" placeholder="Введіть старий пароль">
+                      <div class="input input--btn-visible">
+                        <button class="input__btn input__btn--inherit js-input-btn">
+                          <!-- begin icon-view -->
+                          <svg viewBox="0 0 511.999 511.999" class="icon icon-view" width="1.000em" height="1em">
+                            <path d="M508.745 246.041c-4.574-6.257-113.557-153.206-252.748-153.206S7.818 239.784 3.249 246.035a16.896 16.896 0 000 19.923c4.569 6.257 113.557 153.206 252.748 153.206s248.174-146.95 252.748-153.201a16.875 16.875 0 000-19.922zM255.997 385.406c-102.529 0-191.33-97.533-217.617-129.418 26.253-31.913 114.868-129.395 217.617-129.395 102.524 0 191.319 97.516 217.617 129.418-26.253 31.912-114.868 129.395-217.617 129.395z" />
+                            <path d="M255.997 154.725c-55.842 0-101.275 45.433-101.275 101.275s45.433 101.275 101.275 101.275S357.272 311.842 357.272 256s-45.433-101.275-101.275-101.275zm0 168.791c-37.23 0-67.516-30.287-67.516-67.516s30.287-67.516 67.516-67.516 67.516 30.287 67.516 67.516-30.286 67.516-67.516 67.516z" />
+                          </svg>
+                          <!-- end icon-view -->
+                        </button>
+                        <input class="js-input" type="password" placeholder="Введіть старий пароль" data-type="password">
                       </div>
                       <!-- end input -->
                     </div>
                     <div class="form__field">
                       <!-- begin input -->
-                      <div class="input">
-                        <input type="password" placeholder="Введіть новий пароль">
+                      <div class="input input--btn-visible">
+                        <button class="input__btn input__btn--inherit js-input-btn">
+                          <!-- begin icon-view -->
+                          <svg viewBox="0 0 511.999 511.999" class="icon icon-view" width="1.000em" height="1em">
+                            <path d="M508.745 246.041c-4.574-6.257-113.557-153.206-252.748-153.206S7.818 239.784 3.249 246.035a16.896 16.896 0 000 19.923c4.569 6.257 113.557 153.206 252.748 153.206s248.174-146.95 252.748-153.201a16.875 16.875 0 000-19.922zM255.997 385.406c-102.529 0-191.33-97.533-217.617-129.418 26.253-31.913 114.868-129.395 217.617-129.395 102.524 0 191.319 97.516 217.617 129.418-26.253 31.912-114.868 129.395-217.617 129.395z" />
+                            <path d="M255.997 154.725c-55.842 0-101.275 45.433-101.275 101.275s45.433 101.275 101.275 101.275S357.272 311.842 357.272 256s-45.433-101.275-101.275-101.275zm0 168.791c-37.23 0-67.516-30.287-67.516-67.516s30.287-67.516 67.516-67.516 67.516 30.287 67.516 67.516-30.286 67.516-67.516 67.516z" />
+                          </svg>
+                          <!-- end icon-view -->
+                        </button>
+                        <input class="js-input" type="password" placeholder="Введіть новий пароль" data-type="password">
                       </div>
                       <!-- end input -->
                     </div>
                     <div class="form__field">
                       <!-- begin input -->
-                      <div class="input">
-                        <input type="password" placeholder="Введіть новий пароль ще раз">
+                      <div class="input input--btn-visible">
+                        <button class="input__btn input__btn--inherit js-input-btn">
+                          <!-- begin icon-view -->
+                          <svg viewBox="0 0 511.999 511.999" class="icon icon-view" width="1.000em" height="1em">
+                            <path d="M508.745 246.041c-4.574-6.257-113.557-153.206-252.748-153.206S7.818 239.784 3.249 246.035a16.896 16.896 0 000 19.923c4.569 6.257 113.557 153.206 252.748 153.206s248.174-146.95 252.748-153.201a16.875 16.875 0 000-19.922zM255.997 385.406c-102.529 0-191.33-97.533-217.617-129.418 26.253-31.913 114.868-129.395 217.617-129.395 102.524 0 191.319 97.516 217.617 129.418-26.253 31.912-114.868 129.395-217.617 129.395z" />
+                            <path d="M255.997 154.725c-55.842 0-101.275 45.433-101.275 101.275s45.433 101.275 101.275 101.275S357.272 311.842 357.272 256s-45.433-101.275-101.275-101.275zm0 168.791c-37.23 0-67.516-30.287-67.516-67.516s30.287-67.516 67.516-67.516 67.516 30.287 67.516 67.516-30.286 67.516-67.516 67.516z" />
+                          </svg>
+                          <!-- end icon-view -->
+                        </button>
+                        <input class="js-input" type="password" placeholder="Введіть новий пароль ще раз" data-type="password">
                       </div>
                       <!-- end input -->
                     </div>
                     <div class="form__field form__btn">
                       <button class="btn btn--full btn--square btn--black">Зберегти пароль</button>
                     </div>
-                  </div>
+                  </form>
                   <!-- end form -->
                 </div>
                 <div class="_col _col-md-4">
@@ -795,7 +819,7 @@
             <div class="section__block">
               <h3 class="section__title title title--h3-sm">Попередні замовлення</h3>
               <!-- begin cabinet-table -->
-              <div class="cabinet-table">
+              <div class="cabinet-table js-accordion">
                 <div class="cabinet-table__top">
                   <div class="cabinet-table__th cabinet-table__th--number">№</div>
                   <div class="cabinet-table__th cabinet-table__th--date">Дата</div>
@@ -805,32 +829,32 @@
                   <div class="cabinet-table__th cabinet-table__th--btn"></div>
                 </div>
                 <div class="cabinet-table__item cabinet-table-item">
-                  <div class="cabinet-table-item__top">
-                    <div class="cabinet-table-item__td cabinet-table-item__td--number"><strong>244334</strong></div>
-                    <div class="cabinet-table-item__td cabinet-table-item__td--date gray">
+                  <button class="cabinet-table-item__top js-accordion-title">
+                    <span class="cabinet-table-item__td cabinet-table-item__td--number"><strong>244334</strong></span>
+                    <span class="cabinet-table-item__td cabinet-table-item__td--date gray">
                       <!-- begin icon-clock -->
                       <svg viewBox="0 0 41.301 41.301" class="icon icon-clock" width="1.000em" height="1em">
                         <path style="fill:#1e201d" d="M20.642 0c5.698 0 10.857 2.317 14.602 6.047 3.73 3.746 6.047 8.905 6.047 14.603s-2.317 10.857-6.047 14.603c-3.746 3.73-8.904 6.047-14.602 6.047S9.786 38.983 6.056 35.253A20.572 20.572 0 01.008 20.65 20.573 20.573 0 016.055 6.047 20.576 20.576 0 0120.642 0zm10.524 19.523c.619 0 1.111.508 1.111 1.127s-.492 1.127-1.111 1.127H20.642c-.413 0-.778-.238-.968-.571l-.016-.016-.016-.032v-.016l-.016-.032-.016-.032v-.016l-.016-.032-.016-.016v-.032l-.016-.032v-.016l-.016-.032v-.064l-.016-.016V7.206c0-.619.492-1.111 1.111-1.111s1.127.492 1.127 1.111v12.317h9.398zm2.491-11.888c-3.333-3.333-7.936-5.381-13.015-5.381S10.96 4.301 7.627 7.635A18.408 18.408 0 002.246 20.65c0 5.079 2.063 9.682 5.381 13.016 3.333 3.333 7.936 5.381 13.015 5.381s9.682-2.048 13.015-5.381a18.355 18.355 0 005.397-13.016 18.35 18.35 0 00-5.397-13.015z" />
                       </svg>
-                      <!-- end icon-clock --> 16.01.2019 </div>
-                    <div class="cabinet-table-item__td cabinet-table-item__td--quantity gray">6 товарів</div>
-                    <div class="cabinet-table-item__td cabinet-table-item__td--status">
-                      <div class="status status--done">
+                      <!-- end icon-clock --> 16.01.2019 </span>
+                    <span class="cabinet-table-item__td cabinet-table-item__td--quantity gray">6 товарів</span>
+                    <span class="cabinet-table-item__td cabinet-table-item__td--status">
+                      <span class="status status--done">
                         <!-- begin icon-notepad -->
                         <svg height="1em" viewBox="-79 -16 533 533.333" width="0.999em" class="icon icon-notepad">
                           <path d="M315.809 33.95h-80.356a56.94 56.94 0 00-104.183 0H50.91C20.598 33.983-3.965 58.55-4 88.862v356.223c.035 30.312 24.598 54.879 54.91 54.914H315.81c30.312-.035 54.879-24.602 54.914-54.914V88.863c-.035-30.312-24.602-54.879-54.914-54.914zm-175.496 25a12.5 12.5 0 0012.207-9.821C155.59 35.152 168.563 25 183.363 25s27.77 10.152 30.84 24.129a12.494 12.494 0 0012.211 9.82H251.2v10.969c-.02 16.512-13.398 29.89-29.91 29.91h-75.855c-16.516-.02-29.895-13.398-29.914-29.91V58.949zm205.41 386.136c-.016 16.516-13.399 29.898-29.914 29.914H50.91c-16.512-.016-29.89-13.398-29.91-29.914V88.863c.02-16.515 13.398-29.894 29.91-29.914h39.61v10.969c.035 30.312 24.601 54.875 54.914 54.91h75.855c30.313-.035 54.875-24.598 54.91-54.91V58.949h39.61c16.515.02 29.894 13.399 29.914 29.914zm0 0" />
                           <path d="M245.227 230.957l-82.063 80.125-41.672-40.676c-4.902-4.797-12.754-4.738-17.594.121-4.835 4.864-4.855 12.715-.039 17.598l.168.164 50.399 49.211c4.86 4.742 12.613 4.742 17.469 0l90.792-88.648c4.91-4.829 4.989-12.715.184-17.641-4.812-4.926-12.695-5.035-17.644-.246zm0 0" />
                         </svg>
-                        <!-- end icon-notepad --> Виконаний </div>
-                    </div>
-                    <div class="cabinet-table-item__td cabinet-table-item__td--price">
-                      <div class="price price--md">$ 4890,00</div>
-                    </div>
-                    <div class="cabinet-table-item__td cabinet-table-item__td--btn">
-                      <button class="more-btn">Детальніше</button>
-                    </div>
-                  </div>
-                  <div class="cabinet-table-item__content">
+                        <!-- end icon-notepad --> Виконаний </span>
+                    </span>
+                    <span class="cabinet-table-item__td cabinet-table-item__td--price">
+                      <span class="price price--md">$ 4890,00</span>
+                    </span>
+                    <span class="cabinet-table-item__td cabinet-table-item__td--btn">
+                      <span class="more-btn">Детальніше</span>
+                    </span>
+                  </button>
+                  <div class="cabinet-table-item__content js-accordion-content">
                     <div class="cabinet-table-item__content-left">
                       <!-- begin cart-item -->
                       <div class="cart-item">
@@ -951,32 +975,32 @@
                   </div>
                 </div>
                 <div class="cabinet-table__item cabinet-table-item">
-                  <div class="cabinet-table-item__top">
-                    <div class="cabinet-table-item__td cabinet-table-item__td--number"><strong>244334</strong></div>
-                    <div class="cabinet-table-item__td cabinet-table-item__td--date gray">
+                  <button class="cabinet-table-item__top js-accordion-title">
+                    <span class="cabinet-table-item__td cabinet-table-item__td--number"><strong>244334</strong></span>
+                    <span class="cabinet-table-item__td cabinet-table-item__td--date gray">
                       <!-- begin icon-clock -->
                       <svg viewBox="0 0 41.301 41.301" class="icon icon-clock" width="1.000em" height="1em">
                         <path style="fill:#1e201d" d="M20.642 0c5.698 0 10.857 2.317 14.602 6.047 3.73 3.746 6.047 8.905 6.047 14.603s-2.317 10.857-6.047 14.603c-3.746 3.73-8.904 6.047-14.602 6.047S9.786 38.983 6.056 35.253A20.572 20.572 0 01.008 20.65 20.573 20.573 0 016.055 6.047 20.576 20.576 0 0120.642 0zm10.524 19.523c.619 0 1.111.508 1.111 1.127s-.492 1.127-1.111 1.127H20.642c-.413 0-.778-.238-.968-.571l-.016-.016-.016-.032v-.016l-.016-.032-.016-.032v-.016l-.016-.032-.016-.016v-.032l-.016-.032v-.016l-.016-.032v-.064l-.016-.016V7.206c0-.619.492-1.111 1.111-1.111s1.127.492 1.127 1.111v12.317h9.398zm2.491-11.888c-3.333-3.333-7.936-5.381-13.015-5.381S10.96 4.301 7.627 7.635A18.408 18.408 0 002.246 20.65c0 5.079 2.063 9.682 5.381 13.016 3.333 3.333 7.936 5.381 13.015 5.381s9.682-2.048 13.015-5.381a18.355 18.355 0 005.397-13.016 18.35 18.35 0 00-5.397-13.015z" />
                       </svg>
-                      <!-- end icon-clock --> 16.01.2019 </div>
-                    <div class="cabinet-table-item__td cabinet-table-item__td--quantity gray">6 товарів</div>
-                    <div class="cabinet-table-item__td cabinet-table-item__td--status">
-                      <div class="status status--processing">
+                      <!-- end icon-clock --> 16.01.2019 </span>
+                    <span class="cabinet-table-item__td cabinet-table-item__td--quantity gray">6 товарів</span>
+                    <span class="cabinet-table-item__td cabinet-table-item__td--status">
+                      <span class="status status--processing">
                         <!-- begin icon-history -->
                         <svg height="1em" viewBox="0 0 551.13 551.13" width="1.000em" class="icon icon-history">
                           <path d="M275.531 172.228l-.05 120.493c0 4.575 1.816 8.948 5.046 12.177l86.198 86.181 24.354-24.354-81.153-81.136.05-113.361z" />
                           <path d="M310.011 34.445c-121.23 0-221.563 90.033-238.367 206.674H0l86.114 86.114 86.114-86.114h-65.78C122.925 143.53 207.803 68.891 310.011 68.891c113.966 0 206.674 92.707 206.674 206.674s-92.707 206.674-206.674 206.674c-64.064 0-123.469-28.996-162.978-79.555l-27.146 21.192c46.084 58.968 115.379 92.808 190.124 92.808 132.955 0 241.119-108.181 241.119-241.119S442.966 34.446 310.011 34.445z" />
                         </svg>
-                        <!-- end icon-history --> В обробці </div>
-                    </div>
-                    <div class="cabinet-table-item__td cabinet-table-item__td--price">
-                      <div class="price price--md">$ 4890,00</div>
-                    </div>
-                    <div class="cabinet-table-item__td cabinet-table-item__td--btn">
-                      <button class="more-btn">Детальніше</button>
-                    </div>
-                  </div>
-                  <div class="cabinet-table-item__content">
+                        <!-- end icon-history --> В обробці </span>
+                    </span>
+                    <span class="cabinet-table-item__td cabinet-table-item__td--price">
+                      <span class="price price--md">$ 4890,00</span>
+                    </span>
+                    <span class="cabinet-table-item__td cabinet-table-item__td--btn">
+                      <span class="more-btn">Детальніше</span>
+                    </span>
+                  </button>
+                  <div class="cabinet-table-item__content js-accordion-content">
                     <div class="cabinet-table-item__content-left">
                       <!-- begin cart-item -->
                       <div class="cart-item">
@@ -1097,17 +1121,17 @@
                   </div>
                 </div>
                 <div class="cabinet-table__item cabinet-table-item">
-                  <div class="cabinet-table-item__top">
-                    <div class="cabinet-table-item__td cabinet-table-item__td--number"><strong>244334</strong></div>
-                    <div class="cabinet-table-item__td cabinet-table-item__td--date gray">
+                  <button class="cabinet-table-item__top js-accordion-title">
+                    <span class="cabinet-table-item__td cabinet-table-item__td--number"><strong>244334</strong></span>
+                    <span class="cabinet-table-item__td cabinet-table-item__td--date gray">
                       <!-- begin icon-clock -->
                       <svg viewBox="0 0 41.301 41.301" class="icon icon-clock" width="1.000em" height="1em">
                         <path style="fill:#1e201d" d="M20.642 0c5.698 0 10.857 2.317 14.602 6.047 3.73 3.746 6.047 8.905 6.047 14.603s-2.317 10.857-6.047 14.603c-3.746 3.73-8.904 6.047-14.602 6.047S9.786 38.983 6.056 35.253A20.572 20.572 0 01.008 20.65 20.573 20.573 0 016.055 6.047 20.576 20.576 0 0120.642 0zm10.524 19.523c.619 0 1.111.508 1.111 1.127s-.492 1.127-1.111 1.127H20.642c-.413 0-.778-.238-.968-.571l-.016-.016-.016-.032v-.016l-.016-.032-.016-.032v-.016l-.016-.032-.016-.016v-.032l-.016-.032v-.016l-.016-.032v-.064l-.016-.016V7.206c0-.619.492-1.111 1.111-1.111s1.127.492 1.127 1.111v12.317h9.398zm2.491-11.888c-3.333-3.333-7.936-5.381-13.015-5.381S10.96 4.301 7.627 7.635A18.408 18.408 0 002.246 20.65c0 5.079 2.063 9.682 5.381 13.016 3.333 3.333 7.936 5.381 13.015 5.381s9.682-2.048 13.015-5.381a18.355 18.355 0 005.397-13.016 18.35 18.35 0 00-5.397-13.015z" />
                       </svg>
-                      <!-- end icon-clock --> 16.01.2019 </div>
-                    <div class="cabinet-table-item__td cabinet-table-item__td--quantity gray">6 товарів</div>
-                    <div class="cabinet-table-item__td cabinet-table-item__td--status">
-                      <div class="status status--transporting">
+                      <!-- end icon-clock --> 16.01.2019 </span>
+                    <span class="cabinet-table-item__td cabinet-table-item__td--quantity gray">6 товарів</span>
+                    <span class="cabinet-table-item__td cabinet-table-item__td--status">
+                      <span class="status status--transporting">
                         <!-- begin icon-truck -->
                         <svg viewBox="0 0 512 512" class="icon icon-truck" width="1.000em" height="1em">
                           <path d="M119.467 337.067c-28.237 0-51.2 22.963-51.2 51.2 0 28.237 22.963 51.2 51.2 51.2s51.2-22.963 51.2-51.2c0-28.237-22.964-51.2-51.2-51.2zm0 85.333c-18.825 0-34.133-15.309-34.133-34.133 0-18.825 15.309-34.133 34.133-34.133s34.133 15.309 34.133 34.133c0 18.824-15.309 34.133-34.133 34.133zM409.6 337.067c-28.237 0-51.2 22.963-51.2 51.2 0 28.237 22.963 51.2 51.2 51.2 28.237 0 51.2-22.963 51.2-51.2 0-28.237-22.963-51.2-51.2-51.2zm0 85.333c-18.825 0-34.133-15.309-34.133-34.133 0-18.825 15.309-34.133 34.133-34.133 18.825 0 34.133 15.309 34.133 34.133 0 18.824-15.308 34.133-34.133 34.133z" />
@@ -1115,16 +1139,16 @@
                           <path d="M375.467 277.333V217.6h68.267v-17.067h-76.8a8.53 8.53 0 00-8.533 8.533v76.8a8.525 8.525 0 008.533 8.533h128v-17.067H375.467zM332.8 106.667H8.533A8.536 8.536 0 000 115.2v273.067a8.53 8.53 0 008.533 8.533H76.8v-17.067H17.067v-256h307.2v256H162.133V396.8H332.8a8.525 8.525 0 008.533-8.533V115.2a8.53 8.53 0 00-8.533-8.533z" />
                           <path d="M8.533 345.6h51.2v17.067h-51.2zM179.2 345.6h145.067v17.067H179.2zM469.333 345.6h34.133v17.067h-34.133zM34.133 140.8H332.8v17.067H34.133zM110.933 379.733H128V396.8h-17.067zM401.067 379.733h17.067V396.8h-17.067zM34.133 72.533H153.6V89.6H34.133zM0 72.533h17.067V89.6H0z" />
                         </svg>
-                        <!-- end icon-truck --> В дорозі </div>
-                    </div>
-                    <div class="cabinet-table-item__td cabinet-table-item__td--price">
-                      <div class="price price--md">$ 4890,00</div>
-                    </div>
-                    <div class="cabinet-table-item__td cabinet-table-item__td--btn">
-                      <button class="more-btn">Детальніше</button>
-                    </div>
-                  </div>
-                  <div class="cabinet-table-item__content">
+                        <!-- end icon-truck --> В дорозі </span>
+                    </span>
+                    <span class="cabinet-table-item__td cabinet-table-item__td--price">
+                      <span class="price price--md">$ 4890,00</span>
+                    </span>
+                    <span class="cabinet-table-item__td cabinet-table-item__td--btn">
+                      <span class="more-btn">Детальніше</span>
+                    </span>
+                  </button>
+                  <div class="cabinet-table-item__content js-accordion-content">
                     <div class="cabinet-table-item__content-left">
                       <!-- begin cart-item -->
                       <div class="cart-item">
@@ -1245,32 +1269,32 @@
                   </div>
                 </div>
                 <div class="cabinet-table__item cabinet-table-item">
-                  <div class="cabinet-table-item__top">
-                    <div class="cabinet-table-item__td cabinet-table-item__td--number"><strong>244334</strong></div>
-                    <div class="cabinet-table-item__td cabinet-table-item__td--date gray">
+                  <button class="cabinet-table-item__top js-accordion-title">
+                    <span class="cabinet-table-item__td cabinet-table-item__td--number"><strong>244334</strong></span>
+                    <span class="cabinet-table-item__td cabinet-table-item__td--date gray">
                       <!-- begin icon-clock -->
                       <svg viewBox="0 0 41.301 41.301" class="icon icon-clock" width="1.000em" height="1em">
                         <path style="fill:#1e201d" d="M20.642 0c5.698 0 10.857 2.317 14.602 6.047 3.73 3.746 6.047 8.905 6.047 14.603s-2.317 10.857-6.047 14.603c-3.746 3.73-8.904 6.047-14.602 6.047S9.786 38.983 6.056 35.253A20.572 20.572 0 01.008 20.65 20.573 20.573 0 016.055 6.047 20.576 20.576 0 0120.642 0zm10.524 19.523c.619 0 1.111.508 1.111 1.127s-.492 1.127-1.111 1.127H20.642c-.413 0-.778-.238-.968-.571l-.016-.016-.016-.032v-.016l-.016-.032-.016-.032v-.016l-.016-.032-.016-.016v-.032l-.016-.032v-.016l-.016-.032v-.064l-.016-.016V7.206c0-.619.492-1.111 1.111-1.111s1.127.492 1.127 1.111v12.317h9.398zm2.491-11.888c-3.333-3.333-7.936-5.381-13.015-5.381S10.96 4.301 7.627 7.635A18.408 18.408 0 002.246 20.65c0 5.079 2.063 9.682 5.381 13.016 3.333 3.333 7.936 5.381 13.015 5.381s9.682-2.048 13.015-5.381a18.355 18.355 0 005.397-13.016 18.35 18.35 0 00-5.397-13.015z" />
                       </svg>
-                      <!-- end icon-clock --> 16.01.2019 </div>
-                    <div class="cabinet-table-item__td cabinet-table-item__td--quantity gray">6 товарів</div>
-                    <div class="cabinet-table-item__td cabinet-table-item__td--status">
-                      <div class="status status--done">
+                      <!-- end icon-clock --> 16.01.2019 </span>
+                    <span class="cabinet-table-item__td cabinet-table-item__td--quantity gray">6 товарів</span>
+                    <span class="cabinet-table-item__td cabinet-table-item__td--status">
+                      <span class="status status--done">
                         <!-- begin icon-notepad -->
                         <svg height="1em" viewBox="-79 -16 533 533.333" width="0.999em" class="icon icon-notepad">
                           <path d="M315.809 33.95h-80.356a56.94 56.94 0 00-104.183 0H50.91C20.598 33.983-3.965 58.55-4 88.862v356.223c.035 30.312 24.598 54.879 54.91 54.914H315.81c30.312-.035 54.879-24.602 54.914-54.914V88.863c-.035-30.312-24.602-54.879-54.914-54.914zm-175.496 25a12.5 12.5 0 0012.207-9.821C155.59 35.152 168.563 25 183.363 25s27.77 10.152 30.84 24.129a12.494 12.494 0 0012.211 9.82H251.2v10.969c-.02 16.512-13.398 29.89-29.91 29.91h-75.855c-16.516-.02-29.895-13.398-29.914-29.91V58.949zm205.41 386.136c-.016 16.516-13.399 29.898-29.914 29.914H50.91c-16.512-.016-29.89-13.398-29.91-29.914V88.863c.02-16.515 13.398-29.894 29.91-29.914h39.61v10.969c.035 30.312 24.601 54.875 54.914 54.91h75.855c30.313-.035 54.875-24.598 54.91-54.91V58.949h39.61c16.515.02 29.894 13.399 29.914 29.914zm0 0" />
                           <path d="M245.227 230.957l-82.063 80.125-41.672-40.676c-4.902-4.797-12.754-4.738-17.594.121-4.835 4.864-4.855 12.715-.039 17.598l.168.164 50.399 49.211c4.86 4.742 12.613 4.742 17.469 0l90.792-88.648c4.91-4.829 4.989-12.715.184-17.641-4.812-4.926-12.695-5.035-17.644-.246zm0 0" />
                         </svg>
-                        <!-- end icon-notepad --> Виконаний </div>
-                    </div>
-                    <div class="cabinet-table-item__td cabinet-table-item__td--price">
-                      <div class="price price--md">$ 4890,00</div>
-                    </div>
-                    <div class="cabinet-table-item__td cabinet-table-item__td--btn">
-                      <button class="more-btn">Детальніше</button>
-                    </div>
-                  </div>
-                  <div class="cabinet-table-item__content">
+                        <!-- end icon-notepad --> Виконаний </span>
+                    </span>
+                    <span class="cabinet-table-item__td cabinet-table-item__td--price">
+                      <span class="price price--md">$ 4890,00</span>
+                    </span>
+                    <span class="cabinet-table-item__td cabinet-table-item__td--btn">
+                      <span class="more-btn">Детальніше</span>
+                    </span>
+                  </button>
+                  <div class="cabinet-table-item__content js-accordion-content">
                     <div class="cabinet-table-item__content-left">
                       <!-- begin cart-item -->
                       <div class="cart-item">
@@ -1391,32 +1415,32 @@
                   </div>
                 </div>
                 <div class="cabinet-table__item cabinet-table-item">
-                  <div class="cabinet-table-item__top">
-                    <div class="cabinet-table-item__td cabinet-table-item__td--number"><strong>244334</strong></div>
-                    <div class="cabinet-table-item__td cabinet-table-item__td--date gray">
+                  <button class="cabinet-table-item__top js-accordion-title">
+                    <span class="cabinet-table-item__td cabinet-table-item__td--number"><strong>244334</strong></span>
+                    <span class="cabinet-table-item__td cabinet-table-item__td--date gray">
                       <!-- begin icon-clock -->
                       <svg viewBox="0 0 41.301 41.301" class="icon icon-clock" width="1.000em" height="1em">
                         <path style="fill:#1e201d" d="M20.642 0c5.698 0 10.857 2.317 14.602 6.047 3.73 3.746 6.047 8.905 6.047 14.603s-2.317 10.857-6.047 14.603c-3.746 3.73-8.904 6.047-14.602 6.047S9.786 38.983 6.056 35.253A20.572 20.572 0 01.008 20.65 20.573 20.573 0 016.055 6.047 20.576 20.576 0 0120.642 0zm10.524 19.523c.619 0 1.111.508 1.111 1.127s-.492 1.127-1.111 1.127H20.642c-.413 0-.778-.238-.968-.571l-.016-.016-.016-.032v-.016l-.016-.032-.016-.032v-.016l-.016-.032-.016-.016v-.032l-.016-.032v-.016l-.016-.032v-.064l-.016-.016V7.206c0-.619.492-1.111 1.111-1.111s1.127.492 1.127 1.111v12.317h9.398zm2.491-11.888c-3.333-3.333-7.936-5.381-13.015-5.381S10.96 4.301 7.627 7.635A18.408 18.408 0 002.246 20.65c0 5.079 2.063 9.682 5.381 13.016 3.333 3.333 7.936 5.381 13.015 5.381s9.682-2.048 13.015-5.381a18.355 18.355 0 005.397-13.016 18.35 18.35 0 00-5.397-13.015z" />
                       </svg>
-                      <!-- end icon-clock --> 16.01.2019 </div>
-                    <div class="cabinet-table-item__td cabinet-table-item__td--quantity gray">6 товарів</div>
-                    <div class="cabinet-table-item__td cabinet-table-item__td--status">
-                      <div class="status status--processing">
+                      <!-- end icon-clock --> 16.01.2019 </span>
+                    <span class="cabinet-table-item__td cabinet-table-item__td--quantity gray">6 товарів</span>
+                    <span class="cabinet-table-item__td cabinet-table-item__td--status">
+                      <span class="status status--processing">
                         <!-- begin icon-history -->
                         <svg height="1em" viewBox="0 0 551.13 551.13" width="1.000em" class="icon icon-history">
                           <path d="M275.531 172.228l-.05 120.493c0 4.575 1.816 8.948 5.046 12.177l86.198 86.181 24.354-24.354-81.153-81.136.05-113.361z" />
                           <path d="M310.011 34.445c-121.23 0-221.563 90.033-238.367 206.674H0l86.114 86.114 86.114-86.114h-65.78C122.925 143.53 207.803 68.891 310.011 68.891c113.966 0 206.674 92.707 206.674 206.674s-92.707 206.674-206.674 206.674c-64.064 0-123.469-28.996-162.978-79.555l-27.146 21.192c46.084 58.968 115.379 92.808 190.124 92.808 132.955 0 241.119-108.181 241.119-241.119S442.966 34.446 310.011 34.445z" />
                         </svg>
-                        <!-- end icon-history --> В обробці </div>
-                    </div>
-                    <div class="cabinet-table-item__td cabinet-table-item__td--price">
-                      <div class="price price--md">$ 4890,00</div>
-                    </div>
-                    <div class="cabinet-table-item__td cabinet-table-item__td--btn">
-                      <button class="more-btn">Детальніше</button>
-                    </div>
-                  </div>
-                  <div class="cabinet-table-item__content">
+                        <!-- end icon-history --> В обробці </span>
+                    </span>
+                    <span class="cabinet-table-item__td cabinet-table-item__td--price">
+                      <span class="price price--md">$ 4890,00</span>
+                    </span>
+                    <span class="cabinet-table-item__td cabinet-table-item__td--btn">
+                      <span class="more-btn">Детальніше</span>
+                    </span>
+                  </button>
+                  <div class="cabinet-table-item__content js-accordion-content">
                     <div class="cabinet-table-item__content-left">
                       <!-- begin cart-item -->
                       <div class="cart-item">
@@ -1537,17 +1561,17 @@
                   </div>
                 </div>
                 <div class="cabinet-table__item cabinet-table-item">
-                  <div class="cabinet-table-item__top">
-                    <div class="cabinet-table-item__td cabinet-table-item__td--number"><strong>244334</strong></div>
-                    <div class="cabinet-table-item__td cabinet-table-item__td--date gray">
+                  <button class="cabinet-table-item__top js-accordion-title">
+                    <span class="cabinet-table-item__td cabinet-table-item__td--number"><strong>244334</strong></span>
+                    <span class="cabinet-table-item__td cabinet-table-item__td--date gray">
                       <!-- begin icon-clock -->
                       <svg viewBox="0 0 41.301 41.301" class="icon icon-clock" width="1.000em" height="1em">
                         <path style="fill:#1e201d" d="M20.642 0c5.698 0 10.857 2.317 14.602 6.047 3.73 3.746 6.047 8.905 6.047 14.603s-2.317 10.857-6.047 14.603c-3.746 3.73-8.904 6.047-14.602 6.047S9.786 38.983 6.056 35.253A20.572 20.572 0 01.008 20.65 20.573 20.573 0 016.055 6.047 20.576 20.576 0 0120.642 0zm10.524 19.523c.619 0 1.111.508 1.111 1.127s-.492 1.127-1.111 1.127H20.642c-.413 0-.778-.238-.968-.571l-.016-.016-.016-.032v-.016l-.016-.032-.016-.032v-.016l-.016-.032-.016-.016v-.032l-.016-.032v-.016l-.016-.032v-.064l-.016-.016V7.206c0-.619.492-1.111 1.111-1.111s1.127.492 1.127 1.111v12.317h9.398zm2.491-11.888c-3.333-3.333-7.936-5.381-13.015-5.381S10.96 4.301 7.627 7.635A18.408 18.408 0 002.246 20.65c0 5.079 2.063 9.682 5.381 13.016 3.333 3.333 7.936 5.381 13.015 5.381s9.682-2.048 13.015-5.381a18.355 18.355 0 005.397-13.016 18.35 18.35 0 00-5.397-13.015z" />
                       </svg>
-                      <!-- end icon-clock --> 16.01.2019 </div>
-                    <div class="cabinet-table-item__td cabinet-table-item__td--quantity gray">6 товарів</div>
-                    <div class="cabinet-table-item__td cabinet-table-item__td--status">
-                      <div class="status status--transporting">
+                      <!-- end icon-clock --> 16.01.2019 </span>
+                    <span class="cabinet-table-item__td cabinet-table-item__td--quantity gray">6 товарів</span>
+                    <span class="cabinet-table-item__td cabinet-table-item__td--status">
+                      <span class="status status--transporting">
                         <!-- begin icon-truck -->
                         <svg viewBox="0 0 512 512" class="icon icon-truck" width="1.000em" height="1em">
                           <path d="M119.467 337.067c-28.237 0-51.2 22.963-51.2 51.2 0 28.237 22.963 51.2 51.2 51.2s51.2-22.963 51.2-51.2c0-28.237-22.964-51.2-51.2-51.2zm0 85.333c-18.825 0-34.133-15.309-34.133-34.133 0-18.825 15.309-34.133 34.133-34.133s34.133 15.309 34.133 34.133c0 18.824-15.309 34.133-34.133 34.133zM409.6 337.067c-28.237 0-51.2 22.963-51.2 51.2 0 28.237 22.963 51.2 51.2 51.2 28.237 0 51.2-22.963 51.2-51.2 0-28.237-22.963-51.2-51.2-51.2zm0 85.333c-18.825 0-34.133-15.309-34.133-34.133 0-18.825 15.309-34.133 34.133-34.133 18.825 0 34.133 15.309 34.133 34.133 0 18.824-15.308 34.133-34.133 34.133z" />
@@ -1555,16 +1579,16 @@
                           <path d="M375.467 277.333V217.6h68.267v-17.067h-76.8a8.53 8.53 0 00-8.533 8.533v76.8a8.525 8.525 0 008.533 8.533h128v-17.067H375.467zM332.8 106.667H8.533A8.536 8.536 0 000 115.2v273.067a8.53 8.53 0 008.533 8.533H76.8v-17.067H17.067v-256h307.2v256H162.133V396.8H332.8a8.525 8.525 0 008.533-8.533V115.2a8.53 8.53 0 00-8.533-8.533z" />
                           <path d="M8.533 345.6h51.2v17.067h-51.2zM179.2 345.6h145.067v17.067H179.2zM469.333 345.6h34.133v17.067h-34.133zM34.133 140.8H332.8v17.067H34.133zM110.933 379.733H128V396.8h-17.067zM401.067 379.733h17.067V396.8h-17.067zM34.133 72.533H153.6V89.6H34.133zM0 72.533h17.067V89.6H0z" />
                         </svg>
-                        <!-- end icon-truck --> В дорозі </div>
-                    </div>
-                    <div class="cabinet-table-item__td cabinet-table-item__td--price">
-                      <div class="price price--md">$ 4890,00</div>
-                    </div>
-                    <div class="cabinet-table-item__td cabinet-table-item__td--btn">
-                      <button class="more-btn">Детальніше</button>
-                    </div>
-                  </div>
-                  <div class="cabinet-table-item__content">
+                        <!-- end icon-truck --> В дорозі </span>
+                    </span>
+                    <span class="cabinet-table-item__td cabinet-table-item__td--price">
+                      <span class="price price--md">$ 4890,00</span>
+                    </span>
+                    <span class="cabinet-table-item__td cabinet-table-item__td--btn">
+                      <span class="more-btn">Детальніше</span>
+                    </span>
+                  </button>
+                  <div class="cabinet-table-item__content js-accordion-content">
                     <div class="cabinet-table-item__content-left">
                       <!-- begin cart-item -->
                       <div class="cart-item">
